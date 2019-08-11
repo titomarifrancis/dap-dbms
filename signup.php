@@ -1,5 +1,6 @@
 <?php
 include 'templates/header.php';
+include 'dbconn.php';
 ?>
 <form>
   <div class="row">
@@ -33,24 +34,40 @@ include 'templates/header.php';
         <input type="text" placeholder="Role in Organization" />
       </label>
     </div>
-
     <div class="large-12 columns">
+	<?php
+	$getAgenciesQuery = 'select id, agencyname from govtagency order by agencyname asc';
+	$agencyStmt= $dbh->query($getAgenciesQuery);
+	?>
       <label>Government Agency
         <select>
-          <option value="husker">Development Academy of the Philippines</option>
-          <option value="starbuck">Department of Science and Technology</option>
-          <option value="hotdog">Department of Justice</option>
-          <option value="apollo">Department of Education</option>
+	<?php
+	foreach($agencyStmt as $row)
+	{
+	?>
+	      <option value="<?php echo $row['id'];?>"><?php echo rtrim($row['agencyname']);?></option>
+	<?php	
+	}
+	?>
         </select>
       </label>
 	</div>
+
     <div class="large-12 columns">
+	<?php
+	$getRegionsQuery = 'select id, regionname from regions order by regionname asc';
+	$regionStmt= $dbh->query($getRegionsQuery);
+	?>
 		<label>Region
 		  <select>
-			<option value="husker">I - Ilocos Region</option>
-			<option value="starbuck">II - Cagayan Valley</option>
-			<option value="hotdog">III - Central Luzon</option>
-			<option value="apollo">IV A - Calabarzon</option>
+	<?php
+	foreach($regionStmt as $regionRow)
+	{
+	?>
+			<option value="<?php echo $regionRow['id'];?>"><?php echo rtrim($regionRow['regionname']);?></option>
+	<?php
+	}
+	?>
 		  </select>
 		</label>
 	  </div>
@@ -101,12 +118,12 @@ include 'templates/header.php';
 		  </select>
 		</label>
 	  </div>
-	  <div class="large-6 columns">
+	  <div class="large-12 columns">
 		<label>Username
 		  <input type="text" placeholder="Enter e-mail as username" />
 		</label>
 	  </div>
-	  <div class="large-6 columns">
+	  <div class="large-12 columns">
 		<label>Password
 		  <input type="text" placeholder="at least 8 alphanumeric characters" />
 		</label>

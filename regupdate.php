@@ -100,12 +100,12 @@
 		  </select>
 		</label>
 	  </div>
-	  <div class="large-6 columns">
+	  <div class="large-12 columns">
 		<label>Username
 		  <input type="text" placeholder="Enter e-mail as username" />
 		</label>
 	  </div>
-	  <div class="large-6 columns">
+	  <div class="large-12 columns">
 		<label>Password
 		  <input type="text" placeholder="at least 8 alphanumeric characters" />
 		</label>
