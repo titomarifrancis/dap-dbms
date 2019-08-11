@@ -26,26 +26,26 @@ img.emoji {
 	padding: 0 !important;
 }
 </style>
-<link rel="stylesheet" id="bwg_fonts-css" href="/css/fonts.css" type="text/css" media="all">
-<link rel="stylesheet" id="bwg_frontend-css" href="/css/styles.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="wp-pagenavi-css" href="/css/pagenavi-css.css" type="text/css" media="all">
-<link rel="stylesheet" id="gwt_wp-foundation-css" href="/css/foundation.min(1).css" type="text/css" media="all">
-<link rel="stylesheet" id="gwt_wp-fontawesome-css" href="/css/font-awesome.min.css" type="text/css" media="all">
-<link rel="stylesheet" id="genericons-css" href="/css/genericons.css" type="text/css" media="all">
-<link rel="stylesheet" id="gwt_wp-style-css" href="/css/theme.css" type="text/css" media="all">
-<link rel="stylesheet" id="gwt_wp-user-style-css" href="/css/style.css" type="text/css" media="all">
-<link rel="stylesheet" id="flexslider_css-css" href="/css/flexslider.css" type="text/css" media="all">
-<link rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" href="css/public.css" type="text/css" media="all">
-<script type="text/javascript" src="js/jquery.js.download"></script>
-<script type="text/javascript" src="js/jquery-migrate.min.js.download"></script>
+<link rel="stylesheet" id="bwg_fonts-css" href="assets/css/fonts.css" type="text/css" media="all">
+<link rel="stylesheet" id="bwg_frontend-css" href="assets/css/styles.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="assets/css/pagenavi-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="gwt_wp-foundation-css" href="assets/css/foundation.min(1).css" type="text/css" media="all">
+<link rel="stylesheet" id="gwt_wp-fontawesome-css" href="assets/css/font-awesome.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="assets/css/genericons.css" type="text/css" media="all">
+<link rel="stylesheet" id="gwt_wp-style-css" href="assets/css/theme.css" type="text/css" media="all">
+<link rel="stylesheet" id="gwt_wp-user-style-css" href="assets/css/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="flexslider_css-css" href="assets/css/flexslider.css" type="text/css" media="all">
+<link rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" href="assets/css/public.css" type="text/css" media="all">
+<script type="text/javascript" src="assets/js/jquery.js.download"></script>
+<script type="text/javascript" src="assets/js/jquery-migrate.min.js.download"></script>
 <script type="text/javascript">
 /* <![CDATA[ */
 var bwg_objectsL10n = {"bwg_field_required":"field is required.","bwg_mail_validation":"This is not a valid email address.","bwg_search_result":"There are no images matching your search.","bwg_select_tag":"Select Tag","bwg_order_by":"Order By","bwg_search":"Search","bwg_show_ecommerce":"Show Ecommerce","bwg_hide_ecommerce":"Hide Ecommerce","bwg_show_comments":"Show Comments","bwg_hide_comments":"Hide Comments","bwg_restore":"Restore","bwg_maximize":"Maximize","bwg_fullscreen":"Fullscreen","bwg_exit_fullscreen":"Exit Fullscreen","bwg_search_tag":"SEARC".","bwg_tag_no_match":"No tags found","bwg_all_tags_selected":"All tags selected","bwg_tags_selected":"tags selected","play":"Play","pause":"Pause","is_pro":"","bwg_play":"Play","bwg_pause":"Pause","bwg_hide_info":"Hide info","bwg_show_info":"Show info","bwg_hide_rating":"Hide rating","bwg_show_rating":"Show rating","ok":"Ok","cancel":"Cancel","select_all":"Select all"};
 /* ]]> */
 </script>
-<script type="text/javascript" src="js/scripts.min.js.download"></script>
+<script type="text/javascript" src="assets/js/scripts.min.js.download"></script>
 
-<link rel="stylesheet" type="text/css" media="screen" id="Social-Sidebar-CSS" href="css/Social-Sidebar-Min.css"><script type="text/javascript">
+<link rel="stylesheet" type="text/css" media="screen" id="Social-Sidebar-CSS" href="assets/css/Social-Sidebar-Min.css"><script type="text/javascript">
 (function(url){
 	if(/(?:Chrome\/26\.0\.1410\.63 Safari\/537\.31|WordfenceTestMonBot)/.test(navigator.userAgent)){ return; }
 	var addEvent = function(evt, handler) {
