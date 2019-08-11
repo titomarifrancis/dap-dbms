@@ -97,9 +97,9 @@ create table systemusers (
 	id serial primary key,
 	lastname varchar(64) not null,
 	firstname varchar(64) not null,
-	midname varchar(64) not null,
-	extname varchar(15) not null,
-	positionid integer references positions(id) on delete restrict,
+	midname varchar(64) default null,
+	extname varchar(15) default null,
+	positionid integer default null references positions(id) on delete restrict,
 	govtagencyid integer references govtagency(id) on delete restrict,
 	regionid integer default null references regions(id) on delete restrict,
 	provinceid integer default null references provinces(id) on delete restrict,
@@ -114,7 +114,7 @@ create table systemusers (
 	approvedby integer default null references systemusers(id) on delete restrict,
 	approveddate timestamptz default null,
 	createdby integer default null references systemusers(id) on delete restrict,
-	creationdate timestamptz not null
+	creationdate timestamptz default null
 );
 
 create index idx_systemuser on systemusers(id, lastname, firstname, midname, extname, usrname, usrpassword);
