@@ -15,10 +15,10 @@ include 'templates/header.php';
     </div>
     </div>
     <div class="row">
-        <div class="large-12 large-centered columns">
-          <input type="submit" class="button expand" value="Log In"/>
-        </div>
-      </div>      
+      <div class="large-12 large-centered columns">
+        <input type="submit" class="button expand" value="Log In"/>
+      </div>
+    </div>      
 </form>
 <?php
 include 'templates/footer.php';
