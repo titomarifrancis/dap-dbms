@@ -46,8 +46,7 @@ $barangayId
 if(validate_hash($password, $dbProvPasswd, $dbProvPasswdSalt))
 {
     $isLoggedIn=TRUE;
-    echo "we are logged in";
-    die();
+
     session_start();
     $_SESSION['userId']= $userIdent;
     $_SESSION['realName']= $userRealName;
