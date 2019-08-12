@@ -25,7 +25,7 @@ foreach($loginStmt as $loginRow)
     $barangayId= $loginRow['barangayid'];
 }
 
-
+/*
 //for troubleshooting purposes only
 echo "you are 
 $userIdent, 
@@ -40,7 +40,7 @@ $distdivId,
 $cityMunicipalityId, 
 $barangayId
 <br/>";
-
+*/
 
 
 if(validate_hash($password, $dbProvPasswd, $dbProvPasswdSalt))
@@ -48,10 +48,10 @@ if(validate_hash($password, $dbProvPasswd, $dbProvPasswdSalt))
     $isLoggedIn=TRUE;
     echo "we are logged in";
     die();
-    //session_start();
-    //$_SESSION['userId']= $userIdent;
-    //$_SESSION['realName']= $userRealName;
-    //$_SESSION['accessLevelId']= $accessLevelId;
+    session_start();
+    $_SESSION['userId']= $userIdent;
+    $_SESSION['realName']= $userRealName;
+    $_SESSION['accessLevelId']= $accessLevelId;
 
     if($govtAgencyId !== '')
     {
