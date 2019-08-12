@@ -4,22 +4,9 @@ include 'dbconn.php';
 
 $getAgenciesQuery = 'select id, agencyname from govtagency where govtagencyclassid=2 order by agencyname';
 $agencyStmt= $dbh->query($getAgenciesQuery);
-//$agencyResult = $agencyStmt->fetchAll();
-//print_r($agencyResult);
-?>
-                    <table class="scroll hover">
-                        <thead>
-                            <tr>
-                                <th>Agency</th>
-                                <th>Certifying Body</th>
-                                <th>Certification</th>
-                                <th>Valid From</th>
-                                <th>Valid Until</th>
-                                <th>Partial</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-<?php
+
+include 'templates/tableheader.php';
+
 foreach($agencyStmt as $row)
 {
 ?>
@@ -33,8 +20,6 @@ foreach($agencyStmt as $row)
                     </tr>                    
 <?php	
 }
-?>
-                        </tbody>
-                    </table>
-<?php
+include 'templates/tablefooter/php';
+
 include 'templates/footer.php';

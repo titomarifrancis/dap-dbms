@@ -79,28 +79,17 @@ create table govtagency (
 
 create index idx_govtagency on govtagency(id, agencyname);
 
---
---create table agencyregprovdistdivcitymunicipalitybrgy (
---	id serial primary key,
---	govtagencyid integer references govtagency(id) on delete restrict,
---	regionid integer default null references region(id) on delete restrict,
---	provinceid integer default null references province(id) on delete restrict,
---	distdivid integer default null references distdiv(id) on delete restrict,
---	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
---	barangayid integer default null references barangay(id) on delete restrict,
---	creationdate timestamptz not null
---);
-
---create index idx_agencyregprovdistdivcitymunicipalitybrgy on agencyregprovdistdivcitymunicipalitybrgy(id);
-
 create table systemusers (
 	id serial primary key,
 	lastname varchar(64) not null,
 	firstname varchar(64) not null,
 	midname varchar(64) default null,
 	extname varchar(15) default null,
-	positionid integer default null references positions(id) on delete restrict,
-	govtagencyid integer references govtagency(id) on delete restrict,
+	position varchar(64) default null,
+	contactlandline varchar(128) default null,
+	contactmobile varchar(128) default null,
+	contactemail varchar(128) default null,
+	govtagencyid integer default null references govtagency(id) on delete restrict,
 	regionid integer default null references regions(id) on delete restrict,
 	provinceid integer default null references provinces(id) on delete restrict,
 	distdivid integer default null references distdivs(id) on delete restrict,

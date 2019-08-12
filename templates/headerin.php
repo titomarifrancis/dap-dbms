@@ -193,7 +193,7 @@ if(isset($loggedInUserRealname))
                             a.sidebar-slink:hover { background: #4145c7; color: #fff !important }
                         </style>
                         <ul style="list-style: none; margin: 0" class="sidebar-sl">
-                            <li class="sidebar-sl"><a href="index.php" class="sidebar-slink">Home</a></li>
+                            <li class="sidebar-sl"><a href="home.php" class="sidebar-slink">Home</a></li>
                             <li class="sidebar-sl"><a href="cocertification.php" class="sidebar-slink">Constitutional Offices</a></li>
                             <li class="sidebar-sl"><a href="ngacertification.php" class="sidebar-slink">National Government Agencies</a></li>
                             <li class="sidebar-sl"><a href="ngattachedcertification.php" class="sidebar-slink">NGA-Attached Offices and Bureaus</a></li>

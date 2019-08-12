@@ -9,7 +9,7 @@
                             a.sidebar-slink:hover { background: #4145c7; color: #fff !important }
                         </style>
                         <ul style="list-style: none; margin: 0" class="sidebar-sl">
-                            <li><a href="logout.php" class="sidebar-slink">Signout</a></li>
+                            <li><a href="logout.php" class="sidebar-slink">Logout</a></li>
                         </ul>
                     </div>
                 </aside>
