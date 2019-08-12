@@ -152,7 +152,7 @@ include 'templates/magic.php';
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1965" role="menuitem"><a target="_blank" href="https://www.dap.edu.ph/pmdp/" data-slimstat="5">PMDP</a></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1966" role="menuitem"><a target="_blank" href="https://www.dap.edu.ph/rbpms/" data-slimstat="5">RBPMS</a></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15317" role="menuitem"><a href="https://www.dap.edu.ph/coe-psp" data-slimstat="5">COE-PSP</a></li>
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15317" role="menuitem"><a href="https://www.dap.edu.ph/coe-psp" data-slimstat="5">GQMPO</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15317" role="menuitem"><a href="home.php" data-slimstat="5">GQMPO</a></li>
                     </ul>
                 </nav>
             </div>

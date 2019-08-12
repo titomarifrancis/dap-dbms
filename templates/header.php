@@ -149,7 +149,7 @@
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1965" role="menuitem"><a target="_blank" href="https://www.dap.edu.ph/pmdp/" data-slimstat="5">PMDP</a></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1966" role="menuitem"><a target="_blank" href="https://www.dap.edu.ph/rbpms/" data-slimstat="5">RBPMS</a></li>
                         <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15317" role="menuitem"><a href="https://www.dap.edu.ph/coe-psp" data-slimstat="5">COE-PSP</a></li>
-                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15317" role="menuitem"><a href="https://www.dap.edu.ph/coe-psp" data-slimstat="5">GQMPO</a></li>
+                        <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15317" role="menuitem"><a href="home.php" data-slimstat="5">GQMPO</a></li>
                     </ul>
                 </nav>
             </div>
@@ -190,7 +190,7 @@ if(isset($loggedInUserRealname))
                             a.sidebar-slink:hover { background: #4145c7; color: #fff !important }
                         </style>
                         <ul style="list-style: none; margin: 0" class="sidebar-sl">
-                            <li class="sidebar-sl"><a href="index.php" class="sidebar-slink">Home</a></li>
+                            <li class="sidebar-sl"><a href="home.php" class="sidebar-slink">Home</a></li>
                             <li class="sidebar-sl"><a href="cocertification.php" class="sidebar-slink">Constitutional Offices</a></li>
                             <li class="sidebar-sl"><a href="ngacertification.php" class="sidebar-slink">National Government Agencies</a></li>
                             <li class="sidebar-sl"><a href="ngattachedcertification.php" class="sidebar-slink">NGA-Attached Offices and Bureaus</a></li>

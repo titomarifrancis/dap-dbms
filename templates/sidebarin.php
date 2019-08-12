@@ -22,17 +22,32 @@
                                 a.sidebar-slink:hover { background: #4145c7; color: #fff !important }
                             </style>
                             <ul style="list-style: none; margin: 0" class="sidebar-sl">
-                                    <li class="sidebar-sl"><a href="updateuserdetail.php" class="sidebar-slink">Approve/Deny User Signup</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update Region List</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update Province List</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update District/Division List</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update City/Municipality List</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update Barangay List</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update Government Agency Category</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/career-opportunities" class="sidebar-slink">Add/Update Government Agency</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/performance-based-incentive-system" class="sidebar-slink">Add/Update Certifying Body</a></li>
-                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/service-charter" class="sidebar-slink">Add/Update Certification</a></li>
-                                    <li class="sidebar-sl"><a href="agencycertification.php" class="sidebar-slink">Add/Update Agency Certification</a></li>
+                                <li class="sidebar-sl"><a href="agencycertification.php" class="sidebar-slink">Agency Certification Manager</a></li>
+<?php
+if(isset($loggedInAccessLevel) && ($loggedInAccessLevel >= 2))
+{
+?>                                
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Government Agency Category Manager</a></li>
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/career-opportunities" class="sidebar-slink">Government Agency Manager</a></li>
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/performance-based-incentive-system" class="sidebar-slink">Certifying Body Manager</a></li>
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/service-charter" class="sidebar-slink">Certification Manager</a></li>
+<?php
+}
+?> 
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Region List Manager</a></li>
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Province List Manager</a></li>
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">District/Division List Manager</a></li>
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">City/Municipality List Manager</a></li>
+                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Barangay List Manager</a></li>
+<?php
+if(isset($loggedInAccessLevel) && ($loggedInAccessLevel >= 2))
+{
+?>
+                                <li class="sidebar-sl"><a href="updateuserdetail.php" class="sidebar-slink">User Access Manager</a></li>
+<?php
+}
+?>                                
+
                             </ul>
                     </div>
                 </aside>
