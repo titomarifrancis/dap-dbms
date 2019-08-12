@@ -7,14 +7,6 @@ create table userlevels (
 
 create index idx_userlevel on userlevels(id, userlevel);
 
-create table positions (
-	id serial primary key,
-	occupationdesc varchar(64) not null,
-	creationdate timestamptz not null	
-);
-
-create index idx_position on positions(id, occupationdesc);
-
 create table regions (
 	id serial primary key,
 	regionname varchar(64) not null,
