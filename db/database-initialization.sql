@@ -95,7 +95,7 @@ create table systemusers (
 	distdivid integer default null references distdivs(id) on delete restrict,
 	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
 	barangayid integer default null references barangays(id) on delete restrict,
-	usrname varchar(20) not null,
+	usrname varchar(20) unique not null,
 	usrpassword varchar(128) not null,
     usrpasswdsalt varchar(128) not null,
 	userlevelid integer default 0 references userlevels(id) on delete restrict check(userlevelid < 4),
