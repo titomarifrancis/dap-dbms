@@ -143,7 +143,7 @@ create table agencycertifications (
 	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
 	barangayid integer default null references barangays(id) on delete restrict,
 	certvalidstartdate date not null,
-	certvalidenddate date not null,
+	certvalidenddate date not null check (certvalidenddate > certvalidstartdate),
 	isapproved boolean default false,
 	approvedby integer default null references systemusers(id) on delete restrict,	
 	approveddate timestamptz default null,

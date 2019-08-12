@@ -4,34 +4,29 @@ include 'dbconn.php';
 ?>
 <form>
   <div class="row">
-    <div class="large-4 columns">
+    <div class="large-12 columns">
       <label>Lastname
-        <input type="text" placeholder="Lastname" />
+        <input type="text" name="lastname" placeholder="Lastname" />
       </label>
     </div>
-    <div class="large-4 columns">
+    <div class="large-12 columns">
       <label>Firstname
-        <input type="text" placeholder="Firstname" />
+        <input type="text" name="firstname" placeholder="Firstname" />
       </label>
     </div>
-    <div class="large-2 columns">
+    <div class="large-12 columns">
       <label>Middle Initial
-        <input type="text" placeholder="Middle Initial" />
+        <input type="text" name="midname" placeholder="Middle Initial" />
       </label>
     </div>
-    <div class="large-2 columns">
+    <div class="large-12 columns">
       <label>Name Extension
-        <input type="text" placeholder="Ext" />
+        <input type="text" name="extname" placeholder="Ext" />
       </label>
     </div>
-    <div class="large-6 columns">
-      <label>Organization Affiliation
-        <input type="text" placeholder="Private or Public Organization" />
-      </label>
-    </div>
-    <div class="large-6 columns">
+    <div class="large-12 columns">
       <label>Position
-        <input type="text" placeholder="Role in Organization" />
+        <input type="text" name="position" placeholder="Role in Organization" />
       </label>
     </div>
     <div class="large-12 columns">
@@ -40,7 +35,8 @@ include 'dbconn.php';
 	$agencyStmt= $dbh->query($getAgenciesQuery);
 	?>
       <label>Government Agency
-        <select>
+        <select name="govtagencyid">
+			<option value="0" selected>Please select one</option>
 	<?php
 	foreach($agencyStmt as $row)
 	{
@@ -59,7 +55,8 @@ include 'dbconn.php';
 	$regionStmt= $dbh->query($getRegionsQuery);
 	?>
 		<label>Region
-		  <select>
+		  <select name="regionid">
+		  	<option value="0" selected>N/A</option>		  
 	<?php
 	foreach($regionStmt as $regionRow)
 	{
@@ -73,7 +70,8 @@ include 'dbconn.php';
 	  </div>
 	  <div class="large-12 columns">
 		<label>Province
-		  <select>
+		  <select name="provinceid">
+		  	<option value="0" selected>N/A</option>		  
 			<option value="husker">Ilocos Norte</option>
 			<option value="starbuck">Ilocos Sur</option>
 			<option value="hotdog">La Union</option>
@@ -84,6 +82,7 @@ include 'dbconn.php';
 	  <div class="large-12 columns">
 		<label>District/Division
 		  <select>
+		  	<option value="0" selected>N/A</option>
 			<option value="husker">District 1</option>
 			<option value="starbuck">District 1</option>
 		  </select>
@@ -92,6 +91,7 @@ include 'dbconn.php';
 	  <div class="large-12 columns">
 		<label>City/Municiplaity
 		  <select>
+		  	<option value="0" selected>N/A</option>
 			<option value="husker">Laoag</option>
 			<option value="starbuck">Adams</option>
 			<option value="hotdog">Bacarra</option>
@@ -111,6 +111,7 @@ include 'dbconn.php';
 	  <div class="large-12 columns">
 		<label>Barangay
 		  <select>
+		  	<option value="0" selected>N/A</option>
 			<option value="husker">Barangay No. 1, San Lorenzo</option>
 			<option value="starbuck">Barangay No. 2, Santa Joaquina</option>
 			<option value="hotdog">Barangay No. 3, Nuestra Señora del Rosario</option>
@@ -125,7 +126,7 @@ include 'dbconn.php';
 	  </div>
 	  <div class="large-12 columns">
 		<label>Password
-		  <input type="text" placeholder="at least 8 alphanumeric characters" />
+		  <input type="password" placeholder="at least 8 alphanumeric characters" />
 		</label>
 	  </div>	  	  	  	  	  	
   <!--

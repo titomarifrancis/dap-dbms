@@ -32,7 +32,7 @@
                                     <li class="sidebar-sl"><a href="https://www.dap.edu.ph/career-opportunities" class="sidebar-slink">Add/Update Government Agency</a></li>
                                     <li class="sidebar-sl"><a href="https://www.dap.edu.ph/performance-based-incentive-system" class="sidebar-slink">Add/Update Certifying Body</a></li>
                                     <li class="sidebar-sl"><a href="https://www.dap.edu.ph/service-charter" class="sidebar-slink">Add/Update Certification</a></li>
-                                    <li class="sidebar-sl"><a href="agencycertification.html" class="sidebar-slink">Add/Update Agency Certification</a></li>
+                                    <li class="sidebar-sl"><a href="agencycertification.php" class="sidebar-slink">Add/Update Agency Certification</a></li>
                             </ul>
                     </div>
                 </aside>
