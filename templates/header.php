@@ -1,6 +1,3 @@
-<?php
-include 'templates/magic.php';
-?>
 <!DOCTYPE html>
 <html class="" lang="en-US">
 <head>
