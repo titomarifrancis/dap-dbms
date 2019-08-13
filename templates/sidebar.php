@@ -1,5 +1,6 @@
 <?php
-//if not logged in and authenticated
+if(!isset($isLoggedIn))
+{
 ?>
                 <!-- Dynamic unauth sidebar start -->
                 <aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
@@ -17,8 +18,13 @@
                 </aside>
                 <!-- Dynamic unauth sidebar end -->
 <?php
-//if logged in and authenticated
+}
+?>
 
+<?php
+//if logged in and authenticated
+if(isset($isLoggedIn))
+{
 ?>
                 <!-- Dynamic auth sidebar start -->
                 <aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
@@ -34,7 +40,12 @@
                     </div>
                 </aside>
                 <!-- Dynamic auth sidebar end -->
+<?php
+}
 
+if(isset($isLoggedIn) && ($loggedInAccessLevel > 2))
+{
+?>
                 <aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
                     <div class="entry-content">
                         <div class="textwidget custom-html-widget"><style>
@@ -50,15 +61,12 @@
                                     <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update City/Municipality List</a></li>
                                     <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update Barangay List</a></li>
                                     <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Add/Update Government Agency Category</a></li>
-                                    <li><a href="https://www.dap.edu.ph/career-opportunities" class="sidebar-slink">Add/Update Government Agency</a></li>
-                                    <li><a href="https://www.dap.edu.ph/performance-based-incentive-system" class="sidebar-slink"><div style="float: left; display:inline-block; width: 10%"></div><div style="float: left; display:inline-block; width: 80%">Add/Update Certifying Body</div>
-                                <div style="clear:both"></div>
-                            </a></li>
-                                    <li><a href="https://www.dap.edu.ph/service-charter" class="sidebar-slink">Add/Update Certification</a></li>
-                                    <li><a href="agencycertification.html" class="sidebar-slink">Add/Update Agency Certification</a></li>
+                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/career-opportunities" class="sidebar-slink">Add/Update Government Agency</a></li>
+                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/performance-based-incentive-system" class="sidebar-slink">Add/Update Certifying Body</a></li>
+                                    <li class="sidebar-sl"><a href="https://www.dap.edu.ph/service-charter" class="sidebar-slink">Add/Update Certification</a></li>
+                                    <li class="sidebar-sl"><a href="agencycertification.html" class="sidebar-slink">Add/Update Agency Certification</a></li>
                             </ul>
                     </div>
                 </aside>
 <?php
-//end of conditionals for the sidebar
-?>
+}

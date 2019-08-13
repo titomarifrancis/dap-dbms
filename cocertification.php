@@ -2,7 +2,7 @@
 include 'templates/header.php';
 include 'dbconn.php';
 
-$getAgenciesQuery = 'select id, agencyname from govtagency where govtagencyclassid=1';
+$getAgenciesQuery = 'select id, agencyname from govtagency where govtagencyclassid=1 order by agencyname';
 $agencyStmt= $dbh->query($getAgenciesQuery);
 //$agencyResult = $agencyStmt->fetchAll();
 //print_r($agencyResult);
