@@ -1,23 +1,27 @@
 <?php
-include 'templates/header.php';
+include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
-<form>
+<form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
-			<label>Government Agency Category
-			  <select>
-				<option value="husker">Constitutional Offices</option>
-				<option value="starbuck">National Government Agencies</option>
-				<option value="hotdog">NGA-Attached Offices and Bureaus</option>
-				<option value="apollo">Other Executive Offices</option>
-				<option value="husker">Government Owned or Controlled Corporations</option>
-				<option value="starbuck">State Universities and Colleges</option>
-				<option value="hotdog">Local Government Units</option>
-				<option value="apollo">Local Water Districts</option>				
-			  </select>
-			</label>
-		  </div>
+	<?php
+	$getGovtAgencyClassQuery = 'select id, agencyclassdesc from govtagencyclass order by agencyclassdesc asc';
+	$agencyclassStmt= $dbh->query($getGovtAgencyClassQuery);	
+	?>
+		<label>Government Agency Category
+			<select>
+	<?php
+	foreach($agencyclassStmt as $agencyclassRow)
+	{
+	?>
+		<option value="<?php echo rtrim($agencyclassRow['id']);?>"><?php echo rtrim($agencyclassRow['agencyclassdesc']);?></option>
+	<?php
+	}
+	?>			
+			</select>
+		</label>
+	</div>
     <div class="large-12 columns">
       <label>Government Agency
         <select>
@@ -29,13 +33,21 @@ include 'dbconn.php';
       </label>
 	</div>
     <div class="large-12 columns">
+	<?php
+	$getRegionsQuery = 'select id, regionname from regions order by regionname asc';
+	$regionStmt= $dbh->query($getRegionsQuery);
+	?>
 		<label>Region
-		  <select>
-			<option value="husker">Central</option>
-			<option value="husker">I - Ilocos Region</option>
-			<option value="starbuck">II - Cagayan Valley</option>
-			<option value="hotdog">III - Central Luzon</option>
-			<option value="apollo">IV A - Calabarzon</option>
+		  <select name="regionid">
+		  	<option value="" selected>N/A</option>		  
+	<?php
+	foreach($regionStmt as $regionRow)
+	{
+	?>
+			<option value="<?php echo $regionRow['id'];?>"><?php echo rtrim($regionRow['regionname']);?></option>
+	<?php
+	}
+	?>
 		  </select>
 		</label>
 	  </div>
@@ -90,18 +102,34 @@ include 'dbconn.php';
 		</label>
 	  </div>
 	  <div class="large-12 columns">
+	<?php
+	$getCertificationsQuery = 'select id, certificationstandard from certifications order by certificationstandard asc';
+	$certificationStmt= $dbh->query($getCertificationsQuery);
+	?>	  
 			<label>Certification
 			  <select>
-				<option value="husker">ISO 9001:2015</option>
-				<option value="starbuck">ISO 9001:2008</option>
+	<?php
+	foreach($certificationStmt as $certificationRow)
+	{
+	?>
+				<option value="<?php echo rtrim($certificationRow['id']);?>"><?php echo rtrim($certificationRow['certificationstandard']);?></option>
+	<?php
+	}
+
+	?>
 			  </select>
 			</label>
 		  </div>	  
+	  <div class="large-12 columns">
+		<label>Upload Certification File
+		<input type="file" name="fileToUpload" id="fileToUpload" placeholder="Certification File to be Uploaded Here">
+		</label>
+	  </div>
 	  <div class="large-6 columns">
 		<label>Validity From Date
 		  <input type="date" placeholder="Start Date" />
 		</label>
-	  </div>
+	  </div>	  
 	  <div class="large-6 columns">
 		<label>Validity Until Date
 		  <input type="date" placeholder="End date" />

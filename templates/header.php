@@ -197,8 +197,8 @@ if(isset($loggedInUserRealname))
                             <li class="sidebar-sl"><a href="oxocertification.php" class="sidebar-slink">Other Executive Offices</a></li>
                             <li class="sidebar-sl"><a href="gocccertification.php" class="sidebar-slink">Government Owned or Controlled Corporations</a></li>
                             <li class="sidebar-sl"><a href="succertification.php" class="sidebar-slink">State Universities and Colleges</a></li>
-                            <li class="sidebar-sl"><a href="/lgucertification/" class="sidebar-slink">Local Government Units</a></li>
-                            <li class="sidebar-sl"><a href="/lwdcertification/" class="sidebar-slink">Local Water Districts</a></li>
+                            <li class="sidebar-sl"><a href="lgucertification.php" class="sidebar-slink">Local Government Units</a></li>
+                            <li class="sidebar-sl"><a href="lwdcertification.php" class="sidebar-slink">Local Water Districts</a></li>
                         </ul>
                     </div>
                 </aside>
