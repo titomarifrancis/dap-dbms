@@ -208,7 +208,7 @@ if(isset($loggedInUserRealname))
                 <!-- Common sidebar end-->
 
 <?php
-include 'templates/sidebar.php';
+include 'templates/sidebarin.php';
 ?>
             </div>
             <div id="entry-content" class="large-9 medium-9 columns">
