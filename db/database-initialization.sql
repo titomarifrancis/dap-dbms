@@ -113,7 +113,7 @@ alter table govtagency add column createdby integer default null references syst
 
 create table certifications (
 	id serial primary key,
-	certificationstandard varchar(32) not null,
+	certificationstandard varchar(32) unique not null,
 	createdby integer default null references systemusers(id) on delete restrict,
 	creationdate timestamptz not null
 );
@@ -123,7 +123,7 @@ create index idx_certification on certifications(id, certificationstandard);
 create table certifyingbody (
 	id serial primary key,
 	ispubaccredited boolean default false,
-	providerorg varchar(32) not null,
+	providerorg varchar(32) unique not null,
 	createdby integer default null references systemusers(id) on delete restrict,
 	creationdate timestamptz not null
 );
