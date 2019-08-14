@@ -27,8 +27,8 @@
 if(isset($loggedInAccessLevel) && ($loggedInAccessLevel >= 2))
 {
 ?>                                
-                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/invitation-to-bid" class="sidebar-slink">Government Agency Category Manager</a></li>
-                                <li class="sidebar-sl"><a href="https://www.dap.edu.ph/career-opportunities" class="sidebar-slink">Government Agency Manager</a></li>
+                                <li class="sidebar-sl"><a href="govtagencyclassmanager.php" class="sidebar-slink">Government Agency Category Manager</a></li>
+                                <li class="sidebar-sl"><a href="govtagencymanager.php" class="sidebar-slink">Government Agency Manager</a></li>
                                 <li class="sidebar-sl"><a href="https://www.dap.edu.ph/performance-based-incentive-system" class="sidebar-slink">Certifying Body Manager</a></li>
                                 <li class="sidebar-sl"><a href="https://www.dap.edu.ph/service-charter" class="sidebar-slink">Certification Manager</a></li>
 <?php

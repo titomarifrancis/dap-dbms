@@ -5,42 +5,51 @@ include 'dbconn.php';
 <form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
-	<?php
-	$getGovtAgencyClassQuery = 'select id, agencyclassdesc from govtagencyclass order by agencyclassdesc asc';
-	$agencyclassStmt= $dbh->query($getGovtAgencyClassQuery);	
-	?>
-		<label>Government Agency Category
+		<label>Government Agency
 			<select>
 	<?php
-	foreach($agencyclassStmt as $agencyclassRow)
+	if(isset($govtAgencyId))
+	{
+		$getAgenciesQuery = 'select id, agencyname from govtagency where id='.$govtAgencyId.' order by agencyname';
+	}
+	else
+	{
+		$getAgenciesQuery = 'select id, agencyname from govtagency order by agencyname';
+	}
+	$agencyStmt= $dbh->query($getAgenciesQuery);
+
+	foreach($agencyStmt as $agencyRow)
 	{
 	?>
-		<option value="<?php echo rtrim($agencyclassRow['id']);?>"><?php echo rtrim($agencyclassRow['agencyclassdesc']);?></option>
+		<option value="<?php echo rtrim($agencyRow['id']);?>"><?php echo rtrim($agencyRow['agencyname']);?></option>
 	<?php
 	}
-	?>			
-			</select>
-		</label>
-	</div>
-    <div class="large-12 columns">
-      <label>Government Agency
-        <select>
-          <option value="husker">Development Academy of the Philippines</option>
-          <option value="starbuck">Department of Science and Technology</option>
-          <option value="hotdog">Department of Justice</option>
-          <option value="apollo">Department of Education</option>
+	?>
         </select>
       </label>
 	</div>
     <div class="large-12 columns">
 	<?php
-	$getRegionsQuery = 'select id, regionname from regions order by regionname asc';
+	if(isset($regionId))
+	{
+		$getRegionsQuery = 'select id, regionname from regions where id='.$regionId.'order by regionname asc';
+	}
+	else
+	{
+		$getRegionsQuery = 'select id, regionname from regions order by regionname asc';
+	}	
 	$regionStmt= $dbh->query($getRegionsQuery);
 	?>
 		<label>Region
 		  <select name="regionid">
-		  	<option value="" selected>N/A</option>		  
 	<?php
+	if(!isset($regionId))
+	{
+	?>
+		  	<option value="" selected>N/A</option>
+	<?php
+	}
+
 	foreach($regionStmt as $regionRow)
 	{
 	?>
@@ -52,6 +61,7 @@ include 'dbconn.php';
 		</label>
 	  </div>
 	  <div class="large-12 columns">
+	  
 		<label>Province
 		  <select>
 			<option value="husker"></option>
@@ -134,29 +144,10 @@ include 'dbconn.php';
 		<label>Validity Until Date
 		  <input type="date" placeholder="End date" />
 		</label>
+	  </div>
+	  <div class="large-12 columns">
+	  		<input type="submit" class="button expand" value="Save"/>
 	  </div>	  	  	  	  	  	
-  <!--
-  <div class="row">
-    <div class="large-6 columns">
-      <label>Choose Your Favorite</label>
-      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
-    </div>
-    <div class="large-6 columns">
-      <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
-    </div>
-  </div>
-  <div class="row">
-  
-    <div class="large-12 columns">
-      <label>Supplemental Contact Information
-        <textarea placeholder="Landline, Cellphone, Facebook, LinkedIn"></textarea>
-      </label>
-	</div>
-  </div>
-  -->
 </form>
 <?php
 include 'templates/footer.php';
