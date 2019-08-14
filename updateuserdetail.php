@@ -2,7 +2,7 @@
 include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
-<form>
+<form action="user_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">
       <label>Lastname
@@ -26,17 +26,17 @@ include 'dbconn.php';
 	</div>
     <div class="large-12 columns">
       <label>Mobile Contact Number
-        <input type="text" name="extname" placeholder="Mobile Contact Number" />
+        <input type="text" name="contactmobile" placeholder="Mobile Contact Number" />
       </label>
 	</div>
     <div class="large-12 columns">
       <label>Landline Contact Number
-        <input type="text" name="extname" placeholder="Landline Contact Number" />
+        <input type="text" name="contactlandline" placeholder="Landline Contact Number" />
       </label>
 	</div>
     <div class="large-12 columns">
       <label>Email Address
-        <input type="email" name="extname" placeholder="Email Address" />
+        <input type="email" name="contactemail" placeholder="Email Address" />
       </label>
 	</div>			
     <div class="large-12 columns">
@@ -96,7 +96,7 @@ include 'dbconn.php';
 	  </div>
 	  <div class="large-12 columns">
 		<label>District/Division
-		  <select>
+		  <select name="distdivid">
 		  	<option value="" selected>N/A</option>
 			<option value="husker">District 1</option>
 			<option value="starbuck">District 1</option>
@@ -105,7 +105,7 @@ include 'dbconn.php';
 	  </div>
 	  <div class="large-12 columns">
 		<label>City/Municiplaity
-		  <select>
+		  <select name="citymunicipalityid">
 		  	<option value="" selected>N/A</option>
 			<option value="husker">Laoag</option>
 			<option value="starbuck">Adams</option>
@@ -125,7 +125,7 @@ include 'dbconn.php';
 	  </div>
 	  <div class="large-12 columns">
 		<label>Barangay
-		  <select>
+		  <select name="barangayid">
 		  	<option value="" selected>N/A</option>
 			<option value="husker">Barangay No. 1, San Lorenzo</option>
 			<option value="starbuck">Barangay No. 2, Santa Joaquina</option>
@@ -136,14 +136,18 @@ include 'dbconn.php';
 	  </div>
 	  <div class="large-12 columns">
 		<label>Username
-		  <input type="text" placeholder="Enter e-mail as username" />
+		  <input type="text" name="usrname" placeholder="Enter e-mail as username" />
 		</label>
 	  </div>
 	  <div class="large-12 columns">
 		<label>Password
-		  <input type="password" placeholder="at least 8 alphanumeric characters" />
+		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters" />
 		</label>
-	  </div>	  	  	  	  	  	
+	  </div>
+      <div class="large-12 large-centered columns">
+        <input type="submit" class="button expand" value="Update"/>
+      </div>
+	</div>  	  	  	  	  	  	
 </form>
 <?php
 include 'templates/footer.php';
