@@ -138,6 +138,7 @@ create table agencycertifications (
 	certificationregnumber varchar(16) not null,
 	certificationscope text not null,
 	scope_ispartial boolean default null,
+	certpdfurl text not null,
 	provinceid integer default null references provinces(id) on delete restrict,
 	distdivid integer default null references distdivs(id) on delete restrict,
 	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
