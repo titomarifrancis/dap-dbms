@@ -1,17 +1,7 @@
 <?php
-require_once('template/magic.php');
+//require_once('template/magic.php');
 require_once('lib/secProc.php');
 require_once('dbconn.php');
-
-if(isset($_REQUEST['userId']))
-{
-	$userId = $_REQUEST['userId'];
-}
-else
-{
-    //
-    $createdby = $loggedInUserId;
-}
 
 $lastname = $_REQUEST['lastname'];
 $firstname = $_REQUEST['firstname'];
@@ -30,6 +20,12 @@ $barangayid = $_REQUEST['barangayid'];
 $usrname = $_REQUEST['usrname'];
 $usrpassword = $_REQUEST['usrpassword'];
 
+if(isset($_REQUEST['userId']))
+{
+	$userId = $_REQUEST['userId'];
+}
+
+/*
 //for troubleshooting purposes only
 echo "
 $lastname,
@@ -47,15 +43,10 @@ $distdivid,
 $citymunicipalityid,
 $barangayid,
 $usrname,
-$usrpassword,
-$spices,
-$userlevelid,
-$isapproved,
-$approvedby,
-$approveddate,
-$loggedInUserId
+$usrpassword
 ";
 die();
+*/
 
 $userlevelid= 'NULL';
 if(isset($_REQUEST['userlevelid']))
@@ -76,7 +67,7 @@ if(isset($_REQUEST['isapproved']))
 }
 
 $spices = create_salt();
-$magicWord = create_hash($passWd, $spices);
+$magicWord = create_hash($usrpassword, $spices);
 
 if(isset($userId))
 {
@@ -145,7 +136,7 @@ else
                         '$citymunicipalityid',
                         '$barangayid',
                         '$usrname',
-                        '$usrpassword',
+                        '$magicWord',
                         '$spices',
                         '$userlevelid',
                         '$isapproved',
@@ -157,8 +148,8 @@ else
 }
 
 //for troubleshooting purposes only
-echo $sqlQuery;
-die();
+//echo $sqlQuery;
+//die();
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && ($govtagencyid > 0) && (strlen($usrname) > 0) && (strlen($usrpassword) > 0))
 {
