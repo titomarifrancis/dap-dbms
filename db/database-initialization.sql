@@ -149,7 +149,8 @@ create table agencycertifications (
 	approvedby integer default null references systemusers(id) on delete restrict,	
 	approveddate timestamptz default null,
 	createdby integer default null references systemusers(id) on delete restrict,
-	creationdate timestamptz not null
+	creationdate timestamptz not null,
+    --headofagency varchar(128) default null
 );
 
 create index idx_agencycertification on agencycertifications(id, certificationregnumber, certificationscope, certvalidstartdate, certvalidenddate);
