@@ -24,21 +24,12 @@ create table provinces (
 
 create index idx_province on provinces(id, provincename);
 
-create table distdivs (
-	id serial primary key,
-	distdivname varchar(24) not null,
-	regionid integer default null references regions(id) on delete restrict,
-	provinceid integer default null references provinces(id) on delete restrict,
-	creationdate timestamptz not null	
-);
-
-create index idx_distdiv on distdivs(id, distdivname);
-
 create table citymunicipality (
 	id serial primary key,
 	towncitymunicipalityname varchar(24) not null,
 	iscity boolean default false not null,
 	distdivid integer references distdivs(id) on delete restrict,
+	provinceid integer default null references provinces(id) on delete restrict,
 	creationdate timestamptz not null
 );
 
@@ -84,7 +75,6 @@ create table systemusers (
 	govtagencyid integer default null references govtagency(id) on delete restrict,
 	regionid integer default null references regions(id) on delete restrict,
 	provinceid integer default null references provinces(id) on delete restrict,
-	distdivid integer default null references distdivs(id) on delete restrict,
 	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
 	barangayid integer default null references barangays(id) on delete restrict,
 	usrname varchar(20) unique not null,
@@ -104,12 +94,10 @@ alter table userlevels add column createdby integer default null references syst
 alter table positions add column createdby integer default null references systemusers(id) on delete restrict;
 alter table regions add column createdby integer default null references systemusers(id) on delete restrict;
 alter table provinces add column createdby integer default null references systemusers(id) on delete restrict;
-alter table distdivs add column createdby integer default null references systemusers(id) on delete restrict;
 alter table citymunicipality add column createdby integer default null references systemusers(id) on delete restrict;
 alter table barangays add column createdby integer default null references systemusers(id) on delete restrict;
 alter table govtagencyclass add column createdby integer default null references systemusers(id) on delete restrict;
 alter table govtagency add column createdby integer default null references systemusers(id) on delete restrict;
---alter table agencyregprovdistdivcitymunicipalitybrgy add column createdby integer references systemusers(id) on delete restrict;
 
 create table certifications (
 	id serial primary key,
@@ -122,8 +110,10 @@ create index idx_certification on certifications(id, certificationstandard);
 
 create table certifyingbody (
 	id serial primary key,
-	ispubaccredited boolean default false,
+	ispabaccredited boolean default false
 	providerorg varchar(32) unique not null,
+	isapproved boolean default false,
+	approvedby integer default null references systemusers(id) on delete restrict, 	
 	createdby integer default null references systemusers(id) on delete restrict,
 	creationdate timestamptz not null
 );
@@ -139,8 +129,8 @@ create table agencycertifications (
 	certificationscope text not null,
 	scope_ispartial boolean default null,
 	certpdfurl text not null,
+	headofagency varchar(128) default null,
 	provinceid integer default null references provinces(id) on delete restrict,
-	distdivid integer default null references distdivs(id) on delete restrict,
 	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
 	barangayid integer default null references barangays(id) on delete restrict,
 	certvalidstartdate date not null,
@@ -149,8 +139,7 @@ create table agencycertifications (
 	approvedby integer default null references systemusers(id) on delete restrict,	
 	approveddate timestamptz default null,
 	createdby integer default null references systemusers(id) on delete restrict,
-	creationdate timestamptz not null,
-    --headofagency varchar(128) default null
+	creationdate timestamptz not null   
 );
 
 create index idx_agencycertification on agencycertifications(id, certificationregnumber, certificationscope, certvalidstartdate, certvalidenddate);
