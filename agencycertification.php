@@ -2,12 +2,13 @@
 include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
-<form enctype="multipart/form-data">
+<form method="post" action="agencycert_processor.php">
   <div class="row">
     <div class="large-12 columns">
 		<label>Government Agency
-			<select>
+			<select name="govtagencyid">
 	<?php
+
 	if(isset($govtAgencyId))
 	{
 		$getAgenciesQuery = 'select id, agencyname from govtagency where id='.$govtAgencyId.' order by agencyname';
@@ -30,14 +31,15 @@ include 'dbconn.php';
 	</div>
     <div class="large-12 columns">
 	<?php
+/*
 	if(isset($regionId))
 	{
 		$getRegionsQuery = 'select id, regionname from regions where id='.$regionId.'order by regionname asc';
 	}
 	else
-	{
+	{*/
 		$getRegionsQuery = 'select id, regionname from regions order by regionname asc';
-	}	
+	//}	
 	$regionStmt= $dbh->query($getRegionsQuery);
 	?>
 		<label>Region
@@ -46,7 +48,7 @@ include 'dbconn.php';
 	if(!isset($regionId))
 	{
 	?>
-		  	<option value="" selected>N/A</option>
+		  	<option value="0" selected>N/A</option>
 	<?php
 	}
 
@@ -63,51 +65,39 @@ include 'dbconn.php';
 	  <div class="large-12 columns">
 	  
 		<label>Province
-		  <select>
-			<option value="husker"></option>
-			<option value="husker">Ilocos Norte</option>
-			<option value="starbuck">Ilocos Sur</option>
-			<option value="hotdog">La Union</option>
-			<option value="apollo">Pangasinan</option>
-		  </select>
-		</label>
-	  </div>
-	  <div class="large-12 columns">
-		<label>District/Division
-		  <select>
-			<option value="husker"></option>
-			<option value="husker">District 1</option>
-			<option value="starbuck">District 2</option>
+		  <select name="provinceid">
+			<option value="0"></option>
+			<option value="1">Ilocos Norte</option>
+			<option value="2">Ilocos Sur</option>
+			<option value="3">La Union</option>
+			<option value="4">Pangasinan</option>
 		  </select>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
 		<label>City/Municiplaity
-		  <select>
-			<option value="husker"></option>
-			<option value="husker">Laoag</option>
-			<option value="starbuck">Adams</option>
-			<option value="hotdog">Bacarra</option>
-			<option value="apollo">Bangui</option>
-			<option value="starbuck">Carasi</option>
-			<option value="hotdog">Dumalneg</option>
-			<option value="apollo">Pasuquin</option>
-			<option value="starbuck">Piddig</option>
-			<option value="hotdog">Sarrat (San Miguel)</option>
-			<option value="apollo">Vintar</option>
-			<option value="starbuck">Burgos (Nagparitan)</option>
-			<option value="hotdog">Pagudpud</option>
+		  <select name="citymunicipalityid">
+			<option value="0"></option>
+			<option value="1">Laoag</option>
+			<option value="2">Adams</option>
+			<option value="3">Bacarra</option>
+			<option value="4">Bangui</option>
+			<option value="5">Carasi</option>
+			<option value="6">Dumalneg</option>
+			<option value="7">Pasuquin</option>
+			<option value="8">Piddig</option>
+			<option value="9">Sarrat (San Miguel)</option>
 		  </select>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
 		<label>Barangay
-		  <select>
-			<option value="husker"></option>
-			<option value="husker">Barangay No. 1, San Lorenzo</option>
-			<option value="starbuck">Barangay No. 2, Santa Joaquina</option>
-			<option value="hotdog">Barangay No. 3, Nuestra Señora del Rosario</option>
-			<option value="apollo">Barangay No. 4, San Guillermo</option>
+		  <select name="barangayid">
+			<option value="0"></option>
+			<option value="1">Barangay No. 1, San Lorenzo</option>
+			<option value="2">Barangay No. 2, Santa Joaquina</option>
+			<option value="3">Barangay No. 3, Nuestra Señora del Rosario</option>
+			<option value="4">Barangay No. 4, San Guillermo</option>
 		  </select>
 		</label>
 	  </div>
@@ -117,7 +107,7 @@ include 'dbconn.php';
 	$certificationStmt= $dbh->query($getCertificationsQuery);
 	?>	  
 			<label>Certification
-			  <select>
+			  <select name="certificationid">
 	<?php
 	foreach($certificationStmt as $certificationRow)
 	{
@@ -129,22 +119,67 @@ include 'dbconn.php';
 	?>
 			  </select>
 			</label>
-		  </div>	  
-	  <div class="large-12 columns">
-		<label>Upload Certification File
-		<input type="file" name="fileToUpload" id="fileToUpload" placeholder="Certification File to be Uploaded Here">
+		  </div>
+
+		  <div class="large-12 columns">
+	<?php
+	$getCertifyingBodyQuery = 'select id, providerorg from certifyingbody order by providerorg asc';
+	$certifyingBodyStmt= $dbh->query($getCertifyingBodyQuery);
+	?>	  
+			<label>Certifying Body
+			  <select name="certifyingbodyid">
+	<?php
+	foreach($certifyingBodyStmt as $certifyingBodyRow)
+	{
+	?>
+				<option value="<?php echo rtrim($certifyingBodyRow['id']);?>"><?php echo rtrim($certifyingBodyRow['providerorg']);?></option>
+	<?php
+	}
+
+	?>
+			  </select>
+			</label>
+		  </div>
+
+	<div class="large-12 columns">
+		<label>Certification Registration Number
+			<input type="text" name="certificationregnumber" id="certificationregnumber" placeholder="Certification Registration Number Here">
 		</label>
-	  </div>
-	  <div class="large-6 columns">
+	</div>
+
+	<div class="large-12 columns">
+		<label>Certification Scope
+			<input type="text" name="certificationscope" id="certificationscope" placeholder="Certification Scope">
+		</label>
+	</div>
+
+	<div class="large-12 columns">
+		<label>Head of Agency During Certification
+			<input type="text" name="headofagency" id="headofagency" placeholder="Head of Agency During Certification">
+		</label>
+	</div>
+
+	<div class="large-12 columns">
+		<label>Certification Scope Is Partial?
+			<input type="checkbox" name="scope_ispartial" id="scope_ispartial" placeholder="Certification Scope Is Partial?">
+		</label>
+	</div>	
+	<div class="large-6 columns">
 		<label>Validity From Date
-		  <input type="date" placeholder="Start Date" />
+		  <input type="date" name="certvalidstartdate" placeholder="Start Date" />
 		</label>
 	  </div>	  
 	  <div class="large-6 columns">
 		<label>Validity Until Date
-		  <input type="date" placeholder="End date" />
+		  <input type="date" name="certvalidenddate" placeholder="End date" />
 		</label>
 	  </div>
+	  <div class="large-12 columns">
+		<label>Upload Certification File in PDF
+		<input type="file" name="fileToUpload" id="fileToUpload" placeholder="Certification File to be Uploaded Here">
+		</label>
+	  </div>
+
 	  <div class="large-12 columns">
 	  		<input type="submit" class="button expand" value="Save"/>
 	  </div>	  	  	  	  	  	
