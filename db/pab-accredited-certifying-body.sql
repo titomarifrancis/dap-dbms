@@ -1,8 +1,8 @@
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'Brixton Assessment Services', 1, NOW());
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'Bureau Veritas Certification Philippines', 1, NOW());
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'Certification International Philippines, Inc (CIPI)', 1, NOW());
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'SGS Philippines, Inc - CBE', 1, NOW());
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'SOCOTEC Certification Philippines Inc. (formerly AJA Registrars Inc)', 1, NOW());
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'TUV NORD Philippines, Inc.', 1, NOW());
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'TUV Rheinland Philippines, Inc.', 1, NOW());
-insert into certifyingbody(ispabaccredited,	providerorg, creationdate) values(1, 'TUV SUD PSB Philippines Inc.', 1, NOW());
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'Brixton Assessment Services', 'TRUE', 'NOW()');
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'Bureau Veritas Certification Philippines', 'TRUE', 'NOW()');
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'Certification International Philippines, Inc (CIPI)', 'TRUE', 'NOW()');
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'SGS Philippines, Inc - CBE', 'TRUE', 'NOW()');
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'SOCOTEC Certification Philippines Inc. (formerly AJA Registrars Inc)', 'TRUE', 'NOW()');
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'TUV NORD Philippines, Inc.', 'TRUE', 'NOW()');
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'TUV Rheinland Philippines, Inc.', 'TRUE', 'NOW()');
+insert into certifyingbody(ispabaccredited,	providerorg, isapproved, creationdate) values('TRUE', 'TUV SUD PSB Philippines Inc.', 'TRUE', 'NOW()');

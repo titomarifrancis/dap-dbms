@@ -109,7 +109,7 @@ create index idx_certification on certifications(id, certificationstandard);
 create table certifyingbody (
 	id serial primary key,
 	ispabaccredited boolean default false,
-	providerorg varchar(32) unique not null,
+	providerorg varchar(128) unique not null,
 	isapproved boolean default false,
 	approvedby integer default null references systemusers(id) on delete restrict, 	
 	createdby integer default null references systemusers(id) on delete restrict,
