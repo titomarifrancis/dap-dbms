@@ -7,7 +7,7 @@ $username= $_POST['usernameField'];
 $password= $_POST['passwordField'];
 
 //verify from DB that username provided exists
-$loginUsernameQuery= "select id, concat(firstname, ' ',lastname) as fullname, govtagencyid, regionid, provinceid, distdivid, citymunicipalityid, barangayid, usrname, usrpassword, usrpasswdsalt, userlevelid from systemusers where usrname='titomarifrancis' and isapproved='TRUE'";
+$loginUsernameQuery= "select id, concat(firstname, ' ',lastname) as fullname, govtagencyid, regionid, provinceid, citymunicipalityid, barangayid, usrname, usrpassword, usrpasswdsalt, userlevelid from systemusers where usrname='$username' and isapproved='TRUE'";
 $loginStmt= $dbh->query($loginUsernameQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach($loginStmt as $loginRow)
@@ -20,7 +20,6 @@ foreach($loginStmt as $loginRow)
     $govtAgencyId= $loginRow['govtagencyid'];
     $regionId= $loginRow['regionid'];
     $provinceId= $loginRow['provinceid'];
-    $distdivId= $loginRow['distdivid'];
     $cityMunicipalityId= $loginRow['citymunicipalityid'];
     $barangayId= $loginRow['barangayid'];
 }
@@ -68,12 +67,6 @@ if(validate_hash($password, $dbProvPasswd, $dbProvPasswdSalt))
     {
         //
         $_SESSION['provinceId']= $provinceId;
-    }
-    
-    if($distdivId !== '')
-    {
-        //
-        $_SESSION['distdivId']= $distdivId;
     }
     
     if($cityMunicipalityId !== '')
