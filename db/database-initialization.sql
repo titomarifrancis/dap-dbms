@@ -28,7 +28,6 @@ create table citymunicipality (
 	id serial primary key,
 	towncitymunicipalityname varchar(24) not null,
 	iscity boolean default false not null,
-	distdivid integer references distdivs(id) on delete restrict,
 	provinceid integer default null references provinces(id) on delete restrict,
 	creationdate timestamptz not null
 );
@@ -91,7 +90,6 @@ create table systemusers (
 create index idx_systemuser on systemusers(id, lastname, firstname, midname, extname, usrname, usrpassword);
 
 alter table userlevels add column createdby integer default null references systemusers(id) on delete restrict;
-alter table positions add column createdby integer default null references systemusers(id) on delete restrict;
 alter table regions add column createdby integer default null references systemusers(id) on delete restrict;
 alter table provinces add column createdby integer default null references systemusers(id) on delete restrict;
 alter table citymunicipality add column createdby integer default null references systemusers(id) on delete restrict;
@@ -110,7 +108,7 @@ create index idx_certification on certifications(id, certificationstandard);
 
 create table certifyingbody (
 	id serial primary key,
-	ispabaccredited boolean default false
+	ispabaccredited boolean default false,
 	providerorg varchar(32) unique not null,
 	isapproved boolean default false,
 	approvedby integer default null references systemusers(id) on delete restrict, 	
