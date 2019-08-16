@@ -36,7 +36,6 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel >= 2))
 ?> 
                                 <li class="sidebar-sl"><a href="regionlistmanager.php" class="sidebar-slink">Region List Manager</a></li>
                                 <li class="sidebar-sl"><a href="provincelistmanager.php" class="sidebar-slink">Province List Manager</a></li>
-                                <li class="sidebar-sl"><a href="distdivlistmanager.php" class="sidebar-slink">District/Division List Manager</a></li>
                                 <li class="sidebar-sl"><a href="citymunicipalitylistmanager.php" class="sidebar-slink">City/Municipality List Manager</a></li>
                                 <li class="sidebar-sl"><a href="barangaylistmanager.php" class="sidebar-slink">Barangay List Manager</a></li>
 <?php
