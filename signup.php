@@ -51,7 +51,7 @@ include 'dbconn.php';
 	?>
       <label>Government Agency
         <select name="govtagencyid">
-			<option value="" selected>Please select one</option>
+			<option value="0" selected>Please select one</option>
 	<?php
 	foreach($agencyStmt as $row)
 	{
@@ -71,7 +71,7 @@ include 'dbconn.php';
 	?>
 		<label>Region
 		  <select name="regionid">
-		  	<option value="" selected>N/A</option>		  
+		  	<option value="0" selected>N/A</option>		  
 	<?php
 	foreach($regionStmt as $regionRow)
 	{
@@ -86,7 +86,11 @@ include 'dbconn.php';
 	  <div class="large-12 columns">
 		<label>Province
 		  <select name="provinceid">
-		  	<option value="" selected>N/A</option>		  
+		  	<option value="0" selected>N/A</option>
+	<?php
+
+	?>		  
+		  	<option value="1" selected>Albay</option>		  
 			<option value="husker">Ilocos Norte</option>
 			<option value="starbuck">Ilocos Sur</option>
 			<option value="hotdog">La Union</option>
@@ -95,19 +99,10 @@ include 'dbconn.php';
 		</label>
 	  </div>
 	  <div class="large-12 columns">
-		<label>District/Division
-		  <select name="distdivid">
-		  	<option value="" selected>N/A</option>
-			<option value="husker">District 1</option>
-			<option value="starbuck">District 1</option>
-		  </select>
-		</label>
-	  </div>
-	  <div class="large-12 columns">
 		<label>City/Municiplaity
 		  <select name="citymunicipalityid">
-		  	<option value="" selected>N/A</option>
-			<option value="husker">Laoag</option>
+		  	<option value="0" selected>N/A</option>
+			<option value="1">Ligao</option>
 			<option value="starbuck">Adams</option>
 			<option value="hotdog">Bacarra</option>
 			<option value="apollo">Bangui</option>
@@ -126,8 +121,8 @@ include 'dbconn.php';
 	  <div class="large-12 columns">
 		<label>Barangay
 		  <select name="barangayid">
-		  	<option value="" selected>N/A</option>
-			<option value="husker">Barangay No. 1, San Lorenzo</option>
+		  	<option value="NULL" selected>N/A</option>
+			<option value="1">Tuburan</option>
 			<option value="starbuck">Barangay No. 2, Santa Joaquina</option>
 			<option value="hotdog">Barangay No. 3, Nuestra Señora del Rosario</option>
 			<option value="apollo">Barangay No. 4, San Guillermo</option>
