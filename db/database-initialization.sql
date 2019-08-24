@@ -79,7 +79,7 @@ create table systemusers (
 	usrname varchar(20) unique not null,
 	usrpassword varchar(128) not null,
     usrpasswdsalt varchar(128) not null,
-	userlevelid integer default 1 references userlevels(id) on delete restrict check(userlevelid < 4),
+	userlevelid integer default 1 references userlevels(userlevel) on delete restrict check(userlevelid < 4),
 	isapproved boolean default false,
 	approvedby integer default null references systemusers(id) on delete restrict,
 	approveddate timestamptz default null,

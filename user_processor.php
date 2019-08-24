@@ -15,9 +15,10 @@ else
     include 'dbconn.php';
 }
 
-$queryArray= [];
-$paramList= '';
-$valueList= '';
+$queryArray = [];
+$paramList = '';
+$valueList = '';
+$updateParam = '';
 if(isset($_REQUEST['lastname']) && (($_REQUEST['lastname'] !== 0) || ($_REQUEST['lastname'] !=='')))
 {
     //
@@ -61,7 +62,7 @@ if(isset($_REQUEST['firstname']) && (($_REQUEST['firstname'] !== 0) || ($_REQUES
     else
     {
         $valueList = "".$valueList.", '".$queryArray['firstname']."'";
-    }      
+    }         
 }
 
 if(isset($_REQUEST['midname']) && (($_REQUEST['midname'] !== 0) || ($_REQUEST['midname'] !=='')))
@@ -130,7 +131,7 @@ if(isset($_REQUEST['contactmobile']) && ((strlen($_REQUEST['contactmobile']) > 0
     else
     {
         $valueList = "".$valueList.", '".$queryArray['contactmobile']."'";
-    }        
+    }
 }
 
 if(isset($_REQUEST['contactlandline']) && ((strlen($_REQUEST['contactlandline']) > 0) || ($_REQUEST['contactlandline'] !=='')))
@@ -153,7 +154,7 @@ if(isset($_REQUEST['contactlandline']) && ((strlen($_REQUEST['contactlandline'])
     else
     {
         $valueList = "".$valueList.", '".$queryArray['contactlandline']."'";
-    }     
+    }
 }
 
 if(isset($_REQUEST['contactemail']) && (($_REQUEST['contactemail'] !== 0) || ($_REQUEST['contactemail'] !=='')))
@@ -176,7 +177,7 @@ if(isset($_REQUEST['contactemail']) && (($_REQUEST['contactemail'] !== 0) || ($_
     else
     {
         $valueList = "".$valueList.", '".$queryArray['contactemail']."'";
-    }         
+    }
 }
 
 if(isset($_REQUEST['position']) && (strlen($_REQUEST['position']) > 0) || ($_REQUEST['position'] !==''))
@@ -199,7 +200,7 @@ if(isset($_REQUEST['position']) && (strlen($_REQUEST['position']) > 0) || ($_REQ
     else
     {
         $valueList = "".$valueList.", '".$queryArray['position']."'";
-    }      
+    }
 }
 
 if(isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] >= 1))
@@ -222,7 +223,7 @@ if(isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] >= 1))
     else
     {
         $valueList = "".$valueList.", ".$queryArray['govtagencyid']."";
-    }           
+    }
 }
 
 if(isset($_REQUEST['regionid']) && ($_REQUEST['regionid'] >= 1))
@@ -245,7 +246,7 @@ if(isset($_REQUEST['regionid']) && ($_REQUEST['regionid'] >= 1))
     else
     {
         $valueList = ''.$valueList.', '.$queryArray['regionid'].'';
-    }     
+    }
 }
 
 if(isset($_REQUEST['provinceid']) && ($_REQUEST['provinceid'] >= 1))
@@ -268,7 +269,7 @@ if(isset($_REQUEST['provinceid']) && ($_REQUEST['provinceid'] >= 1))
     else
     {
         $valueList = ''.$valueList.', '.$queryArray['provinceid'].'';
-    }     
+    }
 }
 
 if(isset($_REQUEST['citymunicipalityid']) && ($_REQUEST['citymunicipalityid'] >= 1))
@@ -291,7 +292,7 @@ if(isset($_REQUEST['citymunicipalityid']) && ($_REQUEST['citymunicipalityid'] >=
     else
     {
         $valueList = ''.$valueList.', '.$queryArray['citymunicipalityid'].'';
-    }        
+    }
 }
 
 if(isset($_REQUEST['barangayid']) && ($_REQUEST['barangayid'] >= 1))
@@ -314,7 +315,7 @@ if(isset($_REQUEST['barangayid']) && ($_REQUEST['barangayid'] >= 1))
     else
     {
         $valueList = ''.$valueList.', '.$queryArray['barangayid'].'';
-    }     
+    }
 }
 
 if(isset($_REQUEST['usrname']) && ((strlen($_REQUEST['usrname']) > 0) || ($_REQUEST['usrname'] !=='')))
@@ -337,7 +338,7 @@ if(isset($_REQUEST['usrname']) && ((strlen($_REQUEST['usrname']) > 0) || ($_REQU
     else
     {
         $valueList = "".$valueList.", '".$queryArray['usrname']."'";
-    }     
+    }
 }
 
 if(isset($_REQUEST['usrpassword']) && ((strlen($_REQUEST['usrpassword']) > 0) || ($_REQUEST['usrpassword'] !=='')))
@@ -366,7 +367,89 @@ if(isset($_REQUEST['usrpassword']) && ((strlen($_REQUEST['usrpassword']) > 0) ||
     }          
 }
 
-$sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
+#userlevelid
+if(isset($_REQUEST['userlevelid']))
+{
+    $userlevelid = $_REQUEST['userlevelid'];
+    $queryArray['userlevelid'] = $userlevelid;
+    if(strlen($paramList) < 1)
+    {
+        $paramList .= 'userlevelid';
+    }
+    else
+    {
+        $paramList .= ', userlevelid';
+    }
+    if(strlen($valueList) < 1)
+    {
+        $valueList = "". $queryArray['userlevelid']."";
+    }
+    else
+    {
+        $valueList = "".$valueList.", ".$queryArray['userlevelid']."";
+    }
+}
+
+#isapproved
+if(isset($_REQUEST['isapproved']) && isset($loggedInUserId))
+{
+    $isapproved = $_REQUEST['isapproved'];
+    $queryArray['isapproved'] = $isapproved;
+    if(strlen($paramList) < 1)
+    {
+        $paramList .= 'isapproved, approvedby, approveddate';
+    }
+    else
+    {
+        $paramList .= ', isapproved, approvedby, approveddate';
+    }
+    if(strlen($valueList) < 1)
+    {
+        $valueList = "'". $queryArray['isapproved']."', '".$loggedInUserId."'
+        , 'NOW()'";
+    }
+    else
+    {
+        $valueList = "".$valueList.", '".$queryArray['isapproved']."', '".$loggedInUserId."', 'NOW()'";
+    }
+}
+
+if(isset($_REQUEST['userId']))
+{
+    //update
+    $userId = $_REQUEST['userId'];
+    $paramArray = explode(",", $paramList);
+    $valueArray = explode(",", $valueList);
+    $paramCount = count($paramArray);
+    $valueCount = count($valueArray);
+    //echo "There are $paramCount and $valueCount<br/>";
+    $updateList = '';
+    if($paramCount == $valueCount)
+    {
+        //list per location
+        for($ctr= 0; $ctr < $paramCount; $ctr++)
+        {
+            if(strlen($updateList) < 1)
+            {
+                $updateList .= "$paramArray[$ctr]=$valueArray[$ctr]";
+            }
+            else
+            {
+                $updateList .= ", $paramArray[$ctr]=$valueArray[$ctr]";
+            }
+        }
+    }
+
+    $sqlQuery = "UPDATE systemusers SET $updateList WHERE id= $userId";
+}
+else
+{
+    //insert
+    $sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
+}
+
+//echo $sqlQuery;
+//die();
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0) && (strlen($usrpassword) > 0))
 {
