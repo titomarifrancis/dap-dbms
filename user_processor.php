@@ -179,7 +179,7 @@ if(isset($_REQUEST['contactemail']) && (($_REQUEST['contactemail'] !== 0) || ($_
     }         
 }
 
-if(isset($_REQUEST['position']) && ((strlen$_REQUEST['position']) > 0) || ($_REQUEST['position'] !=='')))
+if(isset($_REQUEST['position']) && (strlen($_REQUEST['position']) > 0) || ($_REQUEST['position'] !==''))
 {
     //
     $position = $_REQUEST['position'];
@@ -366,76 +366,7 @@ if(isset($_REQUEST['usrpassword']) && ((strlen($_REQUEST['usrpassword']) > 0) ||
     }          
 }
 
-//if(isset($_REQUEST['userId']))
-//{
-//	$userId = $_REQUEST['userId'];
-//}
-
-//print_r($queryArray);
-//echo "<br/>";
-//echo $paramList;
-//echo "<br/>";
-//echo $valueList;
-//echo "<br/>";
-//die();
-
-/*
-if(isset() && (( !== 0) || ( !=='')))
-{
-    //
-}
-
-if(isset() && (( !== 0) || ( !=='')))
-{
-    //
-}
-*/
-/*
-foreach($queryArray as $key => $value)
-{
-    //
-    echo $key $value;
-}
-*/
-
-//should create an array of non-empty variables to be fed into the insert query builder
-
-//echo "$lastname $firstname $midname $extname $contactmobile $contactlandline $contactemail $position $govtagencyid $regionid $provinceid $citymunicipalityid $barangayid $usrname $usrpassword";
-//die();
-
-//echo "$magicWord $spices";
-//die();
-/*
-if(isset($_REQUEST['userId']))
-{
-    $userId = $_REQUEST['userId'];
-    $sqlQuery = 'UPDATE systemusers set
-        lastname = '$lastname',
-        firstname = '$firstname',
-        midname = '$midname',
-        extname = '$extname',
-        position = '$position',
-        contactlandline = '$contactlandline',
-        contactmobile = '$contactmobile',
-        contactemail = '$contactemail',
-        govtagencyid = '$govtagencyid',
-        regionid = '$regionid',
-        provinceid = '$provinceid',
-        citymunicipalityid = '$citymunicipalityid',
-        barangayid = '$barangayid',
-        usrname = '$usrname',
-        usrpassword = '$usrpassword',
-        where id = '$userId''; 
-}
-else
-{*/
-    $sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
-//}
-
-//for troubleshooting purposes only
-//echo $sqlQuery;
-//die();
-
+$sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0) && (strlen($usrpassword) > 0))
 {
