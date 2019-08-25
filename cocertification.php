@@ -6,12 +6,9 @@ include 'dbconn.php';
 
 $getAgenciesQuery = 'select id, agencyname from govtagency where govtagencyclassid=1 order by agencyname';
 $numrecords= $dbh->query($getAgenciesQuery)->rowCount();
-
-/*
-echo "There are $numrecords records";
-die();
-*/
-
+?>
+<h3>Constitutional Offices Certification</h3>
+<?php
 if($numrecords > 0)
 {
     //
@@ -50,7 +47,6 @@ if($numrecords > 0)
                         </tr>                    
     <?php	
     }
-    
     include 'templates/tablefooter/php';    
 }
 else

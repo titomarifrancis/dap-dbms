@@ -6,12 +6,9 @@ include 'dbconn.php';
 
 $getAgenciesQuery = 'select id, agencyname from govtagency where govtagencyclassid=5 order by agencyname';
 $numrecords= $dbh->query($getAgenciesQuery)->rowCount();
-
-/*
-echo "There are $numrecords records";
-die();
-*/
-
+?>
+<h3>National Government Agencies Certification</h3>
+<?php
 if($numrecords > 0)
 {
     //
