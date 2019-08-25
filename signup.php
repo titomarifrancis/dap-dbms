@@ -2,6 +2,7 @@
 include 'templates/header.php';
 include 'dbconn.php';
 ?>
+<h3>User Signup</h3>
 <form action="user_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">

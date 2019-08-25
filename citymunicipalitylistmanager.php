@@ -2,6 +2,7 @@
 include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
+<h3>City/Municipality List Manager</h3>
 <form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
@@ -43,28 +44,13 @@ foreach($getProvinceStmt as $getProvinceRow)
 		</label>
 	</div>
     <div class="large-12 columns">
-		<label>District/Division
-			<select>
-<?php
-
-    $getDistdiv=  'select id, distdivname from distdivs order by distdivname';
-//}
-$getDistdivStmt= $dbh->query($getDistdiv);
-
-foreach($getDistdivStmt as $distdivRow)
-{
-?>
-    //
-                <option value="<?php echo rtrim($distdivRow['id']);?>"><?php echo rtrim($distdivRow['distdivname']);?></option>
-<?php
-}
-?>            
-            </select>
-		</label>
-	</div>    
-    <div class="large-12 columns">
-        <input type="text" name="govtagencydesc" placeholder="City or Municipality Name">
+        <label>City/Municipality
+            <input type="text" name="govtagencydesc" placeholder="City or Municipality Name">
     </div>
+    <div class="large-12 columns">
+        <label>City?
+            <input type="checkbox" name="iscity" placeholder="City or Municipality Name">
+    </div>    
     <div class="large-12 columns">
         <input type="submit" class="button expand" value="Save to Add"/>
     </div>          

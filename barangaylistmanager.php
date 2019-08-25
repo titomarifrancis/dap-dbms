@@ -2,6 +2,7 @@
 include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
+<h3>Barangay List Management</h3>
 <form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
