@@ -1,6 +1,7 @@
 <?php
 include 'templates/header.php';
 ?>
+<h3>Login</h3>
 <form action="login_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">
