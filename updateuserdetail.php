@@ -2,6 +2,7 @@
 include 'templates/headerin.php';
 include 'dbconn.php';
 
+$userId = '';
 if(isset($_REQUEST['userid']))
 {
 	$userId= $_REQUEST['userid'];
@@ -53,10 +54,17 @@ if(isset($_REQUEST['userid']))
     <div class="large-12 columns">
       <label>Lastname
 <?php
-if(isset($lastname))
+if(isset($userId) && ($userId !== ''))
 {
 ?>
 	<input type="hidden" name="userId" value="<?php echo $userId;?>">
+<?php
+}
+
+if(isset($lastname))
+{
+?>
+	
 	<input type="text" name="lastname" value="<?php echo $lastname;?>" />
 <?php
 }
