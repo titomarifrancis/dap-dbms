@@ -405,13 +405,35 @@ if(isset($_REQUEST['isapproved']) && isset($loggedInUserId))
     }
     if(strlen($valueList) < 1)
     {
-        $valueList = "'". $queryArray['isapproved']."', '".$loggedInUserId."'
-        , 'NOW()'";
+        $valueList = "'". $queryArray['isapproved']."', '".$loggedInUserId."', 'NOW()'";
     }
     else
     {
         $valueList = "".$valueList.", '".$queryArray['isapproved']."', '".$loggedInUserId."', 'NOW()'";
     }
+}
+
+if(isset($loggedInUserId) && (!isset($_REQUEST['userId'])))
+{
+    //this is a user creation process while logged in as a user
+    $createdby = $loggedInUserId;
+    $queryArray['createdby'] = $createdby;
+    if(strlen($paramList) < 1)
+    {
+        $paramList .= 'createdby';
+    }
+    else
+    {
+        $paramList .= ', createdby';
+    }
+    if(strlen($valueList) < 1)
+    {
+        $valueList = "'".$queryArray['createdby']."'";
+    }
+    else
+    {
+        $valueList = "".$valueList.", '".$queryArray['createdby']."'";
+    }       
 }
 
 if(isset($_REQUEST['userId']))
@@ -422,7 +444,7 @@ if(isset($_REQUEST['userId']))
     $valueArray = explode(",", $valueList);
     $paramCount = count($paramArray);
     $valueCount = count($valueArray);
-    //echo "There are $paramCount and $valueCount<br/>";
+
     $updateList = '';
     if($paramCount == $valueCount)
     {
@@ -448,15 +470,11 @@ else
     $sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
 }
 
-//echo $sqlQuery;
-//die();
-
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0) && (strlen($usrpassword) > 0))
 {
     try
     {
         $dbh->beginTransaction();
-        //$sql= $sqlQuery;
         $dbh->query($sqlQuery);
         $dbh->commit();
     }

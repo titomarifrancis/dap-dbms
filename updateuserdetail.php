@@ -359,12 +359,12 @@ else
                     <table class="scroll hover" style="table-layout:fixed">
                         <thead>
                             <tr>
-                                <th style="width: 35%">Name</th>
-                                <th style="width: 25%">System Username</th>
+                                <th style="width: 30%">Name</th>
+                                <th style="width: 15%">System Username</th>
                                 <th style="width: 5%">User Level</th>
-                                <th style="width: 15%">Status</th>
-                                <th style="width: 15%">Created By</th>
-                                <th style="width: 15%">Date Created</th>
+                                <th style="width: 10%">Status</th>
+                                <th style="width: 23%">Created By</th>
+                                <th style="width: 27%">Date Created</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -376,21 +376,34 @@ $userListStmt= $dbh->query($userListQuery);
 
 foreach($userListStmt as $userListRow)
 {
-	echo '<tr>';
-	echo '<td><a href="updateuserdetail.php?userid='.$userListRow['id'].'"</a>';
-	echo ''.$userListRow['fullname'].' </td>';
-	echo '<td>'.$userListRow['usrname'].' </td>';
-	echo '<td>'.$userListRow['userlevel'].' </td>';
+	$creatorName = '';
+	if($userListRow['createdby'] > 0)
+	{
+		$creatorId= $userListRow['createdby'];
+		$getCreatorById = "select concat(systemusers.lastname,', ', systemusers.firstname) as creatorname from systemusers where id=$creatorId";
+		$creatorStmt= $dbh->query($getCreatorById);
+		$creatorInfo = $creatorStmt->fetchAll();
+		$creatorName = $creatorInfo[0]['creatorname'];
+	}
+
 	$status="Disabled";
 	if($userListRow['status'] == 1)
 	{
 		$status="Enabled";
 	}
-	echo '<td>'.$status.' </td>';
-	echo '<td>'.$userListRow['createdby'].' </td>';
-	echo '<td>'.$userListRow['creationdate'].' </td>';
-	echo '</tr>';
+	
+	$dateCreated = date("j F Y", strtotime($userListRow['creationdate']));
+?>
 
+                            <tr>
+                                <td><a href="updateuserdetail.php?userid=<?php echo $userListRow['id'];?>"><?php echo $userListRow['fullname'];?></td>
+                                <td><?php echo $userListRow['usrname'];?></td>
+                                <td><?php echo $userListRow['userlevel'];?></td>
+                                <td><?php echo $status;?></td>
+                                <td><?php echo $creatorName;?></th>
+                                <td><?php echo $dateCreated;?></td>
+                            </tr>
+<?php
 }
 ?>
                         </tbody>
