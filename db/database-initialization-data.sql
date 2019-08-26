@@ -15,7 +15,7 @@ insert into userlevels(userlevel, leveldesc, creationdate) values(3, 'Super Admi
 --Region 6 - Western Visayas
 --Region 7 - Central Visayas
 --Region 8 - Eastern Visayas
---Region 9 - zamboanga Peninsula
+--Region 9 - Zamboanga Peninsula
 --Region 10 - Northern Mindanao
 --Region 11 - Davao Region
 --Region 12 - SOCCSKSARGEN
@@ -32,7 +32,7 @@ insert into regions(regionname, creationdate) values('Region 5 - Bicol Region', 
 insert into regions(regionname, creationdate) values('Region 6 - Western Visayas', NOW());
 insert into regions(regionname, creationdate) values('Region 7 - Central Visayas', NOW());
 insert into regions(regionname, creationdate) values('Region 8 - Eastern Visayas', NOW());
-insert into regions(regionname, creationdate) values('Region 9 - zamboanga Peninsula', NOW());
+insert into regions(regionname, creationdate) values('Region 9 - Zamboanga Peninsula', NOW());
 insert into regions(regionname, creationdate) values('Region 10 - Northern Mindanao', NOW());
 insert into regions(regionname, creationdate) values('Region 11 - Davao Region', NOW());
 insert into regions(regionname, creationdate) values('Region 12 - SOCCSKSARGEN', NOW());
