@@ -39,4 +39,3 @@ if(isset($provinceid) && (($provinceid > 0) || ($provinceid !== 'Select region f
 }
 
 header("Location:$_SERVER[HTTP_REFERER]");
-?>
