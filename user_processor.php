@@ -68,7 +68,7 @@ if(isset($_REQUEST['firstname']) && (($_REQUEST['firstname'] !== 0) || ($_REQUES
 if(isset($_REQUEST['midname']) && (($_REQUEST['midname'] !== 0) || ($_REQUEST['midname'] !=='')))
 {
     //
-    $midname = $_REQUEST['midname'];
+    $midname = substr($_REQUEST['midname'], 0, 5);
     $queryArray['midname'] = $midname;
     if(strlen($paramList) < 1)
     {
@@ -91,7 +91,7 @@ if(isset($_REQUEST['midname']) && (($_REQUEST['midname'] !== 0) || ($_REQUEST['m
 if(isset($_REQUEST['extname']) && ((strlen($_REQUEST['extname']) > 0) || ($_REQUEST['extname'] !=='')))
 {
     //
-    $extname = $_REQUEST['extname'];
+    $extname = substr($_REQUEST['extname'], 0, 5);
     $queryArray['extname'] = $extname;
     if(strlen($paramList) < 1)
     {
@@ -157,7 +157,7 @@ if(isset($_REQUEST['contactlandline']) && ((strlen($_REQUEST['contactlandline'])
     }
 }
 
-if(isset($_REQUEST['contactemail']) && (($_REQUEST['contactemail'] !== 0) || ($_REQUEST['contactemail'] !=='')))
+if(isset($_REQUEST['contactemail']) && (strlen($_REQUEST['contactemail']) > 0))
 {
     //
     $contactemail = $_REQUEST['contactemail'];
@@ -469,6 +469,10 @@ else
     //insert
     $sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
 }
+
+//for troubleshooting purposes only
+//echo $sqlQuery;
+//die();
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0) && (strlen($usrpassword) > 0))
 {
