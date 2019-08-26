@@ -9,18 +9,14 @@ $iscity = 'FALSE';
 if($_REQUEST['iscity'] == 'on')
 {
     $iscity = 'TRUE';
-} 
-
-//echo "$regionid, $provinceid, $towncitymunicipalityname, $iscity<br/>";
-
+}
+$createdby = $loggedInUserId;
 
 if(isset($provinceid) && (($provinceid > 0) || ($provinceid !== 'Select region first')) && (isset($towncitymunicipalityname)) && (strlen($towncitymunicipalityname) > 0))
 {
     //insert to DB
-    $sqlQuery = "INSERT INTO citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate) values('$towncitymunicipalityname', '$iscity', '$provinceid', 'NOW()')";
+    $sqlQuery = "INSERT INTO citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values('$towncitymunicipalityname', '$iscity', '$provinceid', 'NOW()', '$createdby')";
 }
-//echo $sqlQuery;
-//die();
 
 if(isset($provinceid) && (($provinceid > 0) || ($provinceid !== 'Select region first')) && (isset($towncitymunicipalityname)) && (strlen($towncitymunicipalityname) > 0))
 {
