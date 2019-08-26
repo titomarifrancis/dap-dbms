@@ -226,10 +226,10 @@ if(isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] >= 1))
     }
 }
 
-if(isset($_REQUEST['regionid']) && ($_REQUEST['regionid'] >= 1))
+if(isset($_REQUEST['region']) && ($_REQUEST['region'] >= 1))
 {
     //
-    $regionid = $_REQUEST['regionid'];
+    $regionid = $_REQUEST['region'];
     $queryArray['regionid'] = $regionid;
     if(strlen($paramList) < 1)
     {
@@ -249,10 +249,10 @@ if(isset($_REQUEST['regionid']) && ($_REQUEST['regionid'] >= 1))
     }
 }
 
-if(isset($_REQUEST['provinceid']) && ($_REQUEST['provinceid'] >= 1))
+if(isset($_REQUEST['province']) && ($_REQUEST['province'] >= 1))
 {
     //
-    $provinceid = $_REQUEST['provinceid'];
+    $provinceid = $_REQUEST['province'];
     $queryArray['provinceid'] = $provinceid;
     if(strlen($paramList) < 1)
     {
@@ -272,10 +272,10 @@ if(isset($_REQUEST['provinceid']) && ($_REQUEST['provinceid'] >= 1))
     }
 }
 
-if(isset($_REQUEST['citymunicipalityid']) && ($_REQUEST['citymunicipalityid'] >= 1))
+if(isset($_REQUEST['citymunicipality']) && ($_REQUEST['citymunicipality'] >= 1))
 {
     //
-    $citymunicipalityid = $_REQUEST['citymunicipalityid'];
+    $citymunicipalityid = $_REQUEST['citymunicipality'];
     $queryArray['citymunicipalityid'] = $citymunicipalityid;
     if(strlen($paramList) < 1)
     {
@@ -295,10 +295,10 @@ if(isset($_REQUEST['citymunicipalityid']) && ($_REQUEST['citymunicipalityid'] >=
     }
 }
 
-if(isset($_REQUEST['barangayid']) && ($_REQUEST['barangayid'] >= 1))
+if(isset($_REQUEST['barangay']) && ($_REQUEST['barangay'] >= 1))
 {
     //
-    $barangayid = $_REQUEST['barangayid'];
+    $barangayid = $_REQUEST['barangay'];
     $queryArray['barangayid'] = $barangayid;
     if(strlen($paramList) < 1)
     {
