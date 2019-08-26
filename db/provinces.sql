@@ -110,3 +110,6 @@ insert into provinces (provincename, regionid, creationdate) values('Lanao del S
 insert into provinces (provincename, regionid, creationdate) values('Maguindanao', 17, NOW());
 insert into provinces (provincename, regionid, creationdate) values('Sulu', 17, NOW());
 insert into provinces (provincename, regionid, creationdate) values('Tawi-Tawi', 17, NOW());
+
+--ncr
+insert into provinces (provincename, regionid, creationdate) values('Metro Manila', 1, NOW());
