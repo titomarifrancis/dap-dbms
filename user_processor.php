@@ -18,7 +18,6 @@ else
 $queryArray = [];
 $paramList = '';
 $valueList = '';
-$updateParam = '';
 if(isset($_REQUEST['lastname']) && (($_REQUEST['lastname'] !== 0) || ($_REQUEST['lastname'] !=='')))
 {
     //
