@@ -1,10 +1,5 @@
---cordillera
-insert into provinces (provincename, regionid, creationdate) values('Abra', 16, NOW());
-insert into provinces (provincename, regionid, creationdate) values('Apayao', 16, NOW());
-insert into provinces (provincename, regionid, creationdate) values('Benguet', 16, NOW());
-insert into provinces (provincename, regionid, creationdate) values('Ifugao', 16, NOW());
-insert into provinces (provincename, regionid, creationdate) values('Kalinga', 16, NOW());
-insert into provinces (provincename, regionid, creationdate) values('Mt. Province', 16, NOW());
+--ncr
+insert into provinces (provincename, regionid, creationdate) values('Metro Manila', 1, NOW());
 
 --region 1
 insert into provinces (provincename, regionid, creationdate) values('Ilocos Norte', 2, NOW());
@@ -104,12 +99,17 @@ insert into provinces (provincename, regionid, creationdate) values('Dinagat Isl
 insert into provinces (provincename, regionid, creationdate) values('Surigao del Norte', 15, NOW());
 insert into provinces (provincename, regionid, creationdate) values('Surigao del Sur', 15, NOW());
 
+--cordillera
+insert into provinces (provincename, regionid, creationdate) values('Abra', 16, NOW());
+insert into provinces (provincename, regionid, creationdate) values('Apayao', 16, NOW());
+insert into provinces (provincename, regionid, creationdate) values('Benguet', 16, NOW());
+insert into provinces (provincename, regionid, creationdate) values('Ifugao', 16, NOW());
+insert into provinces (provincename, regionid, creationdate) values('Kalinga', 16, NOW());
+insert into provinces (provincename, regionid, creationdate) values('Mt. Province', 16, NOW());
+
 --ARMM
 insert into provinces (provincename, regionid, creationdate) values('Basilan', 17, NOW());
 insert into provinces (provincename, regionid, creationdate) values('Lanao del Sur', 17, NOW());
 insert into provinces (provincename, regionid, creationdate) values('Maguindanao', 17, NOW());
 insert into provinces (provincename, regionid, creationdate) values('Sulu', 17, NOW());
 insert into provinces (provincename, regionid, creationdate) values('Tawi-Tawi', 17, NOW());
-
---ncr
-insert into provinces (provincename, regionid, creationdate) values('Metro Manila', 1, NOW());
