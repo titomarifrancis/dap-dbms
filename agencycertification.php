@@ -173,17 +173,18 @@ $(function(){
 	  </div>
 	  <div class="large-12 columns">
 		<label>Upload Certification File in PDF
-		<input type="file" name="uploadedFile" id="uploadedFile" placeholder="Certification File to be Uploaded Here">
+		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf" placeholder="Certification File to be Uploaded Here">
 		</label>
 	  </div>
-
-	  <div class="large-12 columns">
-            <label>Enable/Approve Agency Certification Entry
-                <p>
 <?php
 //this only appears to DAP user
 if(isset($loggedInAccessLevel) && $loggedInAccessLevel > 1)
 {
+?>
+	  <div class="large-12 columns">
+            <label>Enable/Approve Agency Certification Entry
+                <p>
+<?php
 	if($isapproved == 1)
 	{
 	?>

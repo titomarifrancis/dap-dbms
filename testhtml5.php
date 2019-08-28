@@ -50,7 +50,7 @@ $stringInitial= substr($stringInput, 1, 1);
 echo "<h3>$stringInitial</h3>";
 
 ?>
-<form id="companyForm" >
+<form id="companyForm"  method="post" action="testhtml5_processor.php" enctype="multipart/form-data" >
     
 <div class="row">
     <div class="large-12 columns">
@@ -76,7 +76,15 @@ echo "<h3>$stringInitial</h3>";
 			<select id="barangay" name="barangay">
                 <option>Select city/municipality first</option>
             </select>
-	</div>     
+	</div>
+    <div class="large-12 columns">
+		<label>Upload Certification File in PDF
+		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf">
+		</label>
+	  </div>
+	  <div class="large-12 columns">
+	  		<input type="submit" class="button expand" name="uploadBtn" value="Save"/>
+	  </div>              
 </form>
 <?php
 
