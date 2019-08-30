@@ -1,6 +1,6 @@
 create table userlevels (
 	id serial primary key,
-	userlevel integer check (userlevel < 4),
+	userlevel integer unique check (userlevel < 4),
 	leveldesc varchar(64) not null,
 	creationdate timestamptz not null
 );
