@@ -1,14 +1,11 @@
 <?php
 include 'templates/header.php';
 include 'dbconn.php';
-
-//$getAgenciesQuery = 'select govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=6 order by agencyname';
-
-$getAgenciesQuery = 'select id, agencyname from govtagency where govtagencyclassid=6 order by agencyname';
-$numrecords= $dbh->query($getAgenciesQuery)->rowCount();
 ?>
-<h3>National Government Agency-Attached Offices and Bureaus Certification</h3>
+<h3>NGA-Attached Offices and Bureaus Certification</h3>
 <?php
+$getAgenciesQuery = 'select govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=6 order by agencyname';
+$numrecords = $dbh->query($getAgenciesQuery)->rowCount();
 if($numrecords > 0)
 {
     //
@@ -20,11 +17,9 @@ if($numrecords > 0)
         $isPartial="No";
         if($row['ispartial'] == 1)
         {
-            //
             $isPartial="Yes";
         }
-
-        /*
+?>
                         <tr> 
                         <td><a href="#"><?php echo $row['agencyname'];?></a></td>
                         <td><?php echo $row['certifyingbody'];?></td>
@@ -33,28 +28,13 @@ if($numrecords > 0)
                         <td><?php echo $row['certenddate'];?></td>
                         <td><?php echo $isPartial;?></td>
                         </tr>          
-        */
-
-
-    ?>
-                        <tr> 
-                        <td><a href="<?php echo $row['id'];?>"><?php echo $row['agencyname'];?></a></td>
-                        <td><?php echo "Test Certifying Body";?></td>
-                        <td><?php echo "Test Certification";?></td>
-                        <td><?php echo "Test Start Date";?></td>
-                        <td><?php echo "Test End Date";?></td>
-                        <td><?php echo "Test Scope";?></td>
-                        </tr>                    
-    <?php	
+<?php
     }
-    
     include 'templates/tablefooter/php';    
 }
 else
 {
-?>
-    There no certifications recorded for this section
-<?php
+    echo "<p>There no certifications recorded for this section</p>";
 }
 
 include 'templates/footer.php';
