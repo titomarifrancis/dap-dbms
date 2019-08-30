@@ -128,6 +128,7 @@ create table agencycertifications (
 	scope_ispartial boolean default null,
 	certpdfurl text not null,
 	headofagency varchar(128) default null,
+	regionid integer default null references regions(id) on delete restrict,
 	provinceid integer default null references provinces(id) on delete restrict,
 	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
 	barangayid integer default null references barangays(id) on delete restrict,
