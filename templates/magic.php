@@ -24,13 +24,7 @@ if(isset($_SESSION['userId']) && isset($_SESSION['realName']))
         //
         $provinceId= $_SESSION['provinceId'];
     }
-    
-    if(isset($_SESSION['distdivId']))
-    {
-        //
-        $distdivId= $_SESSION['distdivId'];
-    }
-    
+
     if(isset($_SESSION['cityMunicipalityId']))
     {
         //
