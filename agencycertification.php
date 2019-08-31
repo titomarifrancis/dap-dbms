@@ -45,6 +45,7 @@ $(function(){
 });
 </script>
 <h3>Agency Certification Manager</h3>
+<div>
 <form method="post" action="agencycert_processor.php" enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
@@ -210,9 +211,39 @@ if(isset($loggedInAccessLevel) && $loggedInAccessLevel > 1)
 	  		<input type="submit" class="button expand" name="uploadBtn" value="Save"/>
 	  </div>	  	  	  	  	  	
 </form>
+</div>
 <br/>
+<div>
 <?php
-//a table listing agency certifications will be shown here
+//a table listing unapproved agency certifications will be shown here
+//viewable only by DAP admin
+if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
+{
+	echo "<h3>Agency Certification Requiring Approval</h3>";
+	$getUnapprovedAgencyCert = "select agencycertifications.id as agencycertid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=false and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id order by agencyname";
+	$unapprovedAgencyStmt= $dbh->query($getUnapprovedAgencyCert);
+	include 'templates/tableheader.php';
+	foreach($unapprovedAgencyStmt as $unapprovedAgencyRow)
+	{
+		$isPartial="No";
+		if($unapprovedAgencyRow['ispartial'] == 1)
+		{
+			$isPartial="Yes";
+		}
+	?>
+						<tr> 
+						<td><a href="agencycert_approval.php?id=<?php echo $unapprovedAgencyRow['agencycertid'];?>"><?php echo $unapprovedAgencyRow['agencyname'];?></a></td>
+						<td><?php echo $unapprovedAgencyRow['certifyingbody'];?></td>
+						<td><?php echo $unapprovedAgencyRow['certificationdesc'];?></td>
+						<td><?php echo $unapprovedAgencyRow['certstartdate'];?></td>
+						<td><?php echo $unapprovedAgencyRow['certenddate'];?></td>
+						<td><?php echo $isPartial;?></td>
+						</tr>          
+	<?php
+	}
+	include 'templates/tablefooter/php';
+}
 ?>
+</div>
 <?php
 include 'templates/footer.php';
