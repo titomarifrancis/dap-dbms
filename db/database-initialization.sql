@@ -137,6 +137,7 @@ create table agencycertifications (
 	isapproved boolean default false,
 	approvedby integer default null references systemusers(id) on delete restrict,	
 	approveddate timestamptz default null,
+	isexpired boolean default false,
 	createdby integer default null references systemusers(id) on delete restrict,
 	creationdate timestamptz not null   
 );
