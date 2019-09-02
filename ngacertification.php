@@ -4,7 +4,7 @@ include 'dbconn.php';
 ?>
 <h3>National Government Agencies Certification</h3>
 <?php
-$getAgenciesQuery = 'select govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=5 order by agencyname';
+$getAgenciesQuery = 'select agencycertifications.id as agencycertificationid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=5 order by agencyname';
 $numrecords = $dbh->query($getAgenciesQuery)->rowCount();
 if($numrecords > 0)
 {
@@ -21,7 +21,7 @@ if($numrecords > 0)
         }
 ?>
                         <tr> 
-                        <td><a href="#"><?php echo $row['agencyname'];?></a></td>
+                        <td><a href="agencycert_detailsec.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
                         <td><?php echo $row['certifyingbody'];?></td>
                         <td><?php echo $row['certificationdesc'];?></td>
                         <td><?php echo $row['certstartdate'];?></td>
