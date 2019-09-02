@@ -424,14 +424,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             else
             {
                 $valueList = "".$valueList.", '".$queryArray['createdby']."'";
-            }            
-
+            }
 
             //for troubleshooting purposes only
             //echo "the submitted values are $govtagencyid, $provinceid, $citymunicipalityid, $barangayid, $certificationid, $certifyingbodyid, $certificationregnumber, $certificationscope, $headofagency, $scope_ispartial, $certvalidstartdate and $certvalidenddate, $isapproved<br/>";
 
             $sqlQuery = "INSERT INTO agencycertifications($paramList, creationdate) VALUES($valueList, 'NOW()')";
-
+            
             //for troubleshooting purposes only
             //echo $sqlQuery;
             //die();
