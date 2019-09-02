@@ -30,7 +30,7 @@ if($numrecords > 0)
                         </tr>          
 <?php
     }
-    include 'templates/tablefooter/php';    
+    include 'templates/tablefooter.php';    
 }
 else
 {
