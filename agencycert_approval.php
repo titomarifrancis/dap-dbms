@@ -11,7 +11,8 @@ if(isset($_REQUEST['id']))
     $id = $_REQUEST['id'];
 }
 //echo "Agency Certification ID $id";
-$getAgencyCertforApproval = "select 
+$getAgencyCertforApproval = "select
+govtagency.id,
 govtagency.agencyname,
 certifications.certificationstandard,
 certifyingbody.providerorg,
@@ -153,7 +154,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
             </label>
         </div>
         <div class="large-12 columns">
-            <label>Upload Certification File in PDF<br/>
+            <label>Uploaded Certification File in PDF<br/>
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certpdfurl'];?>"/>
             </label>
         </div>
