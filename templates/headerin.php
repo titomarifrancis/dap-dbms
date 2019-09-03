@@ -46,6 +46,8 @@ include 'templates/magic.php';
     <link rel="stylesheet" id="flexslider_css-css" href="css/flexslider.css" type="text/css" media="all">
     <link rel="stylesheet" id="recent-posts-widget-with-thumbnails-public-style-css" href="css/public.css" type="text/css" media="all">
     <script type="text/javascript" src="js/jquery_003.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate.js"></script>
+    <!--<script type="text/javascript" src="js/wpgmza_data.js"></script>-->
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/foundation.js"></script>
     <script type="text/javascript" src="js/jquery_002.js"></script>

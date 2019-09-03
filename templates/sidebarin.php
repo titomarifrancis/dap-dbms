@@ -45,6 +45,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel >= 2))
 {
 ?>
                                 <li class="sidebar-sl"><a href="updateuserdetail.php" class="sidebar-slink">User Access Manager</a></li>
+                                <li class="sidebar-sl"><a href="agencycert_summary.php" class="sidebar-slink">Certification Summary Report</a></li>
 <?php
 }
 ?>                                
