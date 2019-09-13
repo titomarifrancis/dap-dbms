@@ -49,12 +49,12 @@ $(function(){
   <div class="row">
     <div class="large-12 columns">
       <label>Lastname
-        <input type="text" name="lastname" placeholder="Lastname" />
+        <input type="text" name="lastname" placeholder="Lastname" required/>
       </label>
     </div>
     <div class="large-12 columns">
       <label>Firstname
-        <input type="text" name="firstname" placeholder="Firstname" />
+        <input type="text" name="firstname" placeholder="Firstname" required />
       </label>
     </div>
     <div class="large-12 columns">
@@ -69,7 +69,7 @@ $(function(){
 	</div>
     <div class="large-12 columns">
       <label>Mobile Contact Number
-        <input type="text" name="contactmobile" placeholder="Mobile Contact Number" />
+        <input type="text" name="contactmobile" placeholder="Mobile Contact Number" required/>
       </label>
 	</div>
     <div class="large-12 columns">
@@ -79,7 +79,7 @@ $(function(){
 	</div>
     <div class="large-12 columns">
       <label>Email Address
-        <input type="email" name="contactemail" placeholder="Email Address" />
+        <input type="email" name="contactemail" placeholder="Email Address" required/>
       </label>
 	</div>			
     <div class="large-12 columns">
@@ -134,12 +134,12 @@ $(function(){
 
 	  <div class="large-12 columns">
 		<label>Username
-		  <input type="text" name="usrname" placeholder="Enter e-mail as username" />
+		  <input type="text" name="usrname" placeholder="Enter e-mail as username" required/>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
 		<label>Password
-		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters" />
+		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters" required/>
 		</label>
 	  </div>
       <div class="large-12 large-centered columns">

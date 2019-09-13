@@ -6,12 +6,12 @@ include 'templates/header.php';
   <div class="row">
     <div class="large-12 columns">
       <label>Username
-        <input type="text" name="usernameField" method="post" placeholder="Username" />
+        <input type="text" name="usernameField" method="post" placeholder="Username" required/>
       </label>
     </div>
     <div class="large-12 columns">
       <label>Password
-        <input type="password" name="passwordField" method="post" placeholder="Password" />
+        <input type="password" name="passwordField" method="post" placeholder="Password" required/>
       </label>
     </div>
     </div>
