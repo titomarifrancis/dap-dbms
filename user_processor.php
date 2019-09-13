@@ -473,7 +473,7 @@ else
 //echo $sqlQuery;
 //die();
 
-if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0) && (strlen($usrpassword) > 0))
+if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
     try
     {

@@ -385,7 +385,7 @@ else
 <?php
 
 //list of users: name, username, org, userlevel, status
-$userListQuery = "select systemusers.id, concat(systemusers.lastname,', ', systemusers.firstname,' ', systemusers.midname) as fullname, systemusers.usrname, userlevels.userlevel, systemusers.isapproved as status, systemusers.createdby, systemusers.creationdate from systemusers, userlevels  where userlevels.userlevel=systemusers.userlevelid and systemusers.userlevelid < 3 and systemusers.isapproved=false order by systemusers.lastname";
+$userListQuery = "select systemusers.id, concat(systemusers.lastname,', ', systemusers.firstname,' ', systemusers.midname) as fullname, systemusers.usrname, userlevels.userlevel, systemusers.isapproved as status, systemusers.createdby, systemusers.creationdate from systemusers, userlevels  where userlevels.userlevel=systemusers.userlevelid and systemusers.userlevelid < 3 order by systemusers.lastname";
 $userListStmt= $dbh->query($userListQuery);
 
 foreach($userListStmt as $userListRow)
