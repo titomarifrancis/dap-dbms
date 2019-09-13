@@ -69,7 +69,7 @@ $(function(){
 	</div>
     <div class="large-12 columns">
       <label>Mobile Contact Number
-        <input type="text" name="contactmobile" placeholder="Mobile Contact Number" required/>
+        <input type="text" name="contactmobile" placeholder="Mobile Contact Number"/>
       </label>
 	</div>
     <div class="large-12 columns">

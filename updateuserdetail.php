@@ -182,13 +182,13 @@ else
 if(isset($contactmobile))
 {
 ?>
-	<input type="text" name="contactmobile" value="<?php echo $contactmobile;?>" required/>
+	<input type="text" name="contactmobile" value="<?php echo $contactmobile;?>"/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="contactmobile" placeholder="Mobile Contact Number" required/>
+	<input type="text" name="contactmobile" placeholder="Mobile Contact Number"/>
 <?php
 }
 ?>
