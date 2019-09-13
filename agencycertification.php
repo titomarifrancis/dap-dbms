@@ -50,7 +50,7 @@ $(function(){
   <div class="row">
     <div class="large-12 columns">
 		<label>Government Agency
-			<select name="govtagencyid">
+			<select name="govtagencyid" required>
 	<?php
 
 	if(isset($govtAgencyId))
@@ -105,7 +105,7 @@ $(function(){
 	$certificationStmt= $dbh->query($getCertificationsQuery);
 	?>	  
 			<label>Certification
-			  <select name="certificationid">
+			  <select name="certificationid" required>
 	<?php
 	foreach($certificationStmt as $certificationRow)
 	{
@@ -125,7 +125,7 @@ $(function(){
 	$certifyingBodyStmt= $dbh->query($getCertifyingBodyQuery);
 	?>	  
 			<label>Certifying Body
-			  <select name="certifyingbodyid">
+			  <select name="certifyingbodyid" required>
 	<?php
 	foreach($certifyingBodyStmt as $certifyingBodyRow)
 	{
@@ -141,40 +141,40 @@ $(function(){
 
 	<div class="large-12 columns">
 		<label>Certification Registration Number
-			<input type="text" name="certificationregnumber" id="certificationregnumber" placeholder="Certification Registration Number Here">
+			<input type="text" name="certificationregnumber" id="certificationregnumber" placeholder="Certification Registration Number Here" required>
 		</label>
 	</div>
 
 	<div class="large-12 columns">
 		<label>Certification Scope
-			<input type="text" name="certificationscope" id="certificationscope" placeholder="Certification Scope">
+			<input type="text" name="certificationscope" id="certificationscope" placeholder="Certification Scope" required>
 		</label>
 	</div>
 
 	<div class="large-12 columns">
 		<label>Head of Agency During Certification
-			<input type="text" name="headofagency" id="headofagency" placeholder="Head of Agency During Certification">
+			<input type="text" name="headofagency" id="headofagency" placeholder="Head of Agency During Certification" required>
 		</label>
 	</div>
 
 	<div class="large-12 columns">
 		<label>Certification Scope Is Partial? &nbsp;
-			<input type="checkbox" name="scope_ispartial" id="scope_ispartial" placeholder="Certification Scope Is Partial?">
+			<input type="checkbox" name="scope_ispartial" id="scope_ispartial" placeholder="Certification Scope Is Partial?" required>
 		</label>
 	</div>	
 	<div class="large-6 columns">
 		<label>Validity From Date
-		  <input type="date" name="certvalidstartdate" placeholder="Start Date" />
+		  <input type="date" name="certvalidstartdate" placeholder="Start Date" required/>
 		</label>
 	  </div>	  
 	  <div class="large-6 columns">
 		<label>Validity Until Date
-		  <input type="date" name="certvalidenddate" placeholder="End date" />
+		  <input type="date" name="certvalidenddate" placeholder="End date" required/>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
 		<label>Upload Certification File in PDF
-		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf" placeholder="Certification File to be Uploaded Here">
+		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf" placeholder="Certification File to be Uploaded Here" required>
 		</label>
 	  </div>
 <?php
