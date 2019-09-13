@@ -107,13 +107,13 @@ if(isset($lastname))
 {
 ?>
 	
-	<input type="text" name="lastname" value="<?php echo $lastname;?>" />
+	<input type="text" name="lastname" value="<?php echo $lastname;?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="lastname" placeholder="Lastname" />
+	<input type="text" name="lastname" placeholder="Lastname" required/>
 <?php
 }
 ?>		
@@ -126,13 +126,13 @@ else
 if(isset($firstname))
 {
 ?>
-	<input type="text" name="firstname" value="<?php echo $firstname;?>" />	
+	<input type="text" name="firstname" value="<?php echo $firstname;?>" required/>	
 <?php
 }	  
 else
 {
 ?>
-	<input type="text" name="firstname" placeholder="Firstname" />
+	<input type="text" name="firstname" placeholder="Firstname" required/>
 <?php
 }
 ?>
@@ -182,13 +182,13 @@ else
 if(isset($contactmobile))
 {
 ?>
-	<input type="text" name="contactmobile" value="<?php echo $contactmobile;?>" />
+	<input type="text" name="contactmobile" value="<?php echo $contactmobile;?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="contactmobile" placeholder="Mobile Contact Number" />
+	<input type="text" name="contactmobile" placeholder="Mobile Contact Number" required/>
 <?php
 }
 ?>
@@ -219,13 +219,13 @@ else
 if(isset($contactemail))
 {
 ?>
-	<input type="email" name="contactemail" value="<?php echo $contactemail;?>" />
+	<input type="email" name="contactemail" value="<?php echo $contactemail;?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="email" name="contactemail" placeholder="Email Address" />
+	<input type="email" name="contactemail" placeholder="Email Address" required/>
 <?php
 }
 ?>
@@ -257,7 +257,7 @@ else
 	$agencyStmt= $dbh->query($getAgenciesQuery);
 	?>
       <label>Government Agency
-        <select name="govtagencyid">
+        <select name="govtagencyid" required>
 			<option value="0" selected>Please select one</option>
 	<?php
 	foreach($agencyStmt as $row)
@@ -302,13 +302,13 @@ else
 if(isset($usrname) && (strlen($usrname) > 0))
 {
 ?>
-	<input type="text" name="usrname" value="<?php echo $usrname;?>" />
+	<input type="text" name="usrname" value="<?php echo $usrname;?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="usrname" placeholder="Enter e-mail as username" />
+	<input type="text" name="usrname" placeholder="Enter e-mail as username" required/>
 <?php
 }
 ?>		
@@ -317,7 +317,7 @@ else
 	  </div>
 	  <div class="large-12 columns">
 		<label>Password
-		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters" />
+		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters" required/>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
@@ -326,7 +326,7 @@ else
 	$levelStmt= $dbh->query($getLevelsQuery);
 	?>	  
 		<label>User Level
-			<select name="userlevelid">	
+			<select name="userlevelid" required>	
 		<?php
 	foreach($levelStmt as $levelRow)
 	{
