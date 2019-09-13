@@ -36,9 +36,9 @@ insert into regions(regionname, creationdate) values('Region 9 - Zamboanga Penin
 insert into regions(regionname, creationdate) values('Region 10 - Northern Mindanao', NOW());
 insert into regions(regionname, creationdate) values('Region 11 - Davao Region', NOW());
 insert into regions(regionname, creationdate) values('Region 12 - SOCCSKSARGEN', NOW());
-insert into regions(regionname, creationdate) values('Region CARAGA', NOW());
+insert into regions(regionname, creationdate) values('Region 13 - CARAGA', NOW());
 insert into regions(regionname, creationdate) values('Cordillera Administrative Region', NOW());
-insert into regions(regionname, creationdate) values('Autonomous Region of Muslim Mindanao', NOW());
+insert into regions(regionname, creationdate) values('Autonomous Region in Muslim Mindanao', NOW());
 
 --Constitutional Offices
 --Government-Owned and/or Controlled Corporations
