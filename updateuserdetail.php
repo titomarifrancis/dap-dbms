@@ -48,48 +48,6 @@ if(isset($_REQUEST['userid']))
 	$isapproved =  $usrDetail[0]['isapproved'];
 }
 ?>
-<script>
-$(function(){
-    $.getJSON("lib/getRegions.php", function(json){
-            console.log(json);
-            $('select#region').empty();
-            $('select#region').append($('<option>').text("Select"));
-            $.each(json, function(i, obj){
-                    $('select#region').append($('<option>').text(obj.regionname).attr('value', obj.id));
-            });
-    });
-    $("#region").change(function() {
-        $.getJSON("lib/getProvince.php?regionid=" + $(this).val() + "", function(data){
-            console.log(data);
-            $('select#province').empty();
-            $('select#province').append($('<option>').text("Select"));
-            $.each(data, function(j, myobj){
-                    $('select#province').append($('<option>').text(myobj.provincename).attr('value', myobj.id));
-            });            
-        });
-    });
-    $("#province").change(function() {
-        $.getJSON("lib/getCityMunicipality.php?provinceid=" + $(this).val() + "", function(provincedata){
-            console.log(provincedata);
-            $('select#citymunicipality').empty();
-            $('select#citymunicipality').append($('<option>').text("Select"));
-            $.each(provincedata, function(k, mycitymunobj){
-                    $('select#citymunicipality').append($('<option>').text(mycitymunobj.towncitymunicipalityname).attr('value', mycitymunobj.id));
-            });            
-        });
-    });
-    $("#citymunicipality").change(function() {
-        $.getJSON("lib/getBarangay.php?citymunid=" + $(this).val() + "", function(citymunicipalitydata){
-            console.log(citymunicipalitydata);
-            $('select#barangay').empty();
-            $('select#barangay').append($('<option>').text("Select"));
-            $.each(citymunicipalitydata, function(l, barangayobj){
-                    $('select#barangay').append($('<option>').text(barangayobj.barangayname).attr('value', barangayobj.id));
-            });            
-        });
-    });    
-});
-</script>
 <h3>User Access Manager</h3>
 <form action="user_processor.php" method="post">
   <div class="row">
@@ -317,7 +275,7 @@ else
 	  </div>
 	  <div class="large-12 columns">
 		<label>Password
-		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters" required/>
+		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters"/>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
@@ -326,7 +284,7 @@ else
 	$levelStmt= $dbh->query($getLevelsQuery);
 	?>	  
 		<label>User Level
-			<select name="userlevelid" required>	
+			<select name="userlevelid" id="userlevelField" required>	
 		<?php
 	foreach($levelStmt as $levelRow)
 	{
@@ -423,6 +381,48 @@ foreach($userListStmt as $userListRow)
                         </tbody>
                     </table>
 </div>
+<script>
+$(function(){
+    $.getJSON("lib/getRegions.php", function(json){
+            console.log(json);
+            $('select#region').empty();
+            $('select#region').append($('<option>').text("Select"));
+            $.each(json, function(i, obj){
+                    $('select#region').append($('<option>').text(obj.regionname).attr('value', obj.id));
+            });
+    });
+    $("#region").change(function() {
+        $.getJSON("lib/getProvince.php?regionid=" + $(this).val() + "", function(data){
+            console.log(data);
+            $('select#province').empty();
+            $('select#province').append($('<option>').text("Select"));
+            $.each(data, function(j, myobj){
+                    $('select#province').append($('<option>').text(myobj.provincename).attr('value', myobj.id));
+            });            
+        });
+    });
+    $("#province").change(function() {
+        $.getJSON("lib/getCityMunicipality.php?provinceid=" + $(this).val() + "", function(provincedata){
+            console.log(provincedata);
+            $('select#citymunicipality').empty();
+            $('select#citymunicipality').append($('<option>').text("Select"));
+            $.each(provincedata, function(k, mycitymunobj){
+                    $('select#citymunicipality').append($('<option>').text(mycitymunobj.towncitymunicipalityname).attr('value', mycitymunobj.id));
+            });            
+        });
+    });
+    $("#citymunicipality").change(function() {
+        $.getJSON("lib/getBarangay.php?citymunid=" + $(this).val() + "", function(citymunicipalitydata){
+            console.log(citymunicipalitydata);
+            $('select#barangay').empty();
+            $('select#barangay').append($('<option>').text("Select"));
+            $.each(citymunicipalitydata, function(l, barangayobj){
+                    $('select#barangay').append($('<option>').text(barangayobj.barangayname).attr('value', barangayobj.id));
+            });            
+        });
+    });    
+});
+</script>
 <?php
 
 include 'templates/footer.php';
