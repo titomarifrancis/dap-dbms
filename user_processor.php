@@ -1,5 +1,5 @@
 <?php
-$httpReferingURL = parse_url($_SERVER[HTTP_REFERER]);
+$httpReferingURL = parse_url($_SERVER['HTTP_REFERER']);
 $refererPath = $httpReferingURL['path'];
 $refererPathElements= explode('/', $refererPath);
 
