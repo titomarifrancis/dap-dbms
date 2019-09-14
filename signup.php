@@ -2,6 +2,111 @@
 include 'templates/header.php';
 include 'dbconn.php';
 ?>
+<h3>Signup</h3>
+<form id="signUpForm" action="user_processor.php" method="post">
+<div class="row">
+    <div class="large-12 columns">
+        <label>Lastname
+            <input type="text" name="lastname" id="lastnameField" placeholder="Lastname" required/>
+        </label>
+    </div>
+    <div class="large-12 columns">
+        <label>Firstname
+            <input type="text" name="firstname" id="firstnameField" placeholder="Firstname" required/>
+        </label>
+    </div>
+    <div class="large-12 columns">
+        <label>Middle Initial   
+            <input type="text" name="midname" id="midnameField" placeholder="Middle Initial"/>
+        </label>
+    </div>
+    <div class="large-12 columns">
+        <label>Name Extension
+            <input type="text" name="extname" placeholder="Ext" />
+        </label>
+	</div>
+    <div class="large-12 columns">
+        <label>Mobile Contact Number
+            <input type="text" name="contactmobile" placeholder="Mobile Contact Number"/>
+        </label>
+	</div>
+    <div class="large-12 columns">
+        <label>Landline Contact Number
+            <input type="text" name="contactlandline" placeholder="Landline Contact Number" />
+        </label>
+	</div>
+    <div class="large-12 columns">
+        <label>Email Address
+            <input type="email" name="contactemail" id="emailField" placeholder="Email Address" required/>
+        </label>
+	</div>
+    <div class="large-12 columns">
+        <label>Position
+            <input type="text" name="position" placeholder="Role in Organization" />
+        </label>
+	</div>
+	<div class="large-12 columns">
+	<?php
+	$getAgenciesQuery = 'select id, agencyname from govtagency order by agencyname asc';
+	$agencyStmt= $dbh->query($getAgenciesQuery);
+	?>
+        <label>Government Agency
+            <select name="govtagencyid" id="govtagencyField" required>
+                <option value="0" selected>Please select one</option>
+	<?php
+	foreach($agencyStmt as $row)
+	{
+	?>
+	            <option value="<?php echo $row['id'];?>"><?php echo rtrim($row['agencyname']);?></option>
+	<?php	
+	}
+	?>
+            </select>
+        </label>
+	</div>
+
+    <div class="large-12 columns">
+		<label>Region
+            <select id="region" name="region">
+            </select>
+		</label>
+	</div>
+    <div class="large-12 columns">
+		<label>Province
+            <select id="province" name="province">
+                <option>Select region first</option>
+            </select>
+        </label>            
+	</div>    
+    <div class="large-12 columns">
+        <label>City/Municipality
+            <select id="citymunicipality" name="citymunicipality">
+                <option>Select province first</option>
+            </select>
+        </label>
+	</div>
+    <div class="large-12 columns">
+        <label>Barangay
+            <select id="barangay" name="barangay">
+                <option>Select city/municipality first</option>
+            </select>
+        </label>      
+	</div>
+
+    <div class="large-12 columns">
+        <label>Username
+            <input type="text" name="usrname" id="usernameField" placeholder="Username" required/>
+        </label>
+    </div>
+    <div class="large-12 columns">
+        <label>Password
+            <input type="password" name="usrpassword" id="passwordField" placeholder="Password" required/>
+        </label>
+    </div>    
+    <div class="large-12 large-centered columns">
+        <input type="button" class="button expand" id="okButton" value="Sign Up" disabled>
+    </div>
+</form>
 <script>
 $(function(){
     $.getJSON("lib/getRegions.php", function(json){
@@ -43,109 +148,37 @@ $(function(){
         });
     });    
 });
+
+const signUpForm = document.getElementById('signUpForm');
+const lastnameField = document.getElementById('lastnameField');
+const firstnameField = document.getElementById('firstnameField');
+const emailField = document.getElementById('emailField');
+const govtagencyField = document.getElementById('govtagencyField');
+const usernameField = document.getElementById('usernameField');
+const passwordField = document.getElementById('passwordField');
+const okButton = document.getElementById('okButton');
+  
+signUpForm.addEventListener('keyup', function (event) {
+    isValidLastname = lastnameField.checkValidity();
+    isValidFirstname = firstnameField.checkValidity();
+    isValidEmail = emailField.checkValidity();
+    isValidGovtagency = govtagencyField.checkValidity();
+    isValidUsername = usernameField.checkValidity();
+    isValidPassword = passwordField.checkValidity();
+
+    if ( isValidFirstname && isValidLastname && isValidEmail && isValidGovtagency && isValidUsername && isValidPassword )
+    {
+        okButton.disabled = false;
+    }
+    else
+    {
+        okButton.disabled = true;
+    }
+});
+
+okButton.addEventListener('click', function (event) {
+  signUpForm.submit();
+});
 </script>
-<h3>User Signup</h3>
-<form action="user_processor.php" method="post">
-  <div class="row">
-    <div class="large-12 columns">
-      <label>Lastname
-        <input type="text" name="lastname" placeholder="Lastname" required/>
-      </label>
-    </div>
-    <div class="large-12 columns">
-      <label>Firstname
-        <input type="text" name="firstname" placeholder="Firstname" required />
-      </label>
-    </div>
-    <div class="large-12 columns">
-      <label>Middle Initial
-        <input type="text" name="midname" placeholder="Middle Initial" />
-      </label>
-    </div>
-    <div class="large-12 columns">
-      <label>Name Extension
-        <input type="text" name="extname" placeholder="Ext" />
-      </label>
-	</div>
-    <div class="large-12 columns">
-      <label>Mobile Contact Number
-        <input type="text" name="contactmobile" placeholder="Mobile Contact Number"/>
-      </label>
-	</div>
-    <div class="large-12 columns">
-      <label>Landline Contact Number
-        <input type="text" name="contactlandline" placeholder="Landline Contact Number" />
-      </label>
-	</div>
-    <div class="large-12 columns">
-      <label>Email Address
-        <input type="email" name="contactemail" placeholder="Email Address" required/>
-      </label>
-	</div>			
-    <div class="large-12 columns">
-      <label>Position
-        <input type="text" name="position" placeholder="Role in Organization" />
-      </label>
-	</div>
-	<div class="large-12 columns">
-	<?php
-	$getAgenciesQuery = 'select id, agencyname from govtagency order by agencyname asc';
-	$agencyStmt= $dbh->query($getAgenciesQuery);
-	?>
-      <label>Government Agency
-        <select name="govtagencyid">
-			<option value="0" selected>Please select one</option>
-	<?php
-	foreach($agencyStmt as $row)
-	{
-	?>
-	      <option value="<?php echo $row['id'];?>"><?php echo rtrim($row['agencyname']);?></option>
-	<?php	
-	}
-	?>
-        </select>
-      </label>
-	</div>
-
-    <div class="large-12 columns">
-		<label>Region
-            <select id="region" name="region">
-            </select>
-		</label>
-	</div>
-    <div class="large-12 columns">
-		<label>Province
-			<select id="province" name="province">
-                <option>Select region first</option>
-            </select>
-	</div>    
-    <div class="large-12 columns">
-		<label>City/Municipality
-			<select id="citymunicipality" name="citymunicipality">
-                <option>Select province first</option>
-            </select>
-	</div>
-    <div class="large-12 columns">
-		<label>Barangay
-			<select id="barangay" name="barangay">
-                <option>Select city/municipality first</option>
-            </select>
-	</div>
-
-	  <div class="large-12 columns">
-		<label>Username
-		  <input type="text" name="usrname" placeholder="Enter e-mail as username" required/>
-		</label>
-	  </div>
-	  <div class="large-12 columns">
-		<label>Password
-		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters" required/>
-		</label>
-	  </div>
-      <div class="large-12 large-centered columns">
-        <input type="submit" class="button expand" value="Signup"/>
-      </div>
-	</div>  	  	  	  	  	  	
-</form>
 <?php
 include 'templates/footer.php';
