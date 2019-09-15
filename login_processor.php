@@ -8,6 +8,11 @@ $password= $_POST['passwordField'];
 
 //verify from DB that username provided exists
 $loginUsernameQuery= "select id, concat(firstname, ' ',lastname) as fullname, govtagencyid, regionid, provinceid, citymunicipalityid, barangayid, usrname, usrpassword, usrpasswdsalt, userlevelid from systemusers where usrname='$username' and isapproved='TRUE'";
+
+//for troubleshooting purposes only
+//echo "$loginUsernameQuery<br/>";
+//die();
+
 $loginStmt= $dbh->query($loginUsernameQuery) or die(print_r($dbh->errorInfo(), true));
 
 foreach($loginStmt as $loginRow)
@@ -39,8 +44,8 @@ $distdivId,
 $cityMunicipalityId, 
 $barangayId
 <br/>";
+die();
 */
-
 
 if(validate_hash($password, $dbProvPasswd, $dbProvPasswdSalt))
 {
