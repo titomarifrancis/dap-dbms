@@ -154,7 +154,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
             </label>
         </div>
         <div class="large-12 columns">
-            <label>Uploaded Certification File in PDF<br/>
+            <label>Uploaded Certification File in PDF (Please copy and open in separate browser tab or window to preview)<br/>
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certpdfurl'];?>"/>
             </label>
         </div>
