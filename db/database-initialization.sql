@@ -123,7 +123,7 @@ create table agencycertifications (
 	govtagencyid integer references govtagency(id) on delete restrict,
 	certifyingbodyid integer references certifyingbody(id) on delete restrict,
 	certificationid integer references certifications(id) on delete restrict,
-	certificationregnumber varchar(16) not null,
+	certificationregnumber varchar(64) not null,
 	certificationscope text not null,
 	scope_ispartial boolean default null,
 	certpdfurl text not null,
