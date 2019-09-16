@@ -108,8 +108,10 @@ include 'dbconn.php';
     </div>
 </form>
 <script>
-$(function(){
-    $.getJSON("lib/getRegions.php", function(json){
+$(function()
+{
+    $.getJSON("lib/getRegions.php", function(json)
+    {
             console.log(json);
             $('select#region').empty();
             $('select#region').append($('<option>').text("Select"));
@@ -117,7 +119,8 @@ $(function(){
                     $('select#region').append($('<option>').text(obj.regionname).attr('value', obj.id));
             });
     });
-    $("#region").change(function() {
+    $("#region").change(function()
+    {
         $.getJSON("lib/getProvince.php?regionid=" + $(this).val() + "", function(data){
             console.log(data);
             $('select#province').empty();
@@ -127,7 +130,8 @@ $(function(){
             });            
         });
     });
-    $("#province").change(function() {
+    $("#province").change(function()
+    {
         $.getJSON("lib/getCityMunicipality.php?provinceid=" + $(this).val() + "", function(provincedata){
             console.log(provincedata);
             $('select#citymunicipality').empty();
@@ -137,7 +141,8 @@ $(function(){
             });            
         });
     });
-    $("#citymunicipality").change(function() {
+    $("#citymunicipality").change(function()
+    {
         $.getJSON("lib/getBarangay.php?citymunid=" + $(this).val() + "", function(citymunicipalitydata){
             console.log(citymunicipalitydata);
             $('select#barangay').empty();
@@ -158,7 +163,8 @@ const usernameField = document.getElementById('usernameField');
 const passwordField = document.getElementById('passwordField');
 const okButton = document.getElementById('okButton');
   
-signUpForm.addEventListener('keyup', function (event) {
+signUpForm.addEventListener('keyup', function (event)
+{
     isValidLastname = lastnameField.checkValidity();
     isValidFirstname = firstnameField.checkValidity();
     isValidEmail = emailField.checkValidity();
@@ -176,7 +182,8 @@ signUpForm.addEventListener('keyup', function (event) {
     }
 });
 
-okButton.addEventListener('click', function (event) {
+okButton.addEventListener('click', function (event)
+{
   signUpForm.submit();
 });
 </script>
