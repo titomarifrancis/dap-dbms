@@ -33,7 +33,9 @@ foreach($agencyCategoryArray as $categoryRow)
     }
 
     $getUncertified = "select distinct govtagency.id from govtagency, govtagencyclass, agencycertifications where govtagencyclass.id=govtagency.govtagencyclassid and agencycertifications.govtagencyid<>govtagency.id and govtagencyclass.id=$categoryId";
-    $numberUncertifiedAgency = $dbh->query($getUncertified)->rowCount();
+    $initNumberUncertifiedAgency = $dbh->query($getUncertified)->rowCount();
+    $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
+
     if($numberTotalAgencyCount == 0)
     {
         $percentageUncertified = "N/A";
