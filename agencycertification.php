@@ -2,55 +2,13 @@
 include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
-<script>
-$(function(){
-    $.getJSON("lib/getRegions.php", function(json){
-            console.log(json);
-            $('select#region').empty();
-            $('select#region').append($('<option>').text("Select"));
-            $.each(json, function(i, obj){
-                    $('select#region').append($('<option>').text(obj.regionname).attr('value', obj.id));
-            });
-    });
-    $("#region").change(function() {
-        $.getJSON("lib/getProvince.php?regionid=" + $(this).val() + "", function(data){
-            console.log(data);
-            $('select#province').empty();
-            $('select#province').append($('<option>').text("Select"));
-            $.each(data, function(j, myobj){
-                    $('select#province').append($('<option>').text(myobj.provincename).attr('value', myobj.id));
-            });            
-        });
-    });
-    $("#province").change(function() {
-        $.getJSON("lib/getCityMunicipality.php?provinceid=" + $(this).val() + "", function(provincedata){
-            console.log(provincedata);
-            $('select#citymunicipality').empty();
-            $('select#citymunicipality').append($('<option>').text("Select"));
-            $.each(provincedata, function(k, mycitymunobj){
-                    $('select#citymunicipality').append($('<option>').text(mycitymunobj.towncitymunicipalityname).attr('value', mycitymunobj.id));
-            });            
-        });
-    });
-    $("#citymunicipality").change(function() {
-        $.getJSON("lib/getBarangay.php?citymunid=" + $(this).val() + "", function(citymunicipalitydata){
-            console.log(citymunicipalitydata);
-            $('select#barangay').empty();
-            $('select#barangay').append($('<option>').text("Select"));
-            $.each(citymunicipalitydata, function(l, barangayobj){
-                    $('select#barangay').append($('<option>').text(barangayobj.barangayname).attr('value', barangayobj.id));
-            });            
-        });
-    });    
-});
-</script>
 <h3>Agency Certification Manager</h3>
 <div>
-<form method="post" action="agencycert_processor.php" enctype="multipart/form-data">
+<form id="certForm" method="post" action="agencycert_processor.php" enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
 		<label>Government Agency
-			<select name="govtagencyid" required>
+			<select name="govtagencyid" id="govtagencyField" required>
 	<?php
 
 	if(isset($govtAgencyId))
@@ -66,7 +24,7 @@ $(function(){
 	foreach($agencyStmt as $agencyRow)
 	{
 	?>
-		<option value="<?php echo rtrim($agencyRow['id']);?>"><?php echo rtrim($agencyRow['agencyname']);?></option>
+			<option value="<?php echo rtrim($agencyRow['id']);?>"><?php echo rtrim($agencyRow['agencyname']);?></option>
 	<?php
 	}
 	?>
@@ -105,7 +63,7 @@ $(function(){
 	$certificationStmt= $dbh->query($getCertificationsQuery);
 	?>	  
 			<label>Certification
-			  <select name="certificationid" required>
+			  <select name="certificationid" id="certificationField" required>
 	<?php
 	foreach($certificationStmt as $certificationRow)
 	{
@@ -124,8 +82,8 @@ $(function(){
 	$getCertifyingBodyQuery = 'select id, providerorg from certifyingbody order by providerorg asc';
 	$certifyingBodyStmt= $dbh->query($getCertifyingBodyQuery);
 	?>	  
-			<label>Certifying Body
-			  <select name="certifyingbodyid" required>
+			<label>Certifying Body (if the selection you need to choose is not one of the options below, please add it through the Certifying Body Manager, subject for approval) <a href="certifyingbodymanager.php">Add Certifying Body</a>
+			  <select name="certifyingbodyid" id="certifyingbodyField" required>
 	<?php
 	foreach($certifyingBodyStmt as $certifyingBodyRow)
 	{
@@ -159,17 +117,17 @@ $(function(){
 
 	<div class="large-12 columns">
 		<label>Certification Scope Is Partial? &nbsp;
-			<input type="checkbox" name="scope_ispartial" id="scope_ispartial" placeholder="Certification Scope Is Partial?" required>
+			<input type="checkbox" name="scope_ispartial" id="scope_ispartial" placeholder="Certification Scope Is Partial?">
 		</label>
 	</div>	
 	<div class="large-6 columns">
 		<label>Validity From Date
-		  <input type="date" name="certvalidstartdate" placeholder="Start Date" required/>
+		  <input type="date" name="certvalidstartdate" id="certvalidstartdate" placeholder="Start Date" required/>
 		</label>
 	  </div>	  
 	  <div class="large-6 columns">
 		<label>Validity Until Date
-		  <input type="date" name="certvalidenddate" placeholder="End date" required/>
+		  <input type="date" name="certvalidenddate" id="certvalidenddate" placeholder="End date" required/>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
@@ -185,30 +143,18 @@ if(isset($loggedInAccessLevel) && $loggedInAccessLevel > 1)
 	  <div class="large-12 columns">
             <label>Enable/Approve Agency Certification Entry
                 <p>
-<?php
-	if($isapproved == 1)
-	{
-	?>
-						<input type="radio" name="isapproved" value="true" checked> True<br>
-						<input type="radio" name="isapproved" value="false"> False<br>
-	<?php
-	}
-	else
-	{
-	?>
-						<input type="radio" name="isapproved" value="true"> True<br>
-						<input type="radio" name="isapproved" value="false" checked> False<br>
-	<?php
-	}
-
+					<input type="radio" name="isapproved" value="true"> True<br>
+					<input type="radio" name="isapproved" value="false" checked> False<br>
+				</p>
+        </div>
+<?php						
 }
 ?>                
 
-                </p>
-        </div>
+
 
 	  <div class="large-12 columns">
-	  		<input type="submit" class="button expand" name="uploadBtn" value="Save"/>
+	  		<input type="button" class="button expand" id="okButton" name="uploadBtn" value="Save"/>
 	  </div>	  	  	  	  	  	
 </form>
 </div>
@@ -251,5 +197,92 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 }
 ?>
 </div>
+<script>
+$(function()
+{
+    $.getJSON("lib/getRegions.php", function(json)
+	{
+            console.log(json);
+            $('select#region').empty();
+            $('select#region').append($('<option>').text("Select"));
+            $.each(json, function(i, obj){
+                    $('select#region').append($('<option>').text(obj.regionname).attr('value', obj.id));
+            });
+    });
+    $("#region").change(function()
+	{
+        $.getJSON("lib/getProvince.php?regionid=" + $(this).val() + "", function(data){
+            console.log(data);
+            $('select#province').empty();
+            $('select#province').append($('<option>').text("Select"));
+            $.each(data, function(j, myobj){
+                    $('select#province').append($('<option>').text(myobj.provincename).attr('value', myobj.id));
+            });            
+        });
+    });
+    $("#province").change(function()
+	{
+        $.getJSON("lib/getCityMunicipality.php?provinceid=" + $(this).val() + "", function(provincedata){
+            console.log(provincedata);
+            $('select#citymunicipality').empty();
+            $('select#citymunicipality').append($('<option>').text("Select"));
+            $.each(provincedata, function(k, mycitymunobj){
+                    $('select#citymunicipality').append($('<option>').text(mycitymunobj.towncitymunicipalityname).attr('value', mycitymunobj.id));
+            });            
+        });
+    });
+    $("#citymunicipality").change(function()
+	{
+        $.getJSON("lib/getBarangay.php?citymunid=" + $(this).val() + "", function(citymunicipalitydata){
+            console.log(citymunicipalitydata);
+            $('select#barangay').empty();
+            $('select#barangay').append($('<option>').text("Select"));
+            $.each(citymunicipalitydata, function(l, barangayobj){
+                    $('select#barangay').append($('<option>').text(barangayobj.barangayname).attr('value', barangayobj.id));
+            });            
+        });
+    });    
+});
+
+const certForm = document.getElementById('certForm');
+const govtagencyField = document.getElementById('govtagencyField');
+const certificationField = document.getElementById('certificationField');
+const certifyingbodyField = document.getElementById('certifyingbodyField');
+const certificationregnumber = document.getElementById('certificationregnumber');
+const certificationscope = document.getElementById('certificationscope');
+const headofagency = document.getElementById('headofagency');
+const certvalidstartdate = document.getElementById('certvalidstartdate');
+const certvalidenddate = document.getElementById('certvalidenddate');
+const uploadedFile = document.getElementById('uploadedFile');
+
+certForm.addEventListener('keyup', function (event)
+{
+    isValidGovtAgency = govtagencyField.checkValidity();
+    isValidCertification = certificationField.checkValidity();
+    isValidCertifyingBody = certifyingbodyField.checkValidity();
+    isValidCertificationRegnumber = certificationregnumber.checkValidity();
+	isvalidCertificationScope = certificationscope.checkValidity();
+	isvalidHeadofAgency = headofagency.checkValidity();
+	isvalidCertStartDate = certvalidstartdate.checkValidity();
+	isValidCertEndDate = certvalidenddate.checkValidity();
+    isValidUploadedFile = uploadedFile.checkValidity();
+
+    
+    if ( isValidGovtAgency && isValidCertification && isValidCertifyingBody && isValidCertificationRegnumber && isvalidCertificationScope && isvalidHeadofAgency && isvalidCertStartDate && isValidCertEndDate && isValidUploadedFile )
+    {
+        okButton.disabled = false;
+    }
+    else
+    {
+        okButton.disabled = true;
+    }
+});
+
+okButton.addEventListener('click', function (event)
+{
+  signUpForm.submit();
+});
+
+</script>
 <?php
 include 'templates/footer.php';
