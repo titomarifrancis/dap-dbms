@@ -147,7 +147,7 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Agrarian Legal Assistance', 6, 86, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Agrarian Reform Beneficiaries Development', 6, 86, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Land Tenure Improvement', 6, 86, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Land Tenure Improvement', 6, 86, NOW());
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Agricultural Training Institute', 6, 87, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Agriculture and Fisheries Standards', 6, 87, NOW());
@@ -173,43 +173,43 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Budget and Management Bureau-D', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Budget and Management Bureau-E', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Budget and Management Bureau-F', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Local Government and Regional Coordination Bureau', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Local Government and Regional Coordination Bureau', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Budget Technical Bureau', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Administrative Service', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Budget Information and Training Service', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Corporate Planning and Management Service', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Finance Service', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Fiscal Planning and Reforms Bureau', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Internal Audit Service', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Information and Communications Technology Systems Service', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Legal Service', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Organization Position Classification and Compensation Bureau', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Systems and Productivity Improvement Bureau', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Finance Service', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Fiscal Planning and Reforms Bureau', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Internal Audit Service', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Information and Communications Technology Systems Service', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Legal Service', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Organization Position Classification and Compensation Bureau', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Systems and Productivity Improvement Bureau', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Government Procument Policy Board - Technical Support Office', 6, 88, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Procurement Service', 6, 88, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Procurement Service', 6, 88, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Government Electronic Procurement System', 6, 88, NOW());
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Curriculum Development', 6, 89, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Education Assessment', 6, 89, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Learning Delivery', 6, 89, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Learning Resources', 6, 89, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Learning Delivery', 6, 89, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Learning Resources', 6, 89, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Human Resource and Organizational Development', 6, 89, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Learner Support Services', 6, 89, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Learner Support Services', 6, 89, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Book Development Board', 6, 89, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Council for Children''s Television', 6, 89, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Museum', 6, 89, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Early Childhood Care and Development Council', 6, 89, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine High School for the Arts', 6, 89, NOW());
 
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Energy Policy and Planning Bureau', 6, 90, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Energy Resource Development Bureau', 6, 90, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Energy Policy and Planning Bureau', 6, 90, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Energy Resource Development Bureau', 6, 90, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Energy Utilization and Management Bureau', 6, 90, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Oil Industry Management Bureau', 6, 90, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Electric Power Industry Management Bureau', 6, 90, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Renewable Energy Management Bureau', 6, 90, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Electric Power Industry Management Bureau', 6, 90, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Renewable Energy Management Bureau', 6, 90, NOW());
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Ecosystems Research and Development Bureau', 6, 91, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Forest Management Bureau', 6, 91, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Forest Management Bureau', 6, 91, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Land Management Bureau', 6, 91, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Biodiversity Management Bureau', 6, 91, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Environmental Management Bureau', 6, 91, NOW());
@@ -232,21 +232,21 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('UNESCO National Commission of the Philippine Secretariat', 6, 93, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Technical Cooperation Council of the Philippines', 6, 93, NOW());
 
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Policy Development and Planning Bureau', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of International Health Cooperation', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Facilities Development Bureau', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Knowledge Management and Information Technology Service', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Local Health Systems Development', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Human Resource Development Bureau', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Policy Development and Planning Bureau', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of International Health Cooperation', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Facilities Development Bureau', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Knowledge Management and Information Technology Service', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Local Health Systems Development', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Human Resource Development Bureau', 6, 94, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Voluntary Blood Services Program', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Disease Prevention and Control Bureau', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Promotion and Communication Service', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Epidemiology Bureau', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Facilities and Services Regulatory Bureau', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Disease Prevention and Control Bureau', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Promotion and Communication Service', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Epidemiology Bureau', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Facilities and Services Regulatory Bureau', 6, 94, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Quarantine', 6, 94, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Food and Drug Administration', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Facilities Enhancement Program', 6, 94, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Emergency Management Bureau', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Facilities Enhancement Program', 6, 94, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Health Emergency Management Bureau', 6, 94, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Amang Rodriguez Medical Center', 6, 94, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Dr. Jose Fabella Memorial Hospital', 6, 94, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('East Avenue Medical Center', 6, 94, NOW());
@@ -262,20 +262,20 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Commission on Population', 6, 94, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Nutrition Council', 6, 94, NOW());
 
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Infrastructure Management Bureau', 6, 95, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Infrastructure Management Bureau', 6, 95, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Cybersecurity Bureau', 6, 95, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('ICT Literacy and Competency Development Bureau', 6, 95, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Government Digital Transformation Bureau', 6, 95, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National ICT Planning Policy and Standards Bureau', 6, 95, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('ICT Industry Development Bureau', 6, 95, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('ICT Literacy and Competency Development Bureau', 6, 95, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Government Digital Transformation Bureau', 6, 95, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National ICT Planning Policy and Standards Bureau', 6, 95, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('ICT Industry Development Bureau', 6, 95, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Privacy Commission', 6, 95, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Telecommunications Commission', 6, 95, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Cybercrime Investigation and Coordinating Center', 6, 95, NOW());
 
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Local Government Development', 6, 96, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Local Government Supervision', 6, 96, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Local Government Development', 6, 96, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Local Government Supervision', 6, 96, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Office of Project Development Services', 6, 96, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Barangay Operations Office', 6, 96, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Barangay Operations Office', 6, 96, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Local Government Academy', 6, 96, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Fire Protection', 6, 96, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Jail Management and Penology', 6, 96, NOW());
@@ -295,7 +295,7 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Public Attorney''s Office', 6, 97, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Presidential Commission on Good Government', 6, 97, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Board of Pardons and Parole', 6, 97, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Office for Alternative Dispute Resolution', 6, 97, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Office for Alternative Dispute Resolution', 6, 97, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Office of the Solicitor General', 6, 97, NOW());
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Local Employment', 6, 98, NOW());
@@ -319,7 +319,7 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Navy', 6, 99, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('AFP Health Service Command', 6, 99, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Military Academy', 6, 99, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Presidential Security Group', 6, 99, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Presidential Security Group', 6, 99, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Government Arsenal', 6, 99, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Defense College of the Philippines', 6, 99, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Office of Civil Defense', 6, 99, NOW());
@@ -329,8 +329,8 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Construction', 6, 100, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Design', 6, 100, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Equipment', 6, 100, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Maintenance', 6, 100, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Quality and Safety', 6, 100, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Maintenance', 6, 100, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Quality and Safety', 6, 100, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Research and Standards', 6, 100, NOW());
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Council for Agriculture Aquatic and Natural Resources Research and Development', 6, 101, NOW());
@@ -353,11 +353,11 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Technology Application and Promotion Institute', 6, 101, NOW());
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Policy Development and Planning Bureau', 6, 102, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Standard Bureau', 6, 102, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Disaster Response Management Bureau', 6, 102, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Social Technology Bureau', 6, 102, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Standard Bureau', 6, 102, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Disaster Response Management Bureau', 6, 102, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Social Technology Bureau', 6, 102, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Protective Services Bureau', 6, 102, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Social Welfare Institutional Development Bureau', 6, 102, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Social Welfare Institutional Development Bureau', 6, 102, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Community Programs and Services Bureau', 6, 102, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Anti-Poverty Commission', 6, 102, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('National Commission on Indigenous Peoples', 6, 102, NOW());
@@ -374,15 +374,15 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Competitiveness Bureau', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Philippine Standards', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Consumer Protection and Advocacy Bureau', 6, 104, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Fair Trade Enforcement Bureau', 6, 104, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Fair Trade Enforcement Bureau', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Import Services', 6, 104, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of International Trade Relations', 6, 104, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of International Trade Relations', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Trade and Industrial Policy Research', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Accreditation Bureau', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Small and Medium Enterprise Development', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bureau of Domestic Trade Promotion', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Export Marketing Bureau', 6, 104, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Foreign Trade Service Corps', 6, 104, NOW());
+--insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Foreign Trade Service Corps', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Cooperative Development Authority', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Technical Education and Skills Development Authority', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Board of Investments', 6, 104, NOW());
@@ -404,4 +404,4 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Public-Private Partnership Center of the Philippines', 6, 106, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Statistics Authority', 6, 106, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Statistical Research and Training Institute', 6, 106, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Tariff Commission', 6, 106, NOW());
+-- insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Tariff Commission', 6, 106, NOW());
