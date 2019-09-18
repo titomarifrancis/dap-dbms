@@ -8,11 +8,11 @@ include 'dbconn.php';
 <form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
-		<label>List of Regions
+		<!--<label>List of Regions-->
         <table class="scroll hover" style="table-layout:fixed">
             <thead>
                 <tr>
-                    <th style="width: 100%">Regions</th>
+                    <th style="width: 100%">List of Regions</th>
                 </tr>
             </thead>
             <tbody>
