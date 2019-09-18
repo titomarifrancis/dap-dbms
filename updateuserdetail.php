@@ -103,13 +103,13 @@ else
 if(isset($midname))
 {
 ?>
-	<input type="text" name="midname" value="<?php echo $midname; ?>" />
+	<input type="text" name="midname" value="<?php echo $midname; ?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="midname" placeholder="Middle Initial" />
+	<input type="text" name="midname" placeholder="Middle Initial" required/>
 <?php
 }
 ?>
@@ -140,13 +140,13 @@ else
 if(isset($contactmobile))
 {
 ?>
-	<input type="text" name="contactmobile" value="<?php echo $contactmobile;?>"/>
+	<input type="text" name="contactmobile" value="<?php echo $contactmobile;?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="contactmobile" placeholder="Mobile Contact Number"/>
+	<input type="text" name="contactmobile" placeholder="Mobile Contact Number" required/>
 <?php
 }
 ?>
@@ -158,13 +158,13 @@ else
 if(isset($contactlandline))
 {
 ?>
-	<input type="text" name="contactlandline" value="<?php echo $contactlandline;?>" />
+	<input type="text" name="contactlandline" value="<?php echo $contactlandline;?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="contactlandline" placeholder="Landline Contact Number" />
+	<input type="text" name="contactlandline" placeholder="Landline Contact Number" required/>
 <?php
 }
 ?>
@@ -196,13 +196,13 @@ else
 if(isset($position) && (strlen($position) > 0))
 {
 ?>
-	<input type="text" name="position" value="<?php echo $position;?>" />
+	<input type="text" name="position" value="<?php echo $position;?>" required/>
 <?php
 }
 else
 {
 ?>
-	<input type="text" name="position" placeholder="Role in Organization" />
+	<input type="text" name="position" placeholder="Role in Organization" required/>
 <?php
 }
 ?>	  

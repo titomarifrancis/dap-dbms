@@ -17,7 +17,7 @@ include 'dbconn.php';
     </div>
     <div class="large-12 columns">
         <label>Middle Initial   
-            <input type="text" name="midname" id="midnameField" placeholder="Middle Initial"/>
+            <input type="text" name="midname" id="midnameField" placeholder="Middle Initial" required/>
         </label>
     </div>
     <div class="large-12 columns">
@@ -27,12 +27,12 @@ include 'dbconn.php';
 	</div>
     <div class="large-12 columns">
         <label>Mobile Contact Number
-            <input type="text" name="contactmobile" placeholder="Mobile Contact Number"/>
+            <input type="text" name="contactmobile" placeholder="Mobile Contact Number" required/>
         </label>
 	</div>
     <div class="large-12 columns">
         <label>Landline Contact Number
-            <input type="text" name="contactlandline" placeholder="Landline Contact Number" />
+            <input type="text" name="contactlandline" placeholder="Landline Contact Number" required/>
         </label>
 	</div>
     <div class="large-12 columns">
@@ -42,7 +42,7 @@ include 'dbconn.php';
 	</div>
     <div class="large-12 columns">
         <label>Position
-            <input type="text" name="position" placeholder="Role in Organization" />
+            <input type="text" name="position" placeholder="Role in Organization" required/>
         </label>
 	</div>
 	<div class="large-12 columns">
