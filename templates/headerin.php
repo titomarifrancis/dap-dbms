@@ -173,7 +173,7 @@ if(isset($loggedInUserRealname))
     <nav id="breadcrumbs" class="anchor" aria-label="You are here:" role="navigation">
         <div class="row">
             <div class="large-12 columns">
-                <ul class="breadcrumbs"><li>You are here:</li><li><a class="pathway" href="https://www.dap.edu.ph">Home</a><span class="separator"> › </span></span>GQMPO</span><span class="separator"> › </span><li><span class="current show-for-sr">Current: </span>ISO Certification</li><li style="float:right"><?php echo $greetingDefault;?></li></ul>
+                <ul class="breadcrumbs"><li>You are here:</li><li><a class="pathway" href="home.php">Home</a><span class="separator"> › </span></span>GQMPO</span><span class="separator"> › </span><li><span class="current show-for-sr">Current: </span>ISO Certification</li><li style="float:right"><?php echo $greetingDefault;?>&nbsp;<a href="logout.php">X</a></li></ul>
             </div>
         </div>
     </nav>
