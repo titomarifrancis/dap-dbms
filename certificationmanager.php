@@ -8,11 +8,11 @@ include 'dbconn.php';
 <form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
-		<label>List of ISO Certification
+		<label>List of ISO Standards
         <table class="scroll hover" style="table-layout:fixed">
             <thead>
                 <tr>
-                    <th style="width: 100%">Agency Category</th>
+                    <th style="width: 100%">Version</th>
                 </tr>
             </thead>
             <tbody>
