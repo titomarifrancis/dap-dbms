@@ -61,7 +61,7 @@ insert into regions(regionname, creationdate) values('Autonomous Region in Musli
 --Other Executive Offices
 --State Universities and Colleges
 insert into govtagencyclass(agencyclassdesc, creationdate) values('Constitutional Offices', NOW());
-insert into govtagencyclass(agencyclassdesc, creationdate) values('Government-Owned and/or Controlled Corporations', NOW());
+insert into govtagencyclass(agencyclassdesc, creationdate) values('Government-Owned and Controlled Corporations', NOW());
 insert into govtagencyclass(agencyclassdesc, creationdate) values('Local Government Units', NOW());
 insert into govtagencyclass(agencyclassdesc, creationdate) values('Local Water Districts', NOW());
 insert into govtagencyclass(agencyclassdesc, creationdate) values('National Government Agencies (NGA)', NOW());

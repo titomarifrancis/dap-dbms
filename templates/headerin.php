@@ -198,7 +198,7 @@ if(isset($loggedInUserRealname))
                             <li class="sidebar-sl"><a href="ngacertificationsec.php" class="sidebar-slink">National Government Agencies</a></li>
                             <li class="sidebar-sl"><a href="ngattachedcertificationsec.php" class="sidebar-slink">NGA-Attached Offices and Bureaus</a></li>
                             <li class="sidebar-sl"><a href="oxocertificationsec.php" class="sidebar-slink">Other Executive Offices</a></li>
-                            <li class="sidebar-sl"><a href="gocccertificationsec.php" class="sidebar-slink">Government Owned or Controlled Corporations</a></li>
+                            <li class="sidebar-sl"><a href="gocccertificationsec.php" class="sidebar-slink">Government Owned and Controlled Corporations</a></li>
                             <li class="sidebar-sl"><a href="succertificationsec.php" class="sidebar-slink">State Universities and Colleges</a></li>
                             <li class="sidebar-sl"><a href="lgucertificationsec.php" class="sidebar-slink">Local Government Units</a></li>
                             <li class="sidebar-sl"><a href="lwdcertificationsec.php" class="sidebar-slink">Local Water Districts</a></li>
