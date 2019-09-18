@@ -214,7 +214,7 @@ else
 	$getAgenciesQuery = 'select id, agencyname from govtagency order by agencyname asc';
 	$agencyStmt= $dbh->query($getAgenciesQuery);
 	?>
-      <label>Government Agency
+      <label>Name of Agency
         <select name="govtagencyid" required>
 			<option value="0" selected>Please select one</option>
 	<?php

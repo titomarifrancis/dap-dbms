@@ -7,7 +7,7 @@ include 'dbconn.php';
 <form id="certForm" method="post" action="agencycert_processor.php" enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
-		<label>Government Agency
+		<label>Name of Agency
 			<select name="govtagencyid" id="govtagencyField" required>
 	<?php
 
