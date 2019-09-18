@@ -12,7 +12,7 @@ include 'dbconn.php';
         <table class="scroll hover" style="table-layout:fixed">
             <thead>
                 <tr>
-                    <th style="width: 100%">List of Regions</th>
+                    <th style="width: 100%">Name of Regions</th>
                 </tr>
             </thead>
             <tbody>
