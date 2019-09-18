@@ -6,12 +6,12 @@ include 'dbconn.php';
 <form id="signUpForm" action="user_processor.php" method="post">
 <div class="row">
     <div class="large-12 columns">
-        <label>Lastname
+        <label>Last Name
             <input type="text" name="lastname" id="lastnameField" placeholder="Lastname" required/>
         </label>
     </div>
     <div class="large-12 columns">
-        <label>Firstname
+        <label>First Name
             <input type="text" name="firstname" id="firstnameField" placeholder="Firstname" required/>
         </label>
     </div>

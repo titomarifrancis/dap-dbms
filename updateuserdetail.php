@@ -52,7 +52,7 @@ if(isset($_REQUEST['userid']))
 <form action="user_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">
-      <label>Lastname
+      <label>Last Name
 <?php
 if(isset($userId) && ($userId !== ''))
 {
@@ -79,7 +79,7 @@ else
       </label>
     </div>
     <div class="large-12 columns">
-      <label>Firstname
+      <label>First Name
 <?php	  
 if(isset($firstname))
 {
