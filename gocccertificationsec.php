@@ -14,10 +14,10 @@ if($numrecords > 0)
     $agencyStmt= $dbh->query($getAgenciesQuery);
     foreach($agencyStmt as $row)
     {
-        $isPartial="No";
+        $isPartial="Not Full Scope";
         if($row['ispartial'] == 1)
         {
-            $isPartial="Yes";
+            $isPartial="Full Scope";
         }
 ?>
                         <tr> 
