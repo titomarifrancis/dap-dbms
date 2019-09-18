@@ -47,22 +47,22 @@ if(isset($loggedInAccessLevel) && $loggedInAccessLevel > 1)
 {
 ?>
         <div class="large-12 columns">
-            <label>Is PAB Accredited?
+            <label>PAB Accredited?
                 <p>
 <?php
 if($ispabaccredited == 1)
 {
 ?>
-                    <input type="radio" name="ispabaccredited" value="true" checked> True<br>
-                    <input type="radio" name="ispabaccredited" value="false"> False<br>
+                    <input type="radio" name="ispabaccredited" value="true" checked> Yes<br>
+                    <input type="radio" name="ispabaccredited" value="false"> No<br>
 
 <?php
 }
 else
 {
 ?>
-                    <input type="radio" name="ispabaccredited" value="true"> True<br>
-                    <input type="radio" name="ispabaccredited" value="false" checked> False<br>
+                    <input type="radio" name="ispabaccredited" value="true"> Yes<br>
+                    <input type="radio" name="ispabaccredited" value="false" checked> No<br>
 
 <?php
 }
