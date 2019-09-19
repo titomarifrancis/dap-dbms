@@ -78,7 +78,7 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Bohol Island State University', 8, NULL, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Cebu Normal University', 8, NULL, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Cebu technological University', 8, NULL, NOW());
+insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Cebu Technological University', 8, NULL, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Negros Oriental State University', 8, NULL, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Siquijor State College', 8, NULL, NOW());
 
