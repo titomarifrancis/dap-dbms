@@ -3,11 +3,40 @@ include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
 <h3>Agency Certification Manager</h3>
+<?php
+if(isset($_REQUEST['msg']))
+{
+	$msg_data = $_REQUEST['msg'];
+	unset($_REQUEST['msg']);
+	if($msg_data == 1)
+	{
+		//
+		?>
+		<div data-alert class="alert-box" tabindex="0" aria-live="assertive" role="alertdialog">
+		Congratulations for successfully recording the certification of your agency.<br/>
+		Please wait for the GQMPO Administrator to validate your agency certification.<br/>
+		</div>
+		<?php
+			
+	}
+	elseif($msg_data == 2)
+	{
+		//
+		?>
+		<div data-alert class="alert-box" tabindex="0" aria-live="assertive" role="alertdialog">
+		Please properly fill-in all the required form fields<br/>
+		</div>
+		<?php
+		//unset($_REQUEST['msg']);	
+	}
+
+}
+?>
 <div>
 <form id="certForm" method="post" action="agencycert_processor.php" enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
-		<label>Name of Agency
+		<label>Name of Agency (required)
 			<select name="govtagencyid" id="govtagencyField" required>
 	<?php
 
@@ -62,7 +91,7 @@ include 'dbconn.php';
 	$getCertificationsQuery = 'select id, certificationstandard from certifications order by certificationstandard asc';
 	$certificationStmt= $dbh->query($getCertificationsQuery);
 	?>	  
-			<label>Certification
+			<label>Certification (required)
 			  <select name="certificationid" id="certificationField" required>
 	<?php
 	foreach($certificationStmt as $certificationRow)
@@ -77,12 +106,12 @@ include 'dbconn.php';
 			</label>
 		  </div>
 
-		  <div class="large-12 columns">
+		  <div class="large-6 columns">
 	<?php
 	$getCertifyingBodyQuery = 'select id, providerorg from certifyingbody order by providerorg asc';
 	$certifyingBodyStmt= $dbh->query($getCertifyingBodyQuery);
 	?>	  
-			<label>Certifying Body (if the selection you need to choose is not one of the options below, please add it through the <a href="certifyingbodymanager.php">Certifying Body Manager</a>)
+			<label>Certifying Body (required)
 			  <select name="certifyingbodyid" id="certifyingbodyField" required>
 	<?php
 	foreach($certifyingBodyStmt as $certifyingBodyRow)
@@ -96,42 +125,48 @@ include 'dbconn.php';
 			  </select>
 			</label>
 		  </div>
+		  <div class="large-6 columns">
+			<label>Can't find your Certifying Body on the list? Add it here
+				<input type="text" name="newcertifyingbody" id="newcertifyingbody" placeholder="Type the Name of Your Unlisted Certifying Body Here" required>
+			</label>
+		  </div>		  
 
 	<div class="large-12 columns">
-		<label>Certification Registration Number
+		<label>Certification Registration Number (required)
 			<input type="text" name="certificationregnumber" id="certificationregnumber" placeholder="Certification Registration Number Here" required>
 		</label>
 	</div>
 
 	<div class="large-12 columns">
-		<label>Certification Scope
+		<label>Certification Scope (required)
 			<input type="text" name="certificationscope" id="certificationscope" placeholder="Certification Scope" required>
 		</label>
 	</div>
 
 	<div class="large-12 columns">
-		<label>Head of Agency During Certification
+		<label>Head of Agency During Certification (required)
 			<input type="text" name="headofagency" id="headofagency" placeholder="Head of Agency During Certification" required>
 		</label>
 	</div>
 
 	<div class="large-12 columns">
-		<label>Certification Scope Is Partial? &nbsp;
-			<input type="checkbox" name="scope_ispartial" id="scope_ispartial" placeholder="Certification Scope Is Partial?">
+		<label>Scope of Certification  &nbsp;
+			<!--<input type="checkbox" name="scope_ispartial" id="scope_ispartial" placeholder="Certification Scope Is Partial?">-->
+			<input type="radio" name="scope_ispartial" value="true">Partial &nbsp;&nbsp;<input type="radio" name="scope_ispartial" value="false">Full<br>
 		</label>
 	</div>	
 	<div class="large-6 columns">
-		<label>Validity From Date
+		<label>Validity From Date (required)
 		  <input type="date" name="certvalidstartdate" id="certvalidstartdate" placeholder="Start Date" required/>
 		</label>
 	  </div>	  
 	  <div class="large-6 columns">
-		<label>Validity Until Date
+		<label>Validity Until Date (required)
 		  <input type="date" name="certvalidenddate" id="certvalidenddate" placeholder="End date" required/>
 		</label>
 	  </div>
 	  <div class="large-12 columns">
-		<label>Upload Certification File in PDF
+		<label>Upload Certification File in PDF (required)
 		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf" placeholder="Certification File to be Uploaded Here" required>
 		</label>
 	  </div>
@@ -154,7 +189,7 @@ if(isset($loggedInAccessLevel) && $loggedInAccessLevel > 1)
 
 
 	  <div class="large-12 columns">
-	  		<input type="button" class="button expand" id="okButton" name="uploadBtn" value="Save" disabled/>
+	  		<input type="button" class="button expand" id="okButton" name="uploadBtn" value="Save">
 	  </div>	  	  	  	  	  	
 </form>
 </div>
@@ -254,7 +289,7 @@ const headofagency = document.getElementById('headofagency');
 const certvalidstartdate = document.getElementById('certvalidstartdate');
 const certvalidenddate = document.getElementById('certvalidenddate');
 const uploadedFile = document.getElementById('uploadedFile');
-
+/*
 certForm.addEventListener('keyup', function (event)
 {
     isValidGovtAgency = govtagencyField.checkValidity();
@@ -277,7 +312,7 @@ certForm.addEventListener('keyup', function (event)
         okButton.disabled = true;
     }
 });
-
+*/
 okButton.addEventListener('click', function (event)
 {
 	certForm.submit();
