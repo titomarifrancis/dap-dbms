@@ -3,6 +3,18 @@ include 'templates/header.php';
 include 'dbconn.php';
 ?>
 <h3>Signup</h3>
+<?php
+if(isset($_REQUEST['msg']))
+{
+?>
+<div data-alert class="alert-box" tabindex="0" aria-live="assertive" role="alertdialog">
+Congratulations for your successful registration.<br/>
+    Please wait for the GQMPO Administrator to validate your account.<br/>
+    An email will be sent to you upon the validation of your account<br/>
+</div>
+<?php
+}
+?>
 <form id="signUpForm" action="user_processor.php" method="post">
 <div class="row">
     <div class="large-12 columns">
@@ -50,7 +62,7 @@ include 'dbconn.php';
 	$getAgenciesQuery = 'select id, agencyname from govtagency order by agencyname asc';
 	$agencyStmt= $dbh->query($getAgenciesQuery);
 	?>
-        <label>name of Agency
+        <label>Name of Agency
             <select name="govtagencyid" id="govtagencyField" required>
                 <option value="0" selected>Please select one</option>
 	<?php
@@ -172,7 +184,7 @@ signUpForm.addEventListener('keyup', function (event)
     isValidUsername = usernameField.checkValidity();
     isValidPassword = passwordField.checkValidity();
 
-    if ( isValidFirstname && isValidLastname && isValidEmail && isValidGovtagency && isValidUsername && isValidPassword )
+    if(isValidLastname && isValidFirstname && isValidEmail && isValidGovtagency && isValidUsername && isValidPassword)
     {
         okButton.disabled = false;
     }
