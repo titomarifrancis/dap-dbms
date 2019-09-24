@@ -82,7 +82,7 @@ include 'dbconn.php';
 	$getCertifyingBodyQuery = 'select id, providerorg from certifyingbody order by providerorg asc';
 	$certifyingBodyStmt= $dbh->query($getCertifyingBodyQuery);
 	?>	  
-			<label>Certifying Body (if the selection you need to choose is not one of the options below, please add it through the Certifying Body Manager, subject for approval) <a href="certifyingbodymanager.php">Add Certifying Body</a>
+			<label>Certifying Body (if the selection you need to choose is not one of the options below, please add it through the <a href="certifyingbodymanager.php">Certifying Body Manager</a>)
 			  <select name="certifyingbodyid" id="certifyingbodyField" required>
 	<?php
 	foreach($certifyingBodyStmt as $certifyingBodyRow)
@@ -154,7 +154,7 @@ if(isset($loggedInAccessLevel) && $loggedInAccessLevel > 1)
 
 
 	  <div class="large-12 columns">
-	  		<input type="button" class="button expand" id="okButton" name="uploadBtn" value="Save"/>
+	  		<input type="button" class="button expand" id="okButton" name="uploadBtn" value="Save" disabled/>
 	  </div>	  	  	  	  	  	
 </form>
 </div>
@@ -280,7 +280,7 @@ certForm.addEventListener('keyup', function (event)
 
 okButton.addEventListener('click', function (event)
 {
-  signUpForm.submit();
+	certForm.submit();
 });
 
 </script>
