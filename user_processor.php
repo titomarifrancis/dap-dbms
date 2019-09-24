@@ -489,4 +489,4 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
     }
 }
 
-header("Location:$_SERVER[HTTP_REFERER]");
+header("Location:$_SERVER[HTTP_REFERER]?msg=1");
