@@ -91,4 +91,8 @@ foreach($agencyCategoryArray as $categoryRow)
 }
 
 include 'templates/tablefooter.php';
+?>
+<br/>
+<a href="reports/agencycert_summary_excel.php" target="_tab">Export as Excel</a>&nbsp;&nbsp;<a href="#">Export as PDF</a>
+<?php
 include 'templates/footer.php';
