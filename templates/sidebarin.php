@@ -1,6 +1,18 @@
 <?php
 ?>
-
+                <!-- Dynamic auth sidebar start -->
+                <aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
+                    <div class="entry-content">
+                        <style>
+                            ul.sidebar-sl li { margin-bottom: 0.5rem }
+                            a.sidebar-slink { font-size: 1.05rem; padding: 0.5rem 1rem; color: #fff; background: #2e3192; display: block; border-radius: 3px }
+                            a.sidebar-slink:hover { background: #4145c7; color: #fff !important }
+                        </style>
+                        <ul style="list-style: none; margin: 0" class="sidebar-sl">
+                        <li class="sidebar-sl"><a href="agencycert_summary.php" class="sidebar-slink">Certification Summary Report</a></li>
+                        </ul>
+                    </div>
+                </aside>
                 <!-- Dynamic auth sidebar end -->
                 <aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
                     <div class="entry-content">
@@ -9,7 +21,9 @@
                                 a.sidebar-slink { font-size: 1.05rem; padding: 0.5rem 1rem; color: #fff; background: #2e3192; display: block; border-radius: 3px }
                                 a.sidebar-slink:hover { background: #4145c7; color: #fff !important }
                             </style>
+                            <h3>Data Management</h3>
                             <ul style="list-style: none; margin: 0" class="sidebar-sl">
+                            
                                 <li class="sidebar-sl"><a href="agencycertification.php" class="sidebar-slink">Agency Certification Manager</a></li>
                                 
 <?php
@@ -34,7 +48,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel >= 2))
 {
 ?>
                                 <li class="sidebar-sl"><a href="updateuserdetail.php" class="sidebar-slink">User Access Manager</a></li>
-                                <li class="sidebar-sl"><a href="agencycert_summary.php" class="sidebar-slink">Certification Summary Report</a></li>
+
 <?php
 }
 ?>                                
