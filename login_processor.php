@@ -98,5 +98,5 @@ if(validate_hash($password, $dbProvPasswd, $dbProvPasswdSalt))
 else
 {
     //redirect to index.php
-    header("Location:$_SERVER[HTTP_REFERER]");
+    header("Location:$_SERVER[HTTP_REFERER]?msg=1");
 }

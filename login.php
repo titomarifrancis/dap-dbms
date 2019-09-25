@@ -2,6 +2,16 @@
 include 'templates/header.php';
 ?>
 <h3>Login</h3>
+<?php
+if(isset($_REQUEST['msg']) && ($_REQUEST['msg'] == 1))
+{
+?>
+<div data-alert class="alert-box" tabindex="0" aria-live="assertive" role="alertdialog">
+    Sorry the password or username you entered does not match in any of our system<br/>
+</div>
+<?php
+}
+?>
 <form id="signUpForm" action="login_processor.php" method="post">
 <div class="row">
     <div class="large-12 columns">
