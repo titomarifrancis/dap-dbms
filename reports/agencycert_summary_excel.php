@@ -137,6 +137,21 @@ foreach($agencyCategoryArray as $categoryRow)
 
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);
+$objPHPExcel->getActiveSheet()->getProtection()->setSelectLockedCells(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setSelectUnlockedCells(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setFormatCells(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setFormatRows(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setInsertColumns(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setInsertRows(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setInsertHyperlinks(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setDeleteColumns(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setDeleteRows(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setSort(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setAutofilter(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setObjects(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setScenarios(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setSheet(true);
+$objPHPExcel->getActiveSheet()->getProtection()->setPassword('password');
 
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="AgencyCertificationSummaryReport.xlsx"');
