@@ -3,17 +3,9 @@ $httpReferingURL = parse_url($_SERVER['HTTP_REFERER']);
 $refererPath = $httpReferingURL['path'];
 $refererPathElements= explode('/', $refererPath);
 
-if($refererPathElements[2] == 'signup.php')
-{
-    include 'lib/secProc.php';
-    include 'dbconn.php';
-}
-else
-{
-    include 'templates/magic.php';
-    include 'lib/secProc.php';
-    include 'dbconn.php';
-}
+include 'templates/magic.php';
+include 'lib/secProc.php';
+include 'dbconn.php';
 
 $queryArray = [];
 $paramList = '';
