@@ -4,7 +4,7 @@ include 'dbconn.php';
 
 //this is to manage the content of Govt Agency Class table
 ?>
-<h3>Region List Manager</h3>
+<h3>List of Regions</h3>
 <form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">

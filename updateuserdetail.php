@@ -48,7 +48,7 @@ if(isset($_REQUEST['userid']))
 	$isapproved =  $usrDetail[0]['isapproved'];
 }
 ?>
-<h3>User Access Manager</h3>
+<h3>List of User Accounts</h3>
 <form action="user_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">

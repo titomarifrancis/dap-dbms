@@ -3,7 +3,7 @@ include 'templates/headerin.php';
 include 'dbconn.php';
 //this is to manage the content of Govt Agency table
 ?>
-<h3>Government Agency Manager</h3>
+<h3>List of Government Agencies</h3>
 <form action="govtagency_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">

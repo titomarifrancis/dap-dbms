@@ -19,7 +19,7 @@ if(isset($_REQUEST['providerorgid']))
     //die();
 }
 ?>
-<h3>Certifying Body Manager</h3>
+<h3>Certifying Body Details</h3>
 <form action="certbody_processor.php" method="post">
     <div class="row">
         <div class="large-12 columns">

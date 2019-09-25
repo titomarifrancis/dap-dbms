@@ -2,7 +2,7 @@
 include 'templates/headerin.php';
 include 'dbconn.php';
 ?>
-<h3>Agency Certification Manager</h3>
+<h3>Certification Details</h3>
 <?php
 if(isset($_REQUEST['msg']))
 {

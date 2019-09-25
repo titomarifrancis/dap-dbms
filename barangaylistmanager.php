@@ -34,7 +34,7 @@ $(function(){
     });
 });
 </script>
-<h3>Barangay List Management</h3>
+<h3>List of Barangays</h3>
 <form action="barangay_processor.php" method="post">
     <div class="row">
     <div class="large-12 columns">

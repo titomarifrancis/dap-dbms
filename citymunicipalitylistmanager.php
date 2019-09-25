@@ -24,7 +24,7 @@ $(function(){
     });
 });
 </script>
-<h3>City/Municipality List Manager</h3>
+<h3>List of Cities/Municipalities</h3>
 <form action="citymunicipality_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">
