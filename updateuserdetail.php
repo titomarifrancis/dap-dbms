@@ -303,15 +303,15 @@ else
 if(isset($isapproved) && ($isapproved == 1))
 {
 ?>
-	<input type="radio" name="isapproved" value="true" checked> True<br>
-	<input type="radio" name="isapproved" value="false"> False<br>
+	<input type="radio" name="isapproved" value="true" checked> Grant<br>
+	<input type="radio" name="isapproved" value="false"> Deny<br>
 <?php
 }
 else
 {
 ?>
-	<input type="radio" name="isapproved" value="true"> True<br>
-	<input type="radio" name="isapproved" value="false" checked> False<br>
+	<input type="radio" name="isapproved" value="true"> Grant<br>
+	<input type="radio" name="isapproved" value="false" checked> Deny<br>
 
 <?php
 }
