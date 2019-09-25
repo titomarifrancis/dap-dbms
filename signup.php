@@ -15,20 +15,20 @@ Congratulations for your successful registration.<br/>
 <?php
 }
 ?>
-<form id="signUpForm" action="user_processor.php" method="post">
+<form id="signUpForm" action="signup_processor.php" method="post">
 <div class="row">
     <div class="large-12 columns">
-        <label>Last Name
+        <label>Last Name (required)
             <input type="text" name="lastname" id="lastnameField" placeholder="Lastname" required/>
         </label>
     </div>
     <div class="large-12 columns">
-        <label>First Name
+        <label>First Name (required)
             <input type="text" name="firstname" id="firstnameField" placeholder="Firstname" required/>
         </label>
     </div>
     <div class="large-12 columns">
-        <label>Middle Initial   
+        <label>Middle Initial (required)
             <input type="text" name="midname" id="midnameField" placeholder="Middle Initial" required/>
         </label>
     </div>
@@ -38,22 +38,22 @@ Congratulations for your successful registration.<br/>
         </label>
 	</div>
     <div class="large-12 columns">
-        <label>Mobile Contact Number
+        <label>Mobile Contact Number (required)
             <input type="text" name="contactmobile" placeholder="Mobile Contact Number" required/>
         </label>
 	</div>
     <div class="large-12 columns">
-        <label>Landline Contact Number
+        <label>Landline Contact Number (required)
             <input type="text" name="contactlandline" placeholder="Landline Contact Number" required/>
         </label>
 	</div>
     <div class="large-12 columns">
-        <label>Email Address
+        <label>Email Address (required)
             <input type="email" name="contactemail" id="emailField" placeholder="Email Address" required/>
         </label>
 	</div>
     <div class="large-12 columns">
-        <label>Position
+        <label>Position (required)
             <input type="text" name="position" placeholder="Role in Organization" required/>
         </label>
 	</div>
@@ -62,7 +62,7 @@ Congratulations for your successful registration.<br/>
 	$getAgenciesQuery = 'select id, agencyname from govtagency order by agencyname asc';
 	$agencyStmt= $dbh->query($getAgenciesQuery);
 	?>
-        <label>Name of Agency
+        <label>Name of Agency (required)
             <select name="govtagencyid" id="govtagencyField" required>
                 <option value="0" selected>Please select one</option>
 	<?php
@@ -106,12 +106,12 @@ Congratulations for your successful registration.<br/>
 	</div>
 
     <div class="large-12 columns">
-        <label>Username
+        <label>Username (required)
             <input type="text" name="usrname" id="usernameField" placeholder="Username" required/>
         </label>
     </div>
     <div class="large-12 columns">
-        <label>Password
+        <label>Password (required)
             <input type="password" name="usrpassword" id="passwordField" placeholder="Password" required/>
         </label>
     </div>    
