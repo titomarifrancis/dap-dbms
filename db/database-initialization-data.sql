@@ -15,7 +15,7 @@ insert into userlevels(userlevel, leveldesc, creationdate) values(3, 'Super Admi
 --isapproved - true
 --approveddate - NOW()
 --creationdate - NOW()
-insert into systemusers(lastname, firstname, usrname, usrpassword, usrpasswdsalt, userlevelid, isapproved, approveddate, creationdate) values('Escano', 'Tito Mari Francis', 'titomarifrancis', 'Gc/FN5izPSUzA', 'GcjeEJ6.BddW.V.8rSfGS', '3', true, 'NOW()', 'NOW()');
+insert into systemusers(lastname, firstname, usrname, usrpassword, usrpasswdsalt, userlevelid, isapproved, approveddate, creationdate) values('Escano', 'Tito Mari Francis', 'titomarifrancis@gmail.com', 'Gc/FN5izPSUzA', 'GcjeEJ6.BddW.V.8rSfGS', '3', true, 'NOW()', 'NOW()');
 
 --National Capital Region
 --Region 1 - Ilocos Region

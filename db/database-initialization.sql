@@ -76,7 +76,7 @@ create table systemusers (
 	provinceid integer default null references provinces(id) on delete restrict,
 	citymunicipalityid integer default null references citymunicipality(id) on delete restrict,
 	barangayid integer default null references barangays(id) on delete restrict,
-	usrname varchar(20) unique not null,
+	usrname varchar(128) unique not null,
 	usrpassword varchar(128) not null,
     usrpasswdsalt varchar(128) not null,
 	userlevelid integer default 1 references userlevels(userlevel) on delete restrict check(userlevelid < 4),
