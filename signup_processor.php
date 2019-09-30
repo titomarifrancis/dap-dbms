@@ -481,7 +481,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         exit;
     }
 }
-echo $_SERVER[HTTP_REFERER];
-die();
+//echo $_SERVER[HTTP_REFERER];
+//die();
 
 header("Location:$_SERVER[HTTP_REFERER]?msg=1");
