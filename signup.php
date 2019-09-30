@@ -4,7 +4,7 @@ include 'dbconn.php';
 ?>
 <h3>Signup</h3>
 <?php
-if(isset($_REQUEST['msg']))
+if(isset($_REQUEST['msg']) && $_REQUEST['msg']==1)
 {
 ?>
 <div data-alert class="alert-box" tabindex="0" aria-live="assertive" role="alertdialog">

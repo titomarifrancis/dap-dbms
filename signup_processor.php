@@ -3,17 +3,8 @@ $httpReferingURL = parse_url($_SERVER['HTTP_REFERER']);
 $refererPath = $httpReferingURL['path'];
 $refererPathElements= explode('/', $refererPath);
 
-if($refererPathElements[2] == 'signup.php')
-{
-    include 'lib/secProc.php';
-    include 'dbconn.php';
-}
-else
-{
-    include 'templates/magic.php';
-    include 'lib/secProc.php';
-    include 'dbconn.php';
-}
+include 'lib/secProc.php';
+include 'dbconn.php';
 
 $queryArray = [];
 $paramList = '';
@@ -435,6 +426,7 @@ if(isset($loggedInUserId) && (!isset($_REQUEST['userId'])))
     }       
 }
 
+/*
 if(isset($_REQUEST['userId']))
 {
     //update
@@ -465,9 +457,10 @@ if(isset($_REQUEST['userId']))
 }
 else
 {
+    */
     //insert
     $sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
-}
+//}
 
 //for troubleshooting purposes only
 //echo $sqlQuery;
@@ -488,5 +481,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         exit;
     }
 }
+echo $_SERVER[HTTP_REFERER];
+die();
 
 header("Location:$_SERVER[HTTP_REFERER]?msg=1");
