@@ -454,11 +454,13 @@ if(isset($_REQUEST['userId']))
     }
 
     $sqlQuery = "UPDATE systemusers SET $updateList WHERE id= $userId";
+    $actionId= 2;
 }
 else
 {
     //insert
     $sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
+    $actionId= 1;
 }
 
 //for troubleshooting purposes only
@@ -481,4 +483,17 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
     }
 }
 
-header("Location:$_SERVER[HTTP_REFERER]");
+$urlComponents = explode("?", $_SERVER[HTTP_REFERER]);
+if($actionId==1)
+{
+    //
+    header("Location:$urlComponents[0]?msg=$actionId");
+}
+elseif($actionId==2)
+{
+    //
+    header("Location:$urlComponents[0]?userid=$userId&msg=$actionId");
+}
+
+
+//header("Location:$_SERVER[HTTP_REFERER]?msg=$actionId");

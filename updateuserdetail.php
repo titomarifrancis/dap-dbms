@@ -49,6 +49,24 @@ if(isset($_REQUEST['userid']))
 }
 ?>
 <h3>List of User Accounts</h3>
+<?php
+if(isset($_REQUEST['msg']) && $_REQUEST['msg']==1)
+{
+?>
+<div data-alert class="alert-box" tabindex="0" aria-live="assertive" role="alertdialog">
+User profile created<br/>
+</div>
+<?php
+}
+elseif(isset($_REQUEST['msg']) && $_REQUEST['msg']==2)
+{
+?>
+<div data-alert class="alert-box" tabindex="0" aria-live="assertive" role="alertdialog">
+User profile updated<br/>
+</div>
+<?php	
+}
+?>
 <form action="user_processor.php" method="post">
   <div class="row">
     <div class="large-12 columns">
