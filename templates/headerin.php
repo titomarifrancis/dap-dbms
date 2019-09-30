@@ -51,6 +51,7 @@ include 'templates/magic.php';
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/foundation.js"></script>
     <script type="text/javascript" src="js/jquery_002.js"></script>
+    <script type="text/javascript" src="js/d3.min.js"></script>
  
     <link rel="stylesheet" type="text/css" media="screen" id="Social-Sidebar-CSS" href="css/Social-Sidebar-Min.css">
     <script type="text/javascript" charset="utf-8">
