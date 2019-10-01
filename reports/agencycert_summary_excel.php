@@ -45,17 +45,15 @@ $objSheet->getColumnDimension('D')->setAutoSize(true);
 $objSheet->getColumnDimension('E')->setAutoSize(true);
 $objSheet->getColumnDimension('F')->setAutoSize(true);
 $objSheet->getColumnDimension('G')->setAutoSize(true);
-$objSheet->getColumnDimension('H')->setAutoSize(true);
 
 $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('A1', 'Agency Category')
             ->setCellValue('B1', 'Total Number of Agencies')        
             ->setCellValue('C1', 'Active Certifications')
             ->setCellValue('D1', 'Active Certifications (%)')
-            ->setCellValue('E1', 'Expired Certifications')
-            ->setCellValue('F1', 'Expired Certifications (%)')
-            ->setCellValue('G1', 'Uncertified Agencies')
-            ->setCellValue('H1', 'Uncertified Agencies (%)');
+            ->setCellValue('E1', 'Uncertified Agencies')
+            ->setCellValue('F1', 'Uncertified Agencies (%)')
+            ->setCellValue('G1', 'Expired Certifications');
 
 $cellCounter=2;
 
@@ -64,10 +62,10 @@ foreach($agencyCategoryArray as $categoryRow)
     $categoryId = $categoryRow['id'];
     $agencycategoryName = $categoryRow['agencyclassdesc'];
 
-    $getTotalAgencyCount = "select agencyname as totalAgencyCount from govtagency, govtagencyclass where govtagency.govtagencyclassid=govtagencyclass.id and govtagency.govtagencyclassid=$categoryId";
+    $getTotalAgencyCount = "select govtagency.id, govtagency.agencyname as totalAgencyCount from govtagency, govtagencyclass where govtagency.govtagencyclassid=govtagencyclass.id and govtagency.govtagencyclassid=$categoryId";
     $numberTotalAgencyCount = $dbh->query($getTotalAgencyCount)->rowCount();
     
-    $getActiveCertified = "select agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=$categoryId and agencycertifications.isexpired=false and agencycertifications.isapproved=true";
+    $getActiveCertified = "select govtagency.id, govtagency.agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=$categoryId and agencycertifications.isexpired=false and agencycertifications.isapproved=true";
     $numberActiveCertified = $dbh->query($getActiveCertified)->rowCount();
     if($numberTotalAgencyCount == 0)
     {
@@ -79,6 +77,27 @@ foreach($agencyCategoryArray as $categoryRow)
         $percentageActivecertified = number_format($percentActivecertified, 2);
 
     }
+    $categoryId = $categoryRow['id'];
+    $agencycategoryName = $categoryRow['agencyclassdesc'];
+
+    $getTotalAgencyCount = "select govtagency.id, govtagency.agencyname as totalAgencyCount from govtagency, govtagencyclass where govtagency.govtagencyclassid=govtagencyclass.id and govtagency.govtagencyclassid=$categoryId";
+    $numberTotalAgencyCount = $dbh->query($getTotalAgencyCount)->rowCount();
+    
+    $getActiveCertified = "select govtagency.id, govtagency.agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=$categoryId and agencycertifications.isexpired=false and agencycertifications.isapproved=true";
+    $numberActiveCertified = $dbh->query($getActiveCertified)->rowCount();
+    if($numberTotalAgencyCount == 0)
+    {
+        $percentageActivecertified = "N/A";
+    }
+    else
+    {
+        $percentActivecertified = ($numberActiveCertified/$numberTotalAgencyCount) * 100;
+        $percentageActivecertified = number_format($percentActivecertified, 2);
+
+    }
+
+    $getExpiredCertification = "select govtagency.id, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=true and govtagencyclass.id=$categoryId order by govtagency.agencyname";
+    $totalNumberExpiredCertification = $dbh->query($getExpiredCertification)->rowCount();
 
     $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
 
@@ -92,51 +111,21 @@ foreach($agencyCategoryArray as $categoryRow)
         $percentageUncertified = number_format($percentUncertified, 2);
 
     }
-    
-    $numExpired = 0;
-    $getAgencyPerCategory = "select id from govtagency where govtagencyclassid=$categoryId";
-    $getAgencyPerCategoryStmt = $dbh->query($getAgencyPerCategory);
-    $agencyPerCategoryArray = $getAgencyPerCategoryStmt->fetchAll();
-
-    foreach($agencyPerCategoryArray as $agencyPerCategoryArray)
-    {
-        //check if it has expired certification as latest certification
-        $agencyId = $agencyPerCategoryArray['id'];
-        $getLastCertificationStatus = "select agencycertifications.isexpired from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagency.id=$agencyId order by agencycertifications.certvalidenddate desc limit 1";
-        $getLastCertificationStatusStmt = $dbh->query($getLastCertificationStatus);
-        $getLastCertificationStatusArray = $getLastCertificationStatusStmt->fetchAll();
-        $lastCertificationStatus = $getLastCertificationStatusArray;
-        if($lastCertificationStatus == 't')
-        {
-            $numExpired++;
-        }
-    }
-    $totalNumberExpiredCertification = $numExpired;
-    if($numberTotalAgencyCount == 0)
-    {
-        $percentageExpired = "N/A";
-    }
-    else
-    {
-        $percentExpired = ($totalNumberExpiredCertification/$numberTotalAgencyCount) * 100;
-        $percentageExpired = number_format($percentExpired, 2);
-
-    }
 
     $objSheet
             ->setCellValue('A' . $cellCounter, $agencycategoryName)
             ->setCellValue('B' . $cellCounter, $numberTotalAgencyCount)
             ->setCellValue('C' . $cellCounter, $numberActiveCertified)
             ->setCellValue('D' . $cellCounter, $percentageActivecertified)
-            ->setCellValue('E' . $cellCounter, $totalNumberExpiredCertification)
-            ->setCellValue('F' . $cellCounter, $percentageExpired)
-            ->setCellValue('G' . $cellCounter, $numberUncertifiedAgency)
-            ->setCellValue('H' . $cellCounter, $percentageUncertified);
+            ->setCellValue('E' . $cellCounter, $numberUncertifiedAgency)
+            ->setCellValue('F' . $cellCounter, $percentageUncertified)
+            ->setCellValue('G' . $cellCounter, $totalNumberExpiredCertification);
     $cellCounter++;
 }
 
 // Set active sheet index to the first sheet, so Excel opens this as the first sheet
 $objPHPExcel->setActiveSheetIndex(0);
+/*
 $objPHPExcel->getActiveSheet()->getProtection()->setSelectLockedCells(true);
 $objPHPExcel->getActiveSheet()->getProtection()->setSelectUnlockedCells(true);
 $objPHPExcel->getActiveSheet()->getProtection()->setFormatCells(true);
@@ -152,6 +141,7 @@ $objPHPExcel->getActiveSheet()->getProtection()->setObjects(true);
 $objPHPExcel->getActiveSheet()->getProtection()->setScenarios(true);
 $objPHPExcel->getActiveSheet()->getProtection()->setSheet(true);
 $objPHPExcel->getActiveSheet()->getProtection()->setPassword('password');
+*/
 
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
 header('Content-Disposition: attachment;filename="AgencyCertificationSummaryReport.xlsx"');

@@ -60,7 +60,7 @@ $pdf->SetDrawColor(0, 0, 0);
 $pdf->SetLineWidth(0.2);
 $pdf->SetFont('', 'B');
 // column titles
-$header = array('Agency Category', 'Total Number of Agencies', 'Active Certifications', 'Active Certifications (%)', 'Expired Certifications', 'Expired Certifications (%)', 'Uncertified Agencies', 'Uncertified Agencies (%)');
+$header = array('Agency Category', 'Total Number of Agencies', 'Active Certifications', 'Active Certifications (%)', 'Uncertified Agencies', 'Uncertified Agencies (%)', 'Expired Certifications',);
 $w = array(93, 25, 25, 25, 25, 25, 25, 25);
 $num_headers = count($header);
 $lineX= $pdf->getX();
@@ -81,10 +81,10 @@ foreach($agencyCategoryArray as $categoryRow)
     $categoryId = $categoryRow['id'];
     $agencycategoryName = $categoryRow['agencyclassdesc'];
 
-    $getTotalAgencyCount = "select agencyname as totalAgencyCount from govtagency, govtagencyclass where govtagency.govtagencyclassid=govtagencyclass.id and govtagency.govtagencyclassid=$categoryId";
+    $getTotalAgencyCount = "select govtagency.id, govtagency.agencyname as totalAgencyCount from govtagency, govtagencyclass where govtagency.govtagencyclassid=govtagencyclass.id and govtagency.govtagencyclassid=$categoryId";
     $numberTotalAgencyCount = $dbh->query($getTotalAgencyCount)->rowCount();
     
-    $getActiveCertified = "select agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=$categoryId and agencycertifications.isexpired=false and agencycertifications.isapproved=true";
+    $getActiveCertified = "select govtagency.id, govtagency.agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=$categoryId and agencycertifications.isexpired=false and agencycertifications.isapproved=true";
     $numberActiveCertified = $dbh->query($getActiveCertified)->rowCount();
     if($numberTotalAgencyCount == 0)
     {
@@ -96,6 +96,9 @@ foreach($agencyCategoryArray as $categoryRow)
         $percentageActivecertified = number_format($percentActivecertified, 2);
 
     }
+
+    $getExpiredCertification = "select govtagency.id, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=true and govtagencyclass.id=$categoryId order by govtagency.agencyname";
+    $totalNumberExpiredCertification = $dbh->query($getExpiredCertification)->rowCount();
 
     $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
 
@@ -109,38 +112,9 @@ foreach($agencyCategoryArray as $categoryRow)
         $percentageUncertified = number_format($percentUncertified, 2);
 
     }
-    
-    $numExpired = 0;
-    $getAgencyPerCategory = "select id from govtagency where govtagencyclassid=$categoryId";
-    $getAgencyPerCategoryStmt = $dbh->query($getAgencyPerCategory);
-    $agencyPerCategoryArray = $getAgencyPerCategoryStmt->fetchAll();
 
-    foreach($agencyPerCategoryArray as $agencyPerCategoryArray)
-    {
-        //check if it has expired certification as latest certification
-        $agencyId = $agencyPerCategoryArray['id'];
-        $getLastCertificationStatus = "select agencycertifications.isexpired from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagency.id=$agencyId order by agencycertifications.certvalidenddate desc limit 1";
-        $getLastCertificationStatusStmt = $dbh->query($getLastCertificationStatus);
-        $getLastCertificationStatusArray = $getLastCertificationStatusStmt->fetchAll();
-        $lastCertificationStatus = $getLastCertificationStatusArray;
-        if($lastCertificationStatus == 't')
-        {
-            $numExpired++;
-        }
-    }
-    $totalNumberExpiredCertification = $numExpired;
-    if($numberTotalAgencyCount == 0)
-    {
-        $percentageExpired = "N/A";
-    }
-    else
-    {
-        $percentExpired = ($totalNumberExpiredCertification/$numberTotalAgencyCount) * 100;
-        $percentageExpired = number_format($percentExpired, 2);
 
-    }
-
-    $data = array($agencycategoryName, $numberTotalAgencyCount, $numberActiveCertified, $percentageActivecertified, $totalNumberExpiredCertification, $percentageExpired, $numberUncertifiedAgency, $percentageUncertified);
+    $data = array($agencycategoryName, $numberTotalAgencyCount, $numberActiveCertified, $percentageActivecertified, $numberUncertifiedAgency, $percentageUncertified, $totalNumberExpiredCertification );
     $y = array(93, 25, 25, 25, 25, 25, 25, 25);
     $num_data = count($data);
     $lineX1= $pdf->getX();

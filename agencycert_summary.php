@@ -32,27 +32,8 @@ foreach($agencyCategoryArray as $categoryRow)
 
     }
 
-    $numExpired = 0;
-    $getAgencyPerCategory = "select id from govtagency where govtagencyclassid=$categoryId";
-    $getAgencyPerCategoryStmt = $dbh->query($getAgencyPerCategory);
-    $agencyPerCategoryArray = $getAgencyPerCategoryStmt->fetchAll();
-
-    foreach($agencyPerCategoryArray as $agencyPerCategoryArray)
-    {
-        //check if it has expired certification as latest certification
-        $agencyId = $agencyPerCategoryArray['id'];
-        $getLastCertificationStatus = "select govtagency.id, agencycertifications.isexpired from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagency.id=$agencyId order by agencycertifications.certvalidenddate desc limit 1";
-        //echo $getLastCertificationStatus;
-        //die();
-        $getLastCertificationStatusStmt = $dbh->query($getLastCertificationStatus);
-        $getLastCertificationStatusArray = $getLastCertificationStatusStmt->fetchAll();
-        $lastCertificationStatus = $getLastCertificationStatusArray[0]['isexpired'];
-        if($lastCertificationStatus == 't')
-        {
-            $numExpired++;
-        }
-    }
-    $totalNumberExpiredCertification = $numExpired;
+    $getExpiredCertification = "select govtagency.id, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=true and govtagencyclass.id=$categoryId order by govtagency.agencyname";
+    $totalNumberExpiredCertification = $dbh->query($getExpiredCertification)->rowCount();
 
     $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
 
@@ -66,10 +47,6 @@ foreach($agencyCategoryArray as $categoryRow)
         $percentageUncertified = number_format($percentUncertified, 2);
 
     }
-    
-
-
-
 ?>
                             <tr>
                                 <td><?php echo $agencycategoryName;?></td>
