@@ -16,10 +16,10 @@ foreach($agencyCategoryArray as $categoryRow)
     $categoryId = $categoryRow['id'];
     $agencycategoryName = $categoryRow['agencyclassdesc'];
 
-    $getTotalAgencyCount = "select agencyname as totalAgencyCount from govtagency, govtagencyclass where govtagency.govtagencyclassid=govtagencyclass.id and govtagency.govtagencyclassid=$categoryId";
+    $getTotalAgencyCount = "select govtagency.id, govtagency.agencyname as totalAgencyCount from govtagency, govtagencyclass where govtagency.govtagencyclassid=govtagencyclass.id and govtagency.govtagencyclassid=$categoryId";
     $numberTotalAgencyCount = $dbh->query($getTotalAgencyCount)->rowCount();
     
-    $getActiveCertified = "select agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=$categoryId and agencycertifications.isexpired=false and agencycertifications.isapproved=true";
+    $getActiveCertified = "select govtagency.id, govtagency.agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=$categoryId and agencycertifications.isexpired=false and agencycertifications.isapproved=true";
     $numberActiveCertified = $dbh->query($getActiveCertified)->rowCount();
     if($numberTotalAgencyCount == 0)
     {
@@ -32,19 +32,6 @@ foreach($agencyCategoryArray as $categoryRow)
 
     }
 
-    $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
-
-    if($numberTotalAgencyCount == 0)
-    {
-        $percentageUncertified = "N/A";
-    }
-    else
-    {
-        $percentUncertified = ($numberUncertifiedAgency/$numberTotalAgencyCount) * 100;
-        $percentageUncertified = number_format($percentUncertified, 2);
-
-    }
-    
     $numExpired = 0;
     $getAgencyPerCategory = "select id from govtagency where govtagencyclassid=$categoryId";
     $getAgencyPerCategoryStmt = $dbh->query($getAgencyPerCategory);
@@ -54,7 +41,9 @@ foreach($agencyCategoryArray as $categoryRow)
     {
         //check if it has expired certification as latest certification
         $agencyId = $agencyPerCategoryArray['id'];
-        $getLastCertificationStatus = "select agencycertifications.isexpired from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagency.id=$agencyId order by agencycertifications.certvalidenddate desc limit 1";
+        $getLastCertificationStatus = "select govtagency.id, agencycertifications.isexpired from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagency.id=$agencyId order by agencycertifications.certvalidenddate desc limit 1";
+        //echo $getLastCertificationStatus;
+        //die();
         $getLastCertificationStatusStmt = $dbh->query($getLastCertificationStatus);
         $getLastCertificationStatusArray = $getLastCertificationStatusStmt->fetchAll();
         $lastCertificationStatus = $getLastCertificationStatusArray[0]['isexpired'];
@@ -73,19 +62,33 @@ foreach($agencyCategoryArray as $categoryRow)
         $percentExpired = ($totalNumberExpiredCertification/$numberTotalAgencyCount) * 100;
         $percentageExpired = number_format($percentExpired, 2);
 
+    }    
+
+    $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
+
+    if($numberTotalAgencyCount == 0)
+    {
+        $percentageUncertified = "N/A";
     }
+    else
+    {
+        $percentUncertified = ($numberUncertifiedAgency/$numberTotalAgencyCount) * 100;
+        $percentageUncertified = number_format($percentUncertified, 2);
+
+    }
+    
+
 
 
 ?>
                             <tr>
                                 <td><?php echo $agencycategoryName;?></td>
                                 <td><?php echo $numberTotalAgencyCount;?></td>
-                                <td><?php echo $numberActiveCertified;?></td>
+                                <td><?php if($numberActiveCertified > 0){ echo "<a href='$categoryId'>$numberActiveCertified</a>";}else{echo $numberActiveCertified;}?></td>
                                 <td><?php echo $percentageActivecertified;?></td>
-                                <td><?php echo $totalNumberExpiredCertification;?></td>
-                                <td><?php echo $percentageExpired;?></td>
-                                <td><?php echo $numberUncertifiedAgency;?></td>
+                                <td><?php if($numberUncertifiedAgency > 0){ echo "<a href='$categoryId'>$numberUncertifiedAgency</a>";}else{echo $numberUncertifiedAgency;}?></td>
                                 <td><?php echo $percentageUncertified;?></td>
+                                <td><?php if($totalNumberExpiredCertification > 0){ echo "<a href='$categoryId'>$totalNumberExpiredCertification</a>";}else{echo $totalNumberExpiredCertification;}?></td>
                             </tr>
 <?php
 }
