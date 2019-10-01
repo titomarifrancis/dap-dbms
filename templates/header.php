@@ -203,14 +203,14 @@ if(isset($loggedInUserRealname))
                         </style>
                         <h3>ISO Certification in the Government</h3>
                         <ul style="list-style: none; margin: 0" class="sidebar-sl">
-                            <li class="sidebar-sl"><a href="cocertification.php" class="sidebar-slink">Constitutional Offices</a></li>
-                            <li class="sidebar-sl"><a href="ngacertification.php" class="sidebar-slink">National Government Agencies</a></li>
-                            <li class="sidebar-sl"><a href="ngattachedcertification.php" class="sidebar-slink">NGA-Attached Offices and Bureaus</a></li>
-                            <li class="sidebar-sl"><a href="oxocertification.php" class="sidebar-slink">Other Executive Offices</a></li>
-                            <li class="sidebar-sl"><a href="gocccertification.php" class="sidebar-slink">Government Owned and Controlled Corporations</a></li>
-                            <li class="sidebar-sl"><a href="succertification.php" class="sidebar-slink">State Universities and Colleges</a></li>
-                            <li class="sidebar-sl"><a href="lgucertification.php" class="sidebar-slink">Local Government Units</a></li>
-                            <li class="sidebar-sl"><a href="lwdcertification.php" class="sidebar-slink">Local Water Districts</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=1" class="sidebar-slink">Constitutional Offices</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=5" class="sidebar-slink">National Government Agencies</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=6" class="sidebar-slink">NGA-Attached Offices and Bureaus</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=7" class="sidebar-slink">Other Executive Offices</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=2" class="sidebar-slink">Government Owned and Controlled Corporations</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=8" class="sidebar-slink">State Universities and Colleges</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=3" class="sidebar-slink">Local Government Units</a></li>
+                            <li class="sidebar-sl"><a href="listcertification.php?catid=4" class="sidebar-slink">Local Water Districts</a></li>
                         </ul>
                     </div>
                 </aside>
