@@ -15,7 +15,9 @@ $getAgencyCertforApproval = "select
 govtagency.id,
 govtagency.agencyname,
 certifications.certificationstandard,
+certifyingbody.id as providerorgid,
 certifyingbody.providerorg,
+certifyingbody.isapproved,
 agencycertifications.certificationregnumber,
 agencycertifications.certificationscope,
 agencycertifications.scope_ispartial,
@@ -40,6 +42,8 @@ and agencycertifications.id=$id";
 //echo "$getAgencyCertforApproval<br/>";
 $agencyCertStmt = $dbh->query($getAgencyCertforApproval);
 $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
+//print_r($agencyCertApprovalArray);
+//die();
 ?>
     <div class="row">
         <div class="large-12 columns">
@@ -117,11 +121,24 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certificationstandard'];?>"/>
             </label>
         </div>
-        <div class="large-12 columns">
+        <div class="large-8 columns">
             <label>Certifying Body<br/>
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['providerorg'];?>"/>
             </label>
         </div>
+        <div class="large-4 columns">
+            <label><br/>
+            <?php
+            if($agencyCertApprovalArray[0]['isapproved'] != 1)
+            {
+            ?>
+                <a href="certifyingbodymanager.php?providerorgid=<?php echo $agencyCertApprovalArray[0]['providerorgid'];?>"><input type="button"  class="button alert-button expand" name="uploadBtn" value="Review this Unapporved Certifying Body"></a>
+            <?php
+            }
+            ?>
+
+            </label>
+        </div>        
         <div class="large-12 columns">
             <label>Certification Registration Number<br/>
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certificationregnumber'];?>"/>
