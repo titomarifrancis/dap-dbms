@@ -53,16 +53,6 @@ foreach($agencyCategoryArray as $categoryRow)
         }
     }
     $totalNumberExpiredCertification = $numExpired;
-    if($numberTotalAgencyCount == 0)
-    {
-        $percentageExpired = "N/A";
-    }
-    else
-    {
-        $percentExpired = ($totalNumberExpiredCertification/$numberTotalAgencyCount) * 100;
-        $percentageExpired = number_format($percentExpired, 2);
-
-    }    
 
     $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
 
