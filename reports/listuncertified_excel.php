@@ -28,7 +28,7 @@ $objPHPExcel->getDefaultStyle()->getFont()->setSize(12);
 
 
 $objSheet = $objPHPExcel->getActiveSheet();
-$title = "$agencyCategoryLabel";
+$title = substr($agencyCategoryLabel, 0, 24);
 $objSheet->setTitle($title);
 
 
@@ -61,8 +61,9 @@ foreach($agencyStmt as $row)
         $agencyName = $row['agencyname'];
         $objSheet
             ->setCellValue('A' . $cellCounter, $agencyName);
+        $cellCounter++;
     }
-    $cellCounter++;
+    //$cellCounter++;
 }
 
 

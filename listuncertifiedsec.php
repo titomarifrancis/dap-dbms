@@ -46,7 +46,7 @@ if($numrecords > 0)
     include 'templates/tablefooter.php';
 ?>
     <br/>
-    <a href="reports/agencycert_summary_excel.php" target="_tab"><input type="button" class="button expand" id="okButton" name="uploadBtn" value="Export as Excel"></a>&nbsp;&nbsp;<a href="reports/agencycert_summary_pdf.php" target="_tab"><input type="button" class="button expand" id="okButton" name="uploadBtn" value="Export as PDF"></a>
+    <a href="reports/listuncertified_excel.php?catid=<?php echo $agencycategoryId; ?>" target="_tab"><input type="button" class="button expand" id="okButton" name="uploadBtn" value="Export as Excel"></a>&nbsp;&nbsp;<a href="reports/listuncertified_pdf.php?catid=<?php echo $agencycategoryId; ?>" target="_tab"><input type="button" class="button expand" id="okButton" name="uploadBtn" value="Export as PDF"></a>
 <?php    
 }
 else
