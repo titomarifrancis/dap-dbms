@@ -92,12 +92,13 @@ if(isset($_REQUEST['msg']))
 	$certificationStmt= $dbh->query($getCertificationsQuery);
 	?>	  
 			<label>Certification (required)
-			  <select name="certificationid" id="certificationField" required>
+				<select name="certificationid" id="certificationField" required>
+					
 	<?php
 	foreach($certificationStmt as $certificationRow)
 	{
 	?>
-				<option value="<?php echo rtrim($certificationRow['id']);?>"><?php echo rtrim($certificationRow['certificationstandard']);?></option>
+					<option value="<?php echo rtrim($certificationRow['id']);?>"><?php echo rtrim($certificationRow['certificationstandard']);?></option>
 	<?php
 	}
 
@@ -112,7 +113,8 @@ if(isset($_REQUEST['msg']))
 	$certifyingBodyStmt= $dbh->query($getCertifyingBodyQuery);
 	?>	  
 			<label>Certifying Body (required)
-			  <select name="certifyingbodyid" id="certifyingbodyField" required>
+				<select name="certifyingbodyid" id="certifyingbodyField" required>
+				<option value="">Can't find your choice on the list? Add it on right form field</option>
 	<?php
 	foreach($certifyingBodyStmt as $certifyingBodyRow)
 	{
@@ -126,7 +128,7 @@ if(isset($_REQUEST['msg']))
 			</label>
 		  </div>
 		  <div class="large-6 columns">
-			<label>Can't find your Certifying Body on the list? Add it here
+			<label>Can't find your Certifying Body on the list at left? Add it here
 				<input type="text" name="newcertifyingbody" id="newcertifyingbody" placeholder="Type the Name of Your Unlisted Certifying Body Here" required>
 			</label>
 		  </div>		  
