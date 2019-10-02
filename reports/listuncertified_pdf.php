@@ -114,4 +114,4 @@ foreach($agencyStmt as $row)
 $pdf->lastPage();
 
 //Close and output PDF document
-$pdf->Output('AgencyCertificationSummary.pdf', 'I');
+$pdf->Output('UncertifiedAgencyReport.pdf', 'I');
