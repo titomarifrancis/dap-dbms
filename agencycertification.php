@@ -230,7 +230,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 			}
 	?>
 							<tr> 
-							<td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+							<td><a href="agencycert_approval.php??id=<?php echo $row['agencycertid'];?>"><?php echo $row['agencyname'];?></a></td>
 							<td><?php echo $row['certifyingbody'];?></td>
 							<td><?php echo $row['certificationdesc'];?></td>
 							<td><?php echo $row['certstartdate'];?></td>
@@ -268,7 +268,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 			}
 	?>
 							<tr> 
-							<td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+							<td><a href="agencycert_approval.php??id=<?php echo $row['agencycertid'];?>"><?php echo $row['agencyname'];?></a></td>
 							<td><?php echo $row['certifyingbody'];?></td>
 							<td><?php echo $row['certificationdesc'];?></td>
 							<td><?php echo $row['certstartdate'];?></td>
@@ -307,7 +307,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 			}
 	?>
 							<tr> 
-							<td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+							<td><a href="agencycert_approval.php??id=<?php echo $row['agencycertid'];?>"><?php echo $row['agencyname'];?></a></td>
 							<td><?php echo $row['certifyingbody'];?></td>
 							<td><?php echo $row['certificationdesc'];?></td>
 							<td><?php echo $row['certstartdate'];?></td>
