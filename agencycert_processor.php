@@ -539,6 +539,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 else
 {
     //else jump back with notification
-    header("Location:$_SERVER[HTTP_REFERER]?msg=2");
+    $urlComponents = explode("?", $_SERVER[HTTP_REFERER]);
+    header("Location:$urlComponents[0]?msg=2");
 }
 
