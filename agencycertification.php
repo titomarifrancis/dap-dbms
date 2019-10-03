@@ -38,6 +38,7 @@ if(isset($_REQUEST['msg']))
     <div class="large-12 columns">
 		<label>Name of Agency (required)
 			<select name="govtagencyid" id="govtagencyField" required>
+				<option value=""></option>
 	<?php
 
 	if(isset($govtAgencyId))
@@ -53,7 +54,7 @@ if(isset($_REQUEST['msg']))
 	foreach($agencyStmt as $agencyRow)
 	{
 	?>
-			<option value="<?php echo rtrim($agencyRow['id']);?>"><?php echo rtrim($agencyRow['agencyname']);?></option>
+				<option value="<?php echo rtrim($agencyRow['id']);?>"><?php echo rtrim($agencyRow['agencyname']);?></option>
 	<?php
 	}
 	?>
@@ -93,6 +94,7 @@ if(isset($_REQUEST['msg']))
 	?>	  
 			<label>Certification (required)
 				<select name="certificationid" id="certificationField" required>
+					<option value=""></option>
 					
 	<?php
 	foreach($certificationStmt as $certificationRow)
@@ -114,12 +116,12 @@ if(isset($_REQUEST['msg']))
 	?>	  
 			<label>Certifying Body (required)
 				<select name="certifyingbodyid" id="certifyingbodyField" required>
-				<option value="">Can't find your choice on the list? Add it on right form field</option>
+					<option value=""></option>
 	<?php
 	foreach($certifyingBodyStmt as $certifyingBodyRow)
 	{
 	?>
-				<option value="<?php echo rtrim($certifyingBodyRow['id']);?>"><?php echo rtrim($certifyingBodyRow['providerorg']);?></option>
+					<option value="<?php echo rtrim($certifyingBodyRow['id']);?>"><?php echo rtrim($certifyingBodyRow['providerorg']);?></option>
 	<?php
 	}
 
