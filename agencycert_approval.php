@@ -32,7 +32,8 @@ agencycertifications.creationdate,
 agencycertifications.regionid,
 agencycertifications.provinceid,
 agencycertifications.citymunicipalityid,
-agencycertifications.barangayid
+agencycertifications.barangayid,
+agencycertifications.createdby
 from agencycertifications, govtagency, certifications, certifyingbody
 where
 agencycertifications.govtagencyid=govtagency.id 
@@ -42,8 +43,6 @@ and agencycertifications.id=$id";
 //echo "$getAgencyCertforApproval<br/>";
 $agencyCertStmt = $dbh->query($getAgencyCertforApproval);
 $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
-//print_r($agencyCertApprovalArray);
-//die();
 ?>
     <div class="row">
         <div class="large-12 columns">
@@ -175,6 +174,70 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certpdfurl'];?>"/>
             </label>
         </div>
+        <hr/>
+        <div class="large-12 columns">
+            <h3>Certification Recorder Contact Info</h3>
+        </div>
+<?php
+    $userId= $agencyCertApprovalArray[0]['createdby'];
+    $getUsrDetails = "select lastname, firstname, midname, extname, position, contactlandline, contactmobile, contactemail, govtagencyid, regionid, provinceid, citymunicipalityid, barangayid, userlevelid from systemusers where id=$userId";
+    //echo "$getUsrDetails<br/>";
+    //die();
+
+    $userDetailStmt = $dbh->query($getUsrDetails);
+    $usrDetail = $userDetailStmt->fetchAll();
+
+    $lastname = $usrDetail[0]['lastname'];
+    $firstname = $usrDetail[0]['firstname'];
+    $midname = $usrDetail[0]['midname'];
+    $extname = $usrDetail[0]['extname'];
+    $position = $usrDetail[0]['position'];
+    $contactlandline = $usrDetail[0]['contactlandline'];
+    $contactmobile = $usrDetail[0]['contactmobile'];
+    $contactemail = $usrDetail[0]['contactemail'];
+    $govtagencyid = $usrDetail[0]['govtagencyid'];
+    $regionid = $usrDetail[0]['regionid'];
+    $provinceid = $usrDetail[0]['provinceid'];
+    $citymunicipalityid = $usrDetail[0]['citymunicipalityid'];
+    $barangayid = $usrDetail[0]['barangayid'];
+    $usrname = $usrDetail[0]['usrname'];
+    $userlevelid = $usrDetail[0]['userlevelid'];
+    $isapproved =  $usrDetail[0]['isapproved'];
+?>
+
+        <div class="large-12 columns">
+            <label>Last Name
+                <input type="text" name="lastname" value="<?php echo $lastname;?>"/>
+        </div>
+        <div class="large-12 columns">
+        <label>First Name
+                <input type="text" name="lastname" value="<?php echo $firstname;?>"/>
+        </div>        
+        <div class="large-12 columns">
+        <label>Middle Initial
+                <input type="text" name="lastname" value="<?php echo $midname;?>"/>
+        </div>
+        <div class="large-12 columns">
+        <label>Name Extension
+                <input type="text" name="lastname" value="<?php echo $extname;?>"/>
+        </div>
+        <div class="large-12 columns">
+        <label>Mobile Contact Number
+                <input type="text" name="lastname" value="<?php echo $contactmobile;?>"/>
+        </div>
+        <div class="large-12 columns">
+        <label>Landline Contact Number
+                <input type="text" name="lastname" value="<?php echo $contactlandline;?>"/>
+        </div>
+        <div class="large-12 columns">
+        <label>Email Address
+                <input type="text" name="lastname" value="<?php echo $contactemail;?>"/>
+        </div>
+        <div class="large-12 columns">
+        <label>Position
+                <input type="text" name="lastname" value="<?php echo $position;?>"/>
+        </div>                                
+        <hr/>
         <div class="large-12 columns">
             <label>Enable/Approve Agency Certification Entry
             <p>
