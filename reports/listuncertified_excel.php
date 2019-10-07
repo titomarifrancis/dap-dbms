@@ -45,7 +45,7 @@ $objSheet->getColumnDimension('A')->setAutoSize(true);
 $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('A1', 'Agency Name');
 
-$getAgenciesQuery = "select distinct govtagency.id as agencyid, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid!=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=true and govtagencyclass.id=$agencycategoryId order by govtagency.agencyname";
+$getAgenciesQuery = "select distinct govtagency.id as agencyid, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid!=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=$agencycategoryId order by govtagency.agencyname";
 $agencyStmt= $dbh->query($getAgenciesQuery);
 
 $cellCounter=2;
@@ -88,7 +88,7 @@ $objPHPExcel->getActiveSheet()->getProtection()->setPassword('password');
 */
 
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="UncertifiedAgencyReport.xlsx"');
+header('Content-Disposition: attachment;filename="UncertifiedAgencyReport-'.$agencyCategoryLabel.'.xlsx"');
 header('Cache-Control: max-age=1');
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');

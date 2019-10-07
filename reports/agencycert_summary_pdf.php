@@ -120,7 +120,7 @@ foreach($agencyCategoryArray as $categoryRow)
     $lineX1= $pdf->getX();
     for($j = 0; $j < $num_data; ++$j) {
 
-        $pdf->MultiCell($y[$j], 7, $data[$j], 0, 1, 'J', 0, $lineX1);
+        $pdf->MultiCell($y[$j], 7, $data[$j], 1, 1, 'J', 0, $lineX1);
         $lineX1 = $lineX1 + $y[$j];
     }
     $pdf->Ln();

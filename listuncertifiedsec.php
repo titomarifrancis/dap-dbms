@@ -4,13 +4,15 @@ include 'dbconn.php';
 
 $agencycategoryId = $_REQUEST['catid'];
 $getCategoryLabel = "select agencyclassdesc from govtagencyclass where id=$agencycategoryId";
+//echo "$getCategoryLabel<br/>";
 $getCategoryStmt = $dbh->query($getCategoryLabel)->fetchAll();
 $agencyCategoryLabel = $getCategoryStmt[0]['agencyclassdesc'];
 ?>
 <h3>Uncertified <?php echo $agencyCategoryLabel;?></h3>
 <br/>
 <?php
-$getAgenciesQuery = "select distinct govtagency.id as agencyid, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid!=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=true and govtagencyclass.id=$agencycategoryId order by govtagency.agencyname";
+$getAgenciesQuery = "select distinct govtagency.id as agencyid, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid!=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=$agencycategoryId order by govtagency.agencyname";
+//echo "$getAgenciesQuery<br/>";
 $numrecords = $dbh->query($getAgenciesQuery)->rowCount();
 if($numrecords > 0)
 {
@@ -30,6 +32,7 @@ if($numrecords > 0)
 
         //check that this agency has no certification record
         $checkIfUncertified = "select govtagency.id, govtagency.agencyname as numActiveCertified from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id  and agencycertifications.isexpired=false and agencycertifications.isapproved=true and govtagency.id=$govtAgencyId";
+        //echo "$checkIfUncertified<br/>";
         $checkUncertifiedCount = $dbh->query($checkIfUncertified)->rowCount();
 
         //show only those not certified

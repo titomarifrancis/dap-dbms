@@ -61,7 +61,7 @@ $pdf->SetDrawColor(0, 0, 0);
 $pdf->SetLineWidth(0.2);
 $pdf->SetFont('', 'B');
 // column titles
-$header = array('Agency Name');
+$header = array('List of Uncertified Government Agency - '.$agencyCategoryLabel.'');
 $w = array(175);
 $num_headers = count($header);
 $lineX= $pdf->getX();
@@ -77,7 +77,7 @@ $pdf->SetFillColor(224, 235, 255);
 $pdf->SetTextColor(0);
 $pdf->SetFont('');
 
-$getAgenciesQuery = "select distinct govtagency.id as agencyid, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid!=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=true and govtagencyclass.id=$agencycategoryId order by govtagency.agencyname";
+$getAgenciesQuery = "select distinct govtagency.id as agencyid, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid!=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=$agencycategoryId order by govtagency.agencyname";
 $agencyStmt= $dbh->query($getAgenciesQuery);
 
 $cellCounter=2;
@@ -98,7 +98,7 @@ foreach($agencyStmt as $row)
         $lineY1= $pdf->getY();
         for($j = 0; $j < $num_data; ++$j) {
     
-            $pdf->MultiCell($y[$j], 7, $data[$j], 0, 1, 'J', 0, $lineX1);
+            $pdf->MultiCell($y[$j], 7, $data[$j], 1, 1, 'J', 0, $lineX1);
             $lineX1 = $lineX1 + $y[$j];
         }
         $pdf->Ln();
@@ -114,4 +114,4 @@ foreach($agencyStmt as $row)
 $pdf->lastPage();
 
 //Close and output PDF document
-$pdf->Output('UncertifiedAgencyReport.pdf', 'I');
+$pdf->Output('UncertifiedAgencyReport-'.$agencyCategoryLabel.'.pdf', 'I');
