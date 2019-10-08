@@ -43,7 +43,7 @@ $objPHPExcel->getProperties()->setCreator("Tito Mari Francis H. Escano")
 $objSheet->getColumnDimension('A')->setAutoSize(true);
 
 $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Agency Name');
+            ->setCellValue('A1', 'Agencies Without ISO-Certified QMS - '.$agencyCategoryLabel.'');
 
 $getAgenciesQuery = "select distinct govtagency.id as agencyid, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid!=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagencyclass.id=$agencycategoryId order by govtagency.agencyname";
 $agencyStmt= $dbh->query($getAgenciesQuery);

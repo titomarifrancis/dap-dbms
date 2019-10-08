@@ -58,11 +58,11 @@ $pdf->AddPage();
 $pdf->SetFillColor(46, 49, 146);
 $pdf->SetTextColor(255);
 $pdf->SetDrawColor(0, 0, 0);
-$pdf->SetLineWidth(0.2);
+$pdf->SetLineWidth(0.1);
 $pdf->SetFont('', 'B');
 // column titles
-$header = array('List of Uncertified Government Agency - '.$agencyCategoryLabel.'');
-$w = array(175);
+$header = array('Agencies Without ISO-Certified QMS - '.$agencyCategoryLabel.'');
+$w = array(180);
 $num_headers = count($header);
 $lineX= $pdf->getX();
 for($i = 0; $i < $num_headers; ++$i) {
@@ -92,7 +92,7 @@ foreach($agencyStmt as $row)
     {
         $agencyName = $row['agencyname'];
         $data = array($agencyName);
-        $y = array(175);
+        $y = array(180);
         $num_data = count($data);
         $lineX1= $pdf->getX();
         $lineY1= $pdf->getY();

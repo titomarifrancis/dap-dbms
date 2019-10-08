@@ -28,7 +28,8 @@ $pdf->SetSubject('Agency Certification Summary');
 $pdf->SetKeywords('EDGEKIT, DAP, government, agency, certification');
 
 // set default header data
-$pdf->SetHeaderData(PDF_HEADER_TITLE);
+//$pdf->SetHeaderData(PDF_HEADER_TITLE);
+$pdf->SetHeaderData($ht='Agency Certification Summary');
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -55,10 +56,14 @@ $pdf->SetFont('helvetica', '', 9);
 $pdf->AddPage();
 
 $pdf->SetFillColor(46, 49, 146);
-$pdf->SetTextColor(255);
+$pdf->SetTextColor(0);
 $pdf->SetDrawColor(0, 0, 0);
 $pdf->SetLineWidth(0.2);
 $pdf->SetFont('', 'B');
+
+$pdf->Cell(100, 13, 'Agency Certification Summary', 0, 1, '', 0, '', 0);
+//$pdf->Ln();
+$pdf->SetTextColor(255);
 // column titles
 $header = array('Agency Category', 'Total Number of Agencies', 'Active Certifications', 'Active Certifications (%)', 'Uncertified Agencies', 'Uncertified Agencies (%)', 'Expired Certifications',);
 $w = array(93, 25, 25, 25, 25, 25, 25, 25);
@@ -66,7 +71,7 @@ $num_headers = count($header);
 $lineX= $pdf->getX();
 for($i = 0; $i < $num_headers; ++$i) {
 
-    $pdf->MultiCell($w[$i], 13, $header[$i], 0, 1, 'J', 0, $lineX);
+    $pdf->MultiCell($w[$i], 13, $header[$i], 1, 1, 'J', 0, $lineX);
     $lineX = $lineX + $w[$i];
 }
 $pdf->Ln();
@@ -130,4 +135,4 @@ foreach($agencyCategoryArray as $categoryRow)
 $pdf->lastPage();
 
 //Close and output PDF document
-$pdf->Output('AgencyCertificationSummary.pdf', 'I');
+$pdf->Output('AgencyCertificationSummaryReport.pdf', 'I');
