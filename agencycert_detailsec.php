@@ -138,7 +138,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
             </label>
         </div>
         <div class="large-12 columns">
-            <label>Certification Scope Is Partial? &nbsp;
+            <label>Certification Scope Is Full? &nbsp;
                 <?php if($agencyCertApprovalArray[0]['scope_ispartial'] == 1) echo "Yes"; else echo "No";?><br/>&nbsp;
             </label>
         </div>
@@ -177,7 +177,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
 //echo $agencyCertApprovalArray[0]['id'];
 //die();
 $agencyId = $agencyCertApprovalArray[0]['id'];
-$getAgenciesQuery = 'select agencycertifications.id as agencycertificationid, agencycertifications.isexpired, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagency.id='.$agencyId.' order by agencycertifications.certvalidenddate desc';
+$getAgenciesQuery = 'select agencycertifications.id as agencycertificationid, agencycertifications.isexpired, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, agencycertifications.regionid, agencycertifications.provinceid, agencycertifications.citymunicipalityid from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and govtagency.id='.$agencyId.' order by agencycertifications.certvalidenddate desc';
 //echo $getAgenciesQuery;
 //die();
 $numrecords = $dbh->query($getAgenciesQuery)->rowCount();
@@ -189,19 +189,55 @@ if($numrecords > 0)
     $agencyStmt= $dbh->query($getAgenciesQuery);
     foreach($agencyStmt as $row)
     {
-        $isPartial="Not Full Scope";
+        $isPartial="Full Scope";
         if($row['ispartial'] == 1)
         {
-            $isPartial="Full Scope";
+            $isPartial="Not Full Scope";
+        }
+
+        //get region
+        $regionName = '';
+        if(isset($row['regionid']) && ($row['regionid'] != ''))
+        {
+            //
+            $regionId = $row['regionid'];
+            $getRegionName = "select regionname from regions where id=$regionId";
+            $regionArray = $dbh->query($getRegionName)->fetchAll();
+            $regionName = $regionArray[0]['regionname'];
+        }
+
+        //get province
+        $provinceName = '';
+        if(isset($row['provinceid']) && ($row['provinceid'] != ''))
+        {
+            //
+            $provinceId = $row['provinceid'];
+            $getProvinceName = "select provincename from provinces where id=$provinceId";
+            $provinceArray = $dbh->query($getProvinceName)->fetchAll();
+            $provinceName = $provinceArray[0]['provincename'];
+        }
+
+        //get city/municipality
+        $citymunicipalityName = '';
+        if(isset($row['citymunicipalityid']) && ($row['citymunicipalityid'] != ''))
+        {
+            //
+            $citymunicipalityId = $row['citymunicipalityid'];
+            $getCitymunicipalityName = "select towncitymuniciplaityname from citymunicipality where id=$citymunicipalityId";
+            $citymunicipalityArray = $dbh->query($citymunicipalityId)->fetchAll();
+            $citymunicipalityName = $citymunicipalityArray[0]['towncitymuniciplaityname'];
         }
 ?>
                         <tr> 
-                        <td><a href="agencycert_detailsec.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+                        <td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
                         <td><?php echo $row['certifyingbody'];?></td>
                         <td><?php echo $row['certificationdesc'];?></td>
                         <td><?php echo $row['certstartdate'];?></td>
                         <td><?php echo $row['certenddate'];?></td>
                         <td><?php echo $isPartial;?></td>
+                        <td><?php echo $regionName;?></td>
+                        <td><?php echo $provinceName;?></td>
+                        <td><?php echo $citymunicipalityName;?></td>
                         </tr>          
 <?php
     }
