@@ -223,10 +223,10 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 		foreach($agencyStmt as $row)
 		{
 			//
-			$isPartial="Not Full Scope";
+			$isPartial="Full Scope";
 			if($row['ispartial'] == 1)
 			{
-				$isPartial="Full Scope";
+				$isPartial="Not Full Scope";
 			}
 	?>
 							<tr> 
@@ -261,10 +261,10 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 		foreach($agencyStmt as $row)
 		{
 			//
-			$isPartial="Not Full Scope";
+			$isPartial="Full Scope";
 			if($row['ispartial'] == 1)
 			{
-				$isPartial="Full Scope";
+				$isPartial="Not Full Scope";
 			}
 	?>
 							<tr> 
@@ -300,10 +300,10 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 		foreach($agencyStmt as $row)
 		{
 			//
-			$isPartial="Not Full Scope";
+			$isPartial="Full Scope";
 			if($row['ispartial'] == 1)
 			{
-				$isPartial="Full Scope";
+				$isPartial="Not Full Scope";
 			}
 	?>
 							<tr> 
@@ -339,10 +339,10 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 		$agencyStmt= $dbh->query($getAgenciesQueryCityMunicipal);
 		foreach($agencyStmt as $row)
 		{
-			$isPartial="Not Full Scope";
+			$isPartial="Full Scope";
 			if($row['ispartial'] == 1)
 			{
-				$isPartial="Full Scope";
+				$isPartial="Not Full Scope";
 			}
 	?>
 							<tr> 
