@@ -51,7 +51,7 @@ foreach($agencyCategoryArray as $categoryRow)
                             <tr>
                                 <td><?php echo $agencycategoryName;?></td>
                                 <td><?php echo $numberTotalAgencyCount;?></td>
-                                <td><?php if($numberActiveCertified > 0){ echo "<a href='listcertificationsec.php?catid=$categoryId'>$numberActiveCertified</a>";}else{echo $numberActiveCertified;}?></td>
+                                <td><?php if($numberActiveCertified > 0){ echo "<a href='listactivecertification.php?catid=$categoryId'>$numberActiveCertified</a>";}else{echo $numberActiveCertified;}?></td>
                                 <td><?php echo $percentageActivecertified;?></td>
                                 <td><?php if($numberUncertifiedAgency > 0){ echo "<a href='listuncertifiedsec.php?catid=$categoryId'>$numberUncertifiedAgency</a>";}else{echo $numberUncertifiedAgency;}?></td>
                                 <td><?php echo $percentageUncertified;?></td>

@@ -106,7 +106,6 @@ foreach($agencyStmt as $row)
         {
             $pdf->AddPage();
         }
-
     }
 }
 
