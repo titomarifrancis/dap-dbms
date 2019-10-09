@@ -34,7 +34,7 @@ if($numrecordsNational > 0)
         }
 ?>
                         <tr> 
-                        <td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+                        <td><a href="agencycert_detailsec.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
                         <td><?php echo $row['certifyingbody'];?></td>
                         <td><?php echo $row['certificationdesc'];?></td>
                         <td><?php echo $row['certstartdate'];?></td>
@@ -71,7 +71,7 @@ if($numrecordsRegional > 0)
         }
 ?>
                         <tr> 
-                        <td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+                        <td><a href="agencycert_detailsec.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
                         <td><?php echo $row['certifyingbody'];?></td>
                         <td><?php echo $row['certificationdesc'];?></td>
                         <td><?php echo $row['certstartdate'];?></td>
@@ -109,7 +109,7 @@ if($numrecordsProvincial > 0)
         }
 ?>
                         <tr> 
-                        <td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+                        <td><a href="agencycert_detailsec.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
                         <td><?php echo $row['certifyingbody'];?></td>
                         <td><?php echo $row['certificationdesc'];?></td>
                         <td><?php echo $row['certstartdate'];?></td>
@@ -146,7 +146,7 @@ if($numrecordsMunicipal > 0)
         }
 ?>
                         <tr> 
-                        <td><a href="agencycert_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+                        <td><a href="agencycert_detailsec.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
                         <td><?php echo $row['certifyingbody'];?></td>
                         <td><?php echo $row['certificationdesc'];?></td>
                         <td><?php echo $row['certstartdate'];?></td>
