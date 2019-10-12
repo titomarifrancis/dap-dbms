@@ -1,8 +1,10 @@
 <?php
 //dev server
 $deployType="Dev";
-$hName = "192.168.117.133";
+#DAP VM IP: 192.168.227.130
+$hName = "192.168.227.130";
 $dbPort = "5432";
-$dbName = "dap_edgekit";
+//DAP VM dbname: edgekit_dap
+$dbName = "edgekit_dap";
 $userName = "dap_edgekit";
 $passWord = "password";
