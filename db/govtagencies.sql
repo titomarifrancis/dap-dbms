@@ -386,7 +386,7 @@ insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creatio
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Cooperative Development Authority', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Technical Education and Skills Development Authority', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Board of Investments', 6, 104, NOW());
-insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Construction Insdustry Authority of the Philippines', 6, 104, NOW());
+insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Construction Industry Authority of the Philippines', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Design Center of the Philippines', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Intellectual Property Office of the Philippines', 6, 104, NOW());
 insert into govtagency(agencyname, govtagencyclassid, parentgovagencyid, creationdate) values('Philippine Trade Training Center', 6, 104, NOW());
