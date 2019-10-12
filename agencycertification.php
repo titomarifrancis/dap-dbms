@@ -115,7 +115,7 @@ if(isset($_REQUEST['msg']))
 	$certifyingBodyStmt= $dbh->query($getCertifyingBodyQuery);
 	?>	  
 			<label>Certifying Body (required)
-				<select name="certifyingbodyid" id="certifyingbodyField" required>
+				<select name="certifyingbodyid" id="certifyingbodyField">
 					<option value=""></option>
 	<?php
 	foreach($certifyingBodyStmt as $certifyingBodyRow)
@@ -131,7 +131,7 @@ if(isset($_REQUEST['msg']))
 		  </div>
 		  <div class="large-6 columns">
 			<label>Can't find your Certifying Body on the list at left? Add it here
-				<input type="text" name="newcertifyingbody" id="newcertifyingbody" placeholder="Type the Name of Your Unlisted Certifying Body Here" required>
+				<input type="text" name="newcertifyingbody" id="newcertifyingbody" placeholder="Type the Name of Your Unlisted Certifying Body Here">
 			</label>
 		  </div>		  
 
