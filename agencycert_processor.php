@@ -10,6 +10,8 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
     //if all ok
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
     {
+        //print_r($_FILES);
+        //die();
         if (isset($_FILES['uploadedFile']))
         {
             $errors = [];
@@ -21,6 +23,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
             $file_type = $_FILES['uploadedFile']['type'];
             $file_size = $_FILES['uploadedFile']['size'];
             $file_ext = strtolower(end(explode('.', $file_name)));
+            //$file_ext = strtolower(end(explode('.', $_FILES['uploadedFile']['name'])));
             $file = $path . $enc_filename . "." . $file_ext;
             if (!in_array($file_ext, $extensions))
             {
@@ -43,7 +46,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
                 ssh2_scp_send($ssh, $file, $dst, 0644);
     
                 //Should delete the file on local stash folder
-                //unlink($file) or die("Couldn't delete file");
+                unlink($file) or die("Couldn't delete file");
     
                 $webpathlen = strlen($ssh2destpath);
                 $webpathlastchar = substr($ssh2destpath, ($webpathlen - 1), 1);
