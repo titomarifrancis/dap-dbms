@@ -130,7 +130,7 @@ if(isset($_REQUEST['msg']))
 			</label>
 		  </div>
 		  <div class="large-6 columns">
-			<label>Can't find your Certifying Body on the list at left? Add it here
+			<label>Can't find your Certifying Body on the list? Add it here
 				<input type="text" name="newcertifyingbody" id="newcertifyingbody" placeholder="Type the Name of Your Unlisted Certifying Body Here">
 			</label>
 		  </div>		  
