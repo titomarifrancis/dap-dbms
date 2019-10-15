@@ -182,8 +182,8 @@ if(isset($loggedInAccessLevel) && $loggedInAccessLevel > 1)
 	  <div class="large-12 columns">
             <label>Enable/Approve Agency Certification Entry
                 <p>
-					<input type="radio" name="isapproved" value="true"> True<br>
-					<input type="radio" name="isapproved" value="false" checked> False<br>
+					<input type="radio" name="isapproved" value="true"> Approve<br>
+					<input type="radio" name="isapproved" value="false" checked> Disapprove<br>
 				</p>
         </div>
 <?php						
