@@ -239,7 +239,7 @@ else
 	foreach($agencyStmt as $row)
 	{
 	?>
-	      <option value="<?php echo $row['id'];?>" <?php if($row['id'] == $govtagencyid) echo "selected";?>><?php echo rtrim($row['agencyname']);?></option>
+	      <option value="<?php echo $row['id'];?>" <?php if((isset($govtagencyid)) && ($row['id'] == $govtagencyid)) echo "selected";?>><?php echo rtrim($row['agencyname']);?></option>
 	<?php	
 	}
 	?>
@@ -307,7 +307,7 @@ else
 	foreach($levelStmt as $levelRow)
 	{
 	?>
-			<option value="<?php echo $levelRow['userlevel'];?>" <?php if($levelRow['userlevel'] == $userlevelid) echo "selected";?>><?php echo rtrim($levelRow['leveldesc']);?></option>
+			<option value="<?php echo $levelRow['userlevel'];?>" <?php if(isset($userlevelid) && ($levelRow['userlevel'] == $userlevelid)) echo "selected";?>><?php echo rtrim($levelRow['leveldesc']);?></option>
 	<?php
 	}
 	?>
