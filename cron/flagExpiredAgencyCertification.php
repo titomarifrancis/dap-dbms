@@ -9,4 +9,7 @@ $flagAgencyCertExpiredStmt = $dbh->query($sqlQuery);
 $numrecords = $dbh->query($sqlQuery)->rowCount();
 
 //to be implemented:
-//notify thru log or messaging like chat or email of flagged expired agency certification#! 
+//notify thru log or messaging like chat or email of flagged expired agency certification#!
+
+//query to get expiring certifications 3 months from now
+//SELECT * FROM agencycertifications WHERE certvalidenddate <= NOW() + interval '3 months'
