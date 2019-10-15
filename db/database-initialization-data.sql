@@ -15,7 +15,8 @@ insert into userlevels(userlevel, leveldesc, creationdate) values(3, 'Super Admi
 --isapproved - true
 --approveddate - NOW()
 --creationdate - NOW()
-insert into systemusers(lastname, firstname, usrname, usrpassword, usrpasswdsalt, userlevelid, isapproved, approveddate, creationdate) values('Escano', 'Tito Mari Francis', 'titomarifrancis@gmail.com', 'Gc/FN5izPSUzA', 'GcjeEJ6.BddW.V.8rSfGS', '3', true, 'NOW()', 'NOW()');
+insert into systemusers(lastname, firstname, usrname, usrpassword, usrpasswdsalt, userlevelid, isapproved, approveddate, creationdate) values('Escano', 'Tito Mari Francis', 'titomarifrancis@edgekit.com', 'Gc/FN5izPSUzA', 'GcjeEJ6.BddW.V.8rSfGS', '3', true, 'NOW()', 'NOW()');
+--insert into systemusers(lastname, firstname, midname, position, contactlandline, contactmobile, contactemail, usrname, usrpassword, usrpasswdsalt, userlevelid, isapproved, approveddate, creationdate) values('Olimpiada', 'Philip Jourdan', 'E', 'Project Assistant', '026312137', '09471774923', 'olimpiadap@dap.edu.ph', 'olimpiadap@dap.edu.ph', 'kAl1LstTGqhQ2', 'kAUesNWr2p4SVTG3pDafO', '2', true, 'NOW()', 'NOW()');
 
 --National Capital Region
 --Region 1 - Ilocos Region
