@@ -77,15 +77,15 @@ else
 if($isapproved == 1)
 {
 ?>
-                    <input type="radio" name="isapproved" value="true" checked> True<br>
-                    <input type="radio" name="isapproved" value="false"> False<br>
+                    <input type="radio" name="isapproved" value="true" checked> Approve<br>
+                    <input type="radio" name="isapproved" value="false"> Disapprove<br>
 <?php
 }
 else
 {
 ?>
-                    <input type="radio" name="isapproved" value="true"> True<br>
-                    <input type="radio" name="isapproved" value="false" checked> False<br>
+                    <input type="radio" name="isapproved" value="true"> Approve<br>
+                    <input type="radio" name="isapproved" value="false" checked> Disapprove<br>
 <?php
 }
 ?>                
