@@ -44,9 +44,15 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
                 //this will be the path to be recorded in the DB
                 $dst = $ssh2destpath . $enc_filename.'.' .$file_ext;
                 ssh2_scp_send($ssh, $file, $dst, 0644);
+
+                //close file handle
+                fclose(realpath($file));
+
+                //change to path of file (stash)
+                chdir($path);
     
                 //Should delete the file on local stash folder
-                unlink($file) or die("Couldn't delete file");
+                unlink(realpath($file)) or die("Couldn't delete file");
     
                 $webpathlen = strlen($ssh2destpath);
                 $webpathlastchar = substr($ssh2destpath, ($webpathlen - 1), 1);
