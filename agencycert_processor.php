@@ -5,7 +5,7 @@ include 'dbconn.php';
 include 'config/ssh2param.php';
 
 //check that all required fields are properly filled in
-if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (isset($_REQUEST['certificationid']) && ($_REQUEST['certificationid'] > 0)) && (isset($_REQUEST['certvalidstartdate']) && ($_REQUEST['certvalidstartdate'] !== '')) && (isset($_REQUEST['certvalidenddate']) && ($_REQUEST['certvalidenddate'] !== '')) && (isset($_REQUEST['certificationregnumber']) && ($_REQUEST['certificationregnumber'] !== '')) && (isset($_REQUEST['certificationscope']) && ($_REQUEST['certificationscope'] !== '')) && (isset($_REQUEST['headofagency']) && ($_REQUEST['headofagency'] !== '')) && (isset($_FILES['uploadedFile'])))
+if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (isset($_REQUEST['certificationid']) && ($_REQUEST['certificationid'] > 0)) && (isset($_REQUEST['certvalidstartdate']) && ($_REQUEST['certvalidstartdate'] !== '')) && (isset($_REQUEST['certvalidenddate']) && ($_REQUEST['certvalidenddate'] !== '')) && (isset($_REQUEST['certificationregnumber']) && ($_REQUEST['certificationregnumber'] !== '')) && (isset($_REQUEST['certificationscope']) && ($_REQUEST['certificationscope'] !== '')) && (isset($_REQUEST['headofagency']) && ($_REQUEST['headofagency'] !== '')) && (isset($_FILES['uploadedFile'])) && ((isset($_REQUEST['certifyingbodyid']) && ($_REQUEST['certifyingbodyid'] != '')) ^((isset($_REQUEST['newcertifyingbody']) && ($_REQUEST['newcertifyingbody'] != '')))))
 {
     //if all ok
     if ($_SERVER['REQUEST_METHOD'] === 'POST')
