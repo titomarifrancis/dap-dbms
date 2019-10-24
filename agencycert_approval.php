@@ -177,7 +177,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
         </div>
         <hr/>
         <div class="large-12 columns">
-            <h3>Certification Recorder Contact Info</h3>
+            <h3>Agency Authorized Representative</h3>
         </div>
 <?php
     $userId= $agencyCertApprovalArray[0]['createdby'];
