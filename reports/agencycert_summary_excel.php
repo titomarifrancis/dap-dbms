@@ -143,8 +143,10 @@ $objPHPExcel->getActiveSheet()->getProtection()->setSheet(true);
 $objPHPExcel->getActiveSheet()->getProtection()->setPassword('password');
 */
 
+$dateStamp = date('Ymd');
+
 header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="AgencyCertificationSummaryReport.xlsx"');
+header('Content-Disposition: attachment;filename="AgencyCertificationSummaryReport'.$dateStamp.'.xlsx"');
 header('Cache-Control: max-age=1');
 
 $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
