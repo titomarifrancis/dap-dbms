@@ -131,7 +131,8 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
             if($agencyCertApprovalArray[0]['isapproved'] != 1)
             {
             ?>
-                <a href="certifyingbodymanager.php?providerorgid=<?php echo $agencyCertApprovalArray[0]['providerorgid'];?>"><input type="button"  class="button alert-button expand" name="uploadBtn" value="Review this Unapporved Certifying Body"></a>
+                <!--<a href="certifyingbodymanager.php?providerorgid=<?php echo $agencyCertApprovalArray[0]['providerorgid'];?>"><input type="button"  class="button alert-button expand" name="uploadBtn" value="Review this Unapporved Certifying Body"></a>-->
+                <a href="certifyingbodymanager.php?providerorgid=<?php echo $agencyCertApprovalArray[0]['providerorgid'];?>"><input type="button"  class="button alert-button expand" name="uploadBtn" value="Review certifying body to be validated"></a>
             <?php
             }
             ?>
