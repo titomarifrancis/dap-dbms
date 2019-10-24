@@ -186,6 +186,7 @@ if(isset($loggedInUserRealname))
 		<div id="main-content" class="row">
 			<div id="content" class="large-3 medium-3 columns" role="main">
                 <!-- Common sidebar start-->
+                <!--
                 <aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
                     <div class="entry-content">
                         <style>
@@ -197,7 +198,8 @@ if(isset($loggedInUserRealname))
                         <li class="sidebar-sl"><a href="home.php" class="sidebar-slink">Home</a></li>
                         </ul>
                     </div>
-                </aside>                 
+                </aside>
+                -->
 				<aside id="custom_html-3" class="widget_text widget callout secondary widget_custom_html">
                     <div class="entry-content">
                         <style>
