@@ -47,12 +47,14 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 
                 //close file handle
                 fclose(realpath($file));
+                //fclose($file);
 
                 //change to path of file (stash)
                 chdir($path);
     
                 //Should delete the file on local stash folder, ensure that stash has chmod 766
                 unlink(realpath($file)) or die("Couldn't delete file");
+                //unlink($file) or die("Couldn't delete file");
     
                 $webpathlen = strlen($ssh2destpath);
                 $webpathlastchar = substr($ssh2destpath, ($webpathlen - 1), 1);
