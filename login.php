@@ -15,6 +15,9 @@ if(isset($_REQUEST['msg']) && ($_REQUEST['msg'] == 1))
 <form id="signUpForm" action="login_processor.php" method="post">
 <div class="row">
     <div class="large-12 columns">
+        <label>Should you need to create or update your agency's certification details, please log in. Thank you.</label>
+    </div>
+    <div class="large-12 columns">
         <label>Username
             <input type="text" name="usernameField" id="usernameField" placeholder="Username" required/>
         </label>
