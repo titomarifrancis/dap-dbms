@@ -70,5 +70,8 @@ insert into govtagencyclass(agencyclassdesc, creationdate) values('NGA-Attached 
 insert into govtagencyclass(agencyclassdesc, creationdate) values('Other Executive Offices', NOW());
 insert into govtagencyclass(agencyclassdesc, creationdate) values('State Universities and Colleges', NOW());
 
+insert into certifications(certificationstandard, creationdate) values('ISO 9001:1987', NOW());
+insert into certifications(certificationstandard, creationdate) values('ISO 9001:1994', NOW());
+insert into certifications(certificationstandard, creationdate) values('ISO 9001:2000', NOW());
 insert into certifications(certificationstandard, creationdate) values('ISO 9001:2008', NOW());
 insert into certifications(certificationstandard, creationdate) values('ISO 9001:2015', NOW());
