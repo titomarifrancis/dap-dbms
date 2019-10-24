@@ -239,10 +239,10 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
         </div>                                
         <hr/>
         <div class="large-12 columns">
-            <label>Enable/Approve Agency Certification Entry
+            <label>Validate Agency Certification Entry
             <p>
-                    <input type="radio" name="isapproved" value="true"> Approve<br>
-                    <input type="radio" name="isapproved" value="false" checked> Disapprove<br>
+                    <input type="radio" name="isapproved" value="true"> Yes<br>
+                    <input type="radio" name="isapproved" value="false" checked> Pending<br>
             </p>
     </div>
     <div class="large-12 columns">
