@@ -109,7 +109,7 @@ else
             <th style="width: 35%">Certifying Body</th>
             <th style="width: 10%">PAB Accredited?</th>
             <th style="width: 5%">Status</th>
-            <th style="width: 15%">Approved By</th>
+            <th style="width: 15%">Validated By</th>
             <th style="width: 15%">Created By</th>
             <th style="width: 20%">Date Created</th>
         </tr>
@@ -129,11 +129,11 @@ foreach($certBodyStmt as $certBodyRow)
         $isPAB = "Yes";
     }
 
-    $isApproved = 'Disabled';
+    $isApproved = 'Pending Validation';
     $approverName = '';
     if($certBodyRow['isapproved'] == 1)
     {
-        $isApproved = "Enabled";
+        $isApproved = "Approved";
 
         if($certBodyRow['approvedby'] > 0)
         {
