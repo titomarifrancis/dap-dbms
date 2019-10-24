@@ -1,7 +1,10 @@
 <?php
 include 'templates/headerin.php';
 ?>
-<h3>GOVERNMENT QUALITY MANAGEMENT PROGRAM</h3>
+<!--<h3>GOVERNMENT QUALITY MANAGEMENT PROGRAM</h3>-->
+<p>
+Through the EO No. 605, the Development Academy of the Philippines has been promoting and enhancing capabilities of the government in establishing, implementing and sustaining a Quality Management System certified to ISO 9001.
+</p>
 <p>
 The Government Quality Management Program, created through the Executive Order No. 605, Institutionalizing the Structure, Mechanisms, and Standards to Implement the Government Quality Management Program (GQMP), aims to enhance citizen satisfaction and public sector productivity.  
 </p>
