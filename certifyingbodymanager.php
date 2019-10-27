@@ -71,21 +71,21 @@ else
                 </p>
         </div>
         <div class="large-12 columns">
-            <label>Enable/Approve Certifying Body
+            <label>Accept/Deny Certifying Body
                 <p>
 <?php
 if($isapproved == 1)
 {
 ?>
-                    <input type="radio" name="isapproved" value="true" checked> Approve<br>
-                    <input type="radio" name="isapproved" value="false"> Disapprove<br>
+                    <input type="radio" name="isapproved" value="true" checked> Accept<br>
+                    <input type="radio" name="isapproved" value="false"> Deny<br>
 <?php
 }
 else
 {
 ?>
-                    <input type="radio" name="isapproved" value="true"> Approve<br>
-                    <input type="radio" name="isapproved" value="false" checked> Disapprove<br>
+                    <input type="radio" name="isapproved" value="true"> Accept<br>
+                    <input type="radio" name="isapproved" value="false" checked> Deny<br>
 <?php
 }
 ?>                
