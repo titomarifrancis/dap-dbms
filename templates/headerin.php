@@ -10,9 +10,9 @@ include 'templates/magic.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Development Academy of the Philippines - The National Development and Productivity Organization of the Philippines</title>
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.dap.edu.ph/wp-content/themes/dap.edu.ph-Likhasapalad/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.dap.edu.ph/wp-content/themes/dap.edu.ph-Likhasapalad/favicon-32x32.png">
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="https://www.dap.edu.ph/wp-content/themes/dap.edu.ph-Likhasapalad/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.dap.edu.ph/wp-content/themes/dap.edu.ph-Likhasapalad/favicon-16x16.png">
-    <link rel="manifest" href="https://www.dap.edu.ph/wp-content/themes/dap.edu.ph-Likhasapalad/site.webmanifest">
+    <link rel="manifest" href="https://www.dap.edu.ph/wp-content/themes/dap.edu.ph-Likhasapalad/site.webmanifest">-->
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
 	<!--
@@ -51,7 +51,7 @@ include 'templates/magic.php';
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/foundation.js"></script>
     <script type="text/javascript" src="js/jquery_002.js"></script>
-    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/canvasjs.min.js"></script>
  
     <link rel="stylesheet" type="text/css" media="screen" id="Social-Sidebar-CSS" href="css/Social-Sidebar-Min.css">
     <script type="text/javascript" charset="utf-8">

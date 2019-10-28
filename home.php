@@ -1,34 +1,55 @@
 <?php
 include 'templates/headerin.php';
 ?>
-<!--<h3>GOVERNMENT QUALITY MANAGEMENT PROGRAM</h3>-->
 <p>
 Through the EO No. 605, the Development Academy of the Philippines has been promoting and enhancing capabilities of the government in establishing, implementing and sustaining a Quality Management System certified to ISO 9001.
 </p>
-<p>
-The Government Quality Management Program, created through the Executive Order No. 605, Institutionalizing the Structure, Mechanisms, and Standards to Implement the Government Quality Management Program (GQMP), aims to enhance citizen satisfaction and public sector productivity.  
-</p>
-<p>
-Through government-wide effort to improve its delivery of services to the Filipino people, government agencies are directed to streamline their processes and rationalize documentary requirements for the ease of transaction of the citizens. The Philippine Development Plan 2017-2022, specifically in Chapter 5, emphasizes the need to build a responsive and transparent public sector through citizen-centered, clean and efficient delivery of public goods and services. 
-</p>
-<p>
-The Government Quality Management Program (GQMP) aims to:<br/>
+<?php
+include 'lib/getChartData.php';
+$chartData = json_decode($chartJson);
 
-    1. Increase the number of agencies with Quality Management System certified to ISO 9001:2015;<br/>
-    2. Streamline processes of frontline services;<br/>
-    3. Establish and promote implementation of service quality standards;<br/>
-    4. Improve the workplace quality and organization of the national government agencies;<br/>
-    5. Develop and promote innovations in public service delivery; and,<br/>
-    6. Strengthen capacities of government agencies in adopting quality improvement approaches.<br/>
-</p>
-<p>
-The Government Quality Management Program (GQMP), in its continuous effort to concentrate on improving the frontline services of the government, has five main components:<br/>
+$totalAgencyCount = $chartData[0]->agencyTotalCount;
+$totalUncertified = $chartData[0]->uncertTotalCount;
+$uncertPercentage = number_format(($totalUncertified/$totalAgencyCount)*100, 2);
+$chartDataArray = $chartData[0]->categoryCertStats;
+$chartDataSize = sizeof($chartDataArray);
+?>
+<br/>
+<div id="chartContainer" style="height: 400px; max-width: 800px; margin: 0px auto;">
+</div>
+<script>
 
-        1. Strengthening and expanding the government quality management system<br/>
-        2. Institutionalizing the 5S good housekeeping program<br/>
-        3. Institutionalizing the Service Quality Standards<br/>
-        4. Public Sector Innovation Laboratory<br/>
-        5. Promoting public sector productivity and quality improvement<br/>
-</p>
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	title: {
+		text: ""
+	},
+	data: [{
+		type: "pie",
+		startAngle: 240,
+		yValueFormatString: "##0.00'%'",
+		indexLabel: "{label} {y}",
+		dataPoints: [
+			{y: <?php echo $uncertPercentage;?>, label: "Uncertified"},
+<?php
+for($a=0; $a < $chartDataSize; $a++)
+{
+    $categoryName = $chartDataArray[$a]->categoryName;
+    $categoryCertCount = $chartDataArray[$a]->agencyCertifiedCount;
+    $categoryCertPercentage = number_format(($categoryCertCount/$totalAgencyCount)*100, 2);
+?>
+			{y: <?php echo $categoryCertPercentage;?>, label: "<?php echo $categoryName;?>"},
+<?php
+}
+?>
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
 <?php
 include 'templates/footer.php';
