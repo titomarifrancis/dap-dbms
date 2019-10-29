@@ -56,6 +56,7 @@ create table govtagency (
 	agencyname varchar(128) not null,
 	govtagencyclassid integer references govtagencyclass(id) on delete restrict,
 	parentgovagencyid integer default null references govtagency(id) on delete restrict,
+	hideorigcertdate boolean default false,
 	creationdate timestamptz not null
 );
 
