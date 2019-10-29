@@ -1,8 +1,22 @@
 <?php
 include 'templates/header.php';
+include 'dbconn.php';
+
+$getLastActiveCertDate = "select distinct approveddate from agencycertifications where isexpired=false and isapproved=true order by approveddate desc limit 1";
+$lastActiveCertdateArray = $dbh->query($getLastActiveCertDate)->fetchAll();
+//print_r($lastActiveCertdateArray);
+$rawDateStamp = $lastActiveCertdateArray[0]['approveddate'];
+//echo "$rawDateStamp<br/>";
+$dateStamp = date("j M Y", strtotime($rawDateStamp));
+//echo "$dateStamp<br/>";
 ?>
 <p>
 Through the EO No. 605, the Development Academy of the Philippines has been promoting and enhancing capabilities of the government in establishing, implementing and sustaining a Quality Management System certified to ISO 9001.
+</p>
+<br/>
+<h3>ISO 9001 Certification in the Government</h3>
+<p>
+The following pie chart shows the ISO 9001 certification in the government as of <?php echo $dateStamp;?>
 </p>
 <?php
 include 'lib/getChartData.php';
@@ -29,18 +43,19 @@ var chart = new CanvasJS.Chart("chartContainer", {
 	data: [{
 		type: "pie",
 		startAngle: 240,
-		yValueFormatString: "##0.00'%'",
+		yValueFormatString: "(##0.00'%')",
 		indexLabel: "{label} {y}",
 		dataPoints: [
-			{y: <?php echo $uncertPercentage;?>, label: "Uncertified"},
+			{y: <?php echo $uncertPercentage;?>, label: "Uncertified = <?php echo $totalUncertified;?>"},
 <?php
 for($a=0; $a < $chartDataSize; $a++)
 {
     $categoryName = $chartDataArray[$a]->categoryName;
     $categoryCertCount = $chartDataArray[$a]->agencyCertifiedCount;
-    $categoryCertPercentage = number_format(($categoryCertCount/$totalAgencyCount)*100, 2);
+	$categoryCertPercentage = number_format(($categoryCertCount/$totalAgencyCount)*100, 2);
+	$label = "".$categoryName." = ".$categoryCertCount."";
 ?>
-			{y: <?php echo $categoryCertPercentage;?>, label: "<?php echo $categoryName;?>"},
+			{y: <?php echo $categoryCertPercentage;?>, label: "<?php echo $label;?>"},
 <?php
 }
 ?>

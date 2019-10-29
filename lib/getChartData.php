@@ -1,6 +1,4 @@
 <?php
-include 'dbconn.php';
-
 //get data for display
 $getAgencyCategory = "select id, agencyclassdesc from govtagencyclass";
 $getAgencyCategoryStmt = $dbh->query($getAgencyCategory);
@@ -24,7 +22,11 @@ foreach($agencyCategoryArray as $categoryRow)
     $categoryAgencyTotal = $numberTotalAgencyCount;
     $categoryUncertifiedAgencyCount = $numberUncertifiedAgencyCount;
     $categoryCertifiedAgencyCount = $numberTotalAgencyCount - $numberUncertifiedAgencyCount;
-    $categoryCertPercentage = ($categoryCertifiedAgencyCount/$categoryAgencyTotal)*100;
+    if(($categoryCertifiedAgencyCount > 0) && ($categoryAgencyTotal > 0))
+    {
+        $categoryCertPercentage = ($categoryCertifiedAgencyCount/$categoryAgencyTotal)*100;
+    }
+    
 
     if($categoryCertifiedAgencyCount > 0)
     {

@@ -27,10 +27,11 @@ if($numrecordsNational > 0)
     foreach($agencyStmt as $row)
     {
         //
-        $isPartial="Not Full Scope";
+        echo $row['ispartial'];
+        $isPartial="Full Scope";
         if($row['ispartial'] == 1)
         {
-            $isPartial="Full Scope";
+            $isPartial="Not Full Scope";
         }
 ?>
                         <tr> 
@@ -64,10 +65,10 @@ if($numrecordsRegional > 0)
     foreach($agencyStmt as $row)
     {
         //
-        $isPartial="Not Full Scope";
+        $isPartial="Full Scope";
         if($row['ispartial'] == 1)
         {
-            $isPartial="Full Scope";
+            $isPartial="Not Full Scope";
         }
 ?>
                         <tr> 
@@ -102,10 +103,10 @@ if($numrecordsProvincial > 0)
     foreach($agencyStmt as $row)
     {
         //
-        $isPartial="Not Full Scope";
+        $isPartial="Full Scope";
         if($row['ispartial'] == 1)
         {
-            $isPartial="Full Scope";
+            $isPartial="Not Full Scope";
         }
 ?>
                         <tr> 
@@ -139,10 +140,10 @@ if($numrecordsMunicipal > 0)
     $agencyStmt= $dbh->query($getAgenciesQueryCityMunicipal);
     foreach($agencyStmt as $row)
     {
-        $isPartial="Not Full Scope";
+        $isPartial="Full Scope";
         if($row['ispartial'] == 1)
         {
-            $isPartial="Full Scope";
+            $isPartial="Not Full Scope";
         }
 ?>
                         <tr> 
