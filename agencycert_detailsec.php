@@ -245,7 +245,7 @@ if($numrecords > 0)
 }
 ?>
 </div>
-
+<a href="hideShowODC.php?agencyid=<?php echo $agencyId;?>&certid=<?php echo $id;?>">Show/Hide Original Certification Date</a>
 <?php
 
 include 'templates/footer.php';
