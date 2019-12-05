@@ -27,7 +27,7 @@ if($numrecordsNational > 0)
     foreach($agencyStmt as $row)
     {
         //
-        echo $row['ispartial'];
+        //echo $row['ispartial'];
         $isPartial="Full Scope";
         if($row['ispartial'] == 1)
         {
