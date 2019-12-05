@@ -35,7 +35,7 @@ foreach($agencyCategoryArray as $categoryRow)
     $getExpiredCertification = "select govtagency.id, govtagency.agencyname from govtagencyclass, govtagency, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=true and govtagencyclass.id=$categoryId order by govtagency.agencyname";
     $totalNumberExpiredCertification = $dbh->query($getExpiredCertification)->rowCount();
 
-    $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified;
+    $numberUncertifiedAgency = $numberTotalAgencyCount - $numberActiveCertified - $totalNumberExpiredCertification;
 
     if($numberTotalAgencyCount == 0)
     {
