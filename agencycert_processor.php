@@ -51,7 +51,9 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 
                 //change to path of file (stash)
                 chdir($path);
-    
+
+                //Disabled deleting the file in the local stash folder, causing showstopper
+                //Can be handled by a cron job and less logic to be handled by system
                 //Should delete the file on local stash folder, ensure that stash has chmod 766
                 //unlink(realpath($file)) or die("Couldn't delete file");
                 //unlink($file) or die("Couldn't delete file");
