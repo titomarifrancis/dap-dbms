@@ -53,7 +53,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
                 chdir($path);
     
                 //Should delete the file on local stash folder, ensure that stash has chmod 766
-                unlink(realpath($file)) or die("Couldn't delete file");
+                //unlink(realpath($file)) or die("Couldn't delete file");
                 //unlink($file) or die("Couldn't delete file");
     
                 $webpathlen = strlen($ssh2destpath);
