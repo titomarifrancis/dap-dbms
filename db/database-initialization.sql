@@ -43,6 +43,14 @@ create table barangays (
 
 create index idx_barangay on barangays(id, barangayname);
 
+create table governancelevel (
+	id serial primary key,
+	govlevel varxchar(24) not null,
+	creationdate timestamptz not null
+);
+
+create index idx_governancelevel on governancelevel(id, govlevel);
+
 create table govtagencyclass (
 	id serial primary key,
 	agencyclassdesc varchar(64) not null,
@@ -125,7 +133,9 @@ create table agencycertifications (
 	certifyingbodyid integer references certifyingbody(id) on delete restrict,
 	certificationid integer references certifications(id) on delete restrict,
 	certificationregnumber varchar(64) not null,
+	governancelevel integer default null references governancelevel(id) on delete restrict,
 	certificationscope text not null,
+	certificationsite varchar(64) default null,
 	scope_ispartial boolean default null,
 	certpdfurl text not null,
 	headofagency varchar(128) default null,
