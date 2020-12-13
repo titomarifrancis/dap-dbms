@@ -12,7 +12,7 @@ if(!isset($isLoggedIn))
                         </style>
                         <ul style="list-style: none; margin: 0" class="sidebar-sl">
                             <li class="sidebar-sl"><a href="login.php" class="sidebar-slink">Login</a></li>
-                            <li class="sidebar-sl"><a href="signup.php" class="sidebar-slink">Signup</a></li>
+                            <li class="sidebar-sl"><a href="signup.php" class="sidebar-slink">Create Account</a></li>
                         </ul>
                     </div>
                 </aside>
