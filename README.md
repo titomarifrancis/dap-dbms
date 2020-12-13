@@ -23,4 +23,7 @@ server "default" {</br>
 }</br>
 </br>
 on /var/www/htdocs:</br>
-git clone https://github.com/titomarifrancis/dap-dbms.git
+git clone https://github.com/titomarifrancis/dap-dbms.git</br>
+</br>
+ln -s /var/www/htdocs/dap-dbms/scripts/update.sh /usr/local/bin/update-dap-dbms</br>
+chmod +x /usr/local/bin/update-dap-dbms
