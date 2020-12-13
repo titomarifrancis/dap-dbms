@@ -1,8 +1,8 @@
                     <table class="scroll hover" style="table-layout:fixed">
                         <thead>
                             <tr>
-                                <th style="width: 34%">Agency Category</th>
-                                <th style="width: 11%">Total Number of Agencies</th>
+                                <th style="width: 34%">Type of Government Agency</th>
+                                <th style="width: 11%">No. of Agencies Certified</th>
                                 <th style="width: 11%">Active Certifications</th>
                                 <th style="width: 11%">Active Certifications (%)</th>
                                 <th style="width: 11%">Uncertified Agencies</th>
