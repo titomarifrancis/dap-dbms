@@ -26,4 +26,11 @@ on /var/www/htdocs:</br>
 git clone https://github.com/titomarifrancis/dap-dbms.git</br>
 </br>
 ln -s /var/www/htdocs/dap-dbms/scripts/update.sh /usr/local/bin/update-dap-dbms</br>
-chmod +x /usr/local/bin/update-dap-dbms
+chmod +x /usr/local/bin/update-dap-dbms</br>
+</br>
+on Ubuntu 20.04</br>
+sudo apt update</br>
+sudo apt install apache2</br>
+sudo ufw app list</br>
+sudo ufw allow 'Apache'</br>
+sudo systemctl status apache2</br>
