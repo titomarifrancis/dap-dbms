@@ -7,20 +7,20 @@ don't run syspatch before installing packages
 
 We install PHP7.2.33
 
-edit /etc/rc.conf.local:
-  httpd_flags=
-  pkg_scripts=php72_fpm
+edit /etc/rc.conf.local:</br>
+  httpd_flags=</br>
+  pkg_scripts=php72_fpm</br>
 
-edit /etc/httpd.conf:
-ext_ip="192.168.253.138"
-server "default" {
-      listen on $ext_ip port 80
-      location "*.php" {
-            fastcgi socket "/run/php-fpm.sock"
-      }
-      directory index index.php
-      root "/htdocs"
-}
-
-on /var/www/htdocs:
+edit /etc/httpd.conf:</br>
+ext_ip="192.168.253.138"</br>
+server "default" {</br>
+      listen on $ext_ip port 80</br>
+      location "*.php" {</br>
+            fastcgi socket "/run/php-fpm.sock"</br>
+      }</br>
+      directory index index.php</br>
+      root "/htdocs"</br>
+}</br>
+</br>
+on /var/www/htdocs:</br>
 git clone https://github.com/titomarifrancis/dap-dbms.git
