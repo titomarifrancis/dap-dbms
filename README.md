@@ -34,3 +34,5 @@ sudo apt install apache2</br>
 sudo ufw app list</br>
 sudo ufw allow 'Apache'</br>
 sudo systemctl status apache2</br>
+</br>
+If PHP exhibits weird or absence of functionality, edit /etc/php-7.2.ini (corresponding to the PHP7 version you have)</br>
