@@ -1,4 +1,4 @@
 #! /bin/sh 
 cd /var/www/htdocs/dap-dbms
-clears
+clear
 git pull
