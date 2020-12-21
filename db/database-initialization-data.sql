@@ -53,6 +53,15 @@ insert into regions(regionname, creationdate) values('Region 13 - CARAGA Adminis
 insert into regions(regionname, creationdate) values('Cordillera Administrative Region', NOW());
 insert into regions(regionname, creationdate) values('Autonomous Region in Muslim Mindanao', NOW());
 
+--Main Office
+--Regional Office
+--Division/District Office
+--Field Office
+insert into governancelevel(govlevel, creationdate) values ('Main Office', NOW());
+insert into governancelevel(govlevel, creationdate) values ('Regional Office', NOW());
+insert into governancelevel(govlevel, creationdate) values ('Division/District Office', NOW());
+insert into governancelevel(govlevel, creationdate) values ('Field Office', NOW());
+
 --Constitutional Offices
 --Government-Owned and/or Controlled Corporations
 --Local Government Units
