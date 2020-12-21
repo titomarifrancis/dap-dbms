@@ -45,7 +45,7 @@ create index idx_barangay on barangays(id, barangayname);
 
 create table governancelevel (
 	id serial primary key,
-	govlevel varxchar(24) not null,
+	govlevel varchar(24) not null,
 	creationdate timestamptz not null
 );
 
