@@ -23,7 +23,7 @@ server "default" {</br>
 }</br>
 </br>
 Ensure PECL SSH2 is enabled in /etc/php-7.2.ini</br>
-extensions=ssh2
+extensions=ssh2</br>
 </br>
 on /var/www/htdocs:</br>
 git clone https://github.com/titomarifrancis/dap-dbms.git</br>
