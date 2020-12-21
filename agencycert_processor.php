@@ -213,25 +213,25 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
                     }     
                 }
 				
-                if(isset($_REQUEST['govlevel']) && ($_REQUEST['govlevel'] > 0))
+                if(isset($_REQUEST['governancelevel']) && ($_REQUEST['governancelevel'] > 0))
                 {
-                    $govlevel = $_REQUEST['govlevel'];
-                    $queryArray['govlevel'] = $govlevel;
+                    $governancelevel = $_REQUEST['governancelevel'];
+                    $queryArray['governancelevel'] = $governancelevel;
                     if(strlen($paramList) < 1)
                     {
-                        $paramList .= 'govlevel';
+                        $paramList .= 'governancelevel';
                     }
                     else
                     {
-                        $paramList .= ', govlevel';
+                        $paramList .= ', governancelevel';
                     }
                     if(strlen($valueList) < 1)
                     {
-                        $valueList = "'". $queryArray['govlevel']."'";
+                        $valueList = "'". $queryArray['governancelevel']."'";
                     }
                     else
                     {
-                        $valueList = "".$valueList.", '".$queryArray['govlevel']."'";
+                        $valueList = "".$valueList.", '".$queryArray['governancelevel']."'";
                     }     
                 }				
     

@@ -98,7 +98,7 @@ if(isset($_REQUEST['msg']))
 	$govlevelStmt= $dbh->query($getGovLevelQuery);	
 	?>
 		<label>Level of Governance (required)
-			<select id="govlevel" name="govlevel">
+			<select id="governancelevel" name="governancelevel">
                 <option value=""></option>
 	<?php
 	foreach($govlevelStmt as $govlevelRow)
