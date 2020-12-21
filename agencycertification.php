@@ -63,6 +63,12 @@ if(isset($_REQUEST['msg']))
 	</div>
 
     <div class="large-12 columns">
+		<label>Site of Certification
+			<input type="text" name="certificationsite" id="certificationsite" placeholder="Type the Site of Certification Here">
+		</label>
+	</div>
+
+    <div class="large-12 columns">
 		<label>Region
             <select id="region" name="region">
             </select>
@@ -86,6 +92,27 @@ if(isset($_REQUEST['msg']))
                 <option>Select city/municipality first</option>
             </select>
 	</div> 
+    <div class="large-12 columns">
+	<?php
+	$getGovLevelQuery = 'select id, govlevel from governancelevel order by govlevel asc';
+	$govlevelStmt= $dbh->query($getGovLevelQuery);	
+	?>
+		<label>Level of Governance
+			<select id="barangay" name="barangay">
+                <option value=""></option>
+	<?php
+	foreach($govlevelStmt as $govlevelRow)
+	{
+	?>
+					<option value="<?php echo rtrim($govlevelRow['id']);?>"><?php echo rtrim($govlevelRow['govlevel']);?></option>
+	<?php
+	}
+
+	?>
+			  </select>
+			</label>
+		  </div>
+
 
 	  <div class="large-12 columns">
 	<?php
