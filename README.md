@@ -27,6 +27,9 @@ types {<br/>
 </br>
 Ensure PECL SSH2 is enabled in /etc/php-7.3.ini</br>
 extensions=ssh2</br>
+Enable PHP POstgreSQL and PDO driver for PostgreSQL</br>
+extensions=pgsql</br>
+extensions=pdo_pgsql</br>
 </br>
 on /var/www/htdocs:</br>
 git clone https://github.com/titomarifrancis/dap-dbms.git</br>
