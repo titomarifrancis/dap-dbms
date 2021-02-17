@@ -5,11 +5,11 @@ Notes:
 on OpenBSD 6.8 install include xbase68.tgz
 don't run syspatch before installing packages
 
-We install PHP7.2.33
+We install PHP7.3
 
 edit /etc/rc.conf.local:</br>
   httpd_flags=</br>
-  pkg_scripts=php72_fpm</br>
+  pkg_scripts=php73_fpm</br>
 
 edit /etc/httpd.conf:</br>
 ext_ip="192.168.253.138"</br>
@@ -21,8 +21,11 @@ server "default" {</br>
       directory index index.php</br>
       root "/htdocs"</br>
 }</br>
+types {<br/>
+    include "/usr/share/misc/mime.types"</br>
+}</br>
 </br>
-Ensure PECL SSH2 is enabled in /etc/php-7.2.ini</br>
+Ensure PECL SSH2 is enabled in /etc/php-7.3.ini</br>
 extensions=ssh2</br>
 </br>
 on /var/www/htdocs:</br>
