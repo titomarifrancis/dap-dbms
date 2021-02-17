@@ -38,6 +38,15 @@ git clone https://github.com/titomarifrancis/dap-dbms.git</br>
 ln -s /var/www/htdocs/dap-dbms/scripts/update.sh /usr/local/bin/update-dap-dbms</br>
 chmod +x /usr/local/bin/update-dap-dbms</br>
 </br>
+Notes on enabling the PHP driver for MongoDB</br>
+NOTE: This is a VERY involved process</br>
+1. Ensure PEAR is installed</br>
+2. Install autoconf-2.69</br>
+3. Set autoconf environment variable: export AUTOCONF_VERSION='2.69'</br>
+4. Run: ln -sf /usr/local/bin/phpize-7.3 /usr/local/bin/phpize</br>
+5. Run: ln -sf /usr/local/bin/php-config-7.3 /usr/local/bin/php-config</br>
+6. Run: pecl install mongodb</br>
+</br>
 on Ubuntu 20.04</br>
 sudo apt update</br>
 sudo apt install apache2</br>
