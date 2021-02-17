@@ -26,7 +26,14 @@ types {<br/>
 }</br>
 </br>
 Ensure PECL SSH2 is enabled in /etc/php-7.3.ini</br>
-extensions=ssh2</br>
+extension=ssh2</br>
+</br>
+Install Memcache package</br>
+pkg_add pecl73-memcached-3.1.5</br>
+</br>
+Enable Memcache in /etc/php-7.3.ini</br>
+extension=memcached.so</br>
+
 </br>
 Enable PHP PostgreSQL and PDO driver for PostgreSQL</br>
 extensions=pgsql</br>
@@ -37,15 +44,6 @@ git clone https://github.com/titomarifrancis/dap-dbms.git</br>
 </br>
 ln -s /var/www/htdocs/dap-dbms/scripts/update.sh /usr/local/bin/update-dap-dbms</br>
 chmod +x /usr/local/bin/update-dap-dbms</br>
-</br>
-Notes on enabling the PHP driver for MongoDB</br>
-NOTE: This is a VERY involved process</br>
-1. Ensure PEAR is installed</br>
-2. Install autoconf-2.69</br>
-3. Set autoconf environment variable: export AUTOCONF_VERSION='2.69'</br>
-4. Run: ln -sf /usr/local/bin/phpize-7.3 /usr/local/bin/phpize</br>
-5. Run: ln -sf /usr/local/bin/php-config-7.3 /usr/local/bin/php-config</br>
-6. Run: pecl install mongodb</br>
 </br>
 on Ubuntu 20.04</br>
 sudo apt update</br>
