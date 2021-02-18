@@ -4,13 +4,19 @@ include 'dbconn.php';
 
 $getLastActiveCertDate = "select distinct approveddate from agencycertifications where isexpired=false and isapproved=true order by approveddate desc limit 1";
 $lastActiveCertdateArray = $dbh->query($getLastActiveCertDate)->fetchAll();
-//print_r($lastActiveCertdateArray);
-//echo "<br/>";
-$rawDateStamp = $lastActiveCertdateArray[0]['approveddate'];
-//echo "$rawDateStamp<br/>";
-$transitionDateStamp = strtotime($lastActiveCertdateArray[0]['approveddate']);
-$dateStamp = date("j M Y", $transitionDateStamp);
-//echo "$dateStamp<br/>";
+$arraySize= sizeof($lastActiveCertdateArray);
+
+if(sizeof($lastActiveCertdateArray) > 0)
+{
+	$rawDateStamp = $lastActiveCertdateArray[0]['approveddate'];
+	$transitionDateStamp = strtotime($lastActiveCertdateArray[0]['approveddate']);
+	$dateStamp = date("j M Y", $transitionDateStamp);
+}
+else
+{
+	$dateStamp = date("j M Y");
+}
+
 ?>
 <p>
 Through the EO No. 605, the Development Academy of the Philippines has been promoting and enhancing capabilities of the government in establishing, implementing and sustaining a Quality Management System certified to ISO 9001.
