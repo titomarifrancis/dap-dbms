@@ -157,6 +157,8 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
             <label>Uploaded Certification File in PDF<br/>
 <?php
     $origFileUrl = $agencyCertApprovalArray[0]['certpdfurl'];
+	//echo $origFileUrl;
+	//die();
     $origFileUrlArray = explode("/", $origFileUrl);
     $viewerRootUrl = $origFileUrlArray[0];
     $origFileArraySize = sizeof($origFileUrlArray);
