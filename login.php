@@ -15,7 +15,7 @@ if(isset($_REQUEST['msg']) && ($_REQUEST['msg'] == 1))
 <form id="signUpForm" action="login_processor.php" method="post">
 <div class="row">
     <div class="large-12 columns">
-        <label>Should you need to create or update your agency's certification details, please log in. Thank you.</label>
+        <label>Log in to update Agency certification details. No account yet? Click <a href="http://192.168.253.157/dap-dbms/signup.php">Create Account</a>.</label>
     </div>
     <div class="large-12 columns">
         <label>Username
