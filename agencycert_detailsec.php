@@ -42,7 +42,10 @@ $agencyCertStmt = $dbh->query($getAgencyCertforApproval);
 $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
 ?>
     <div class="row">
+		
         <div class="large-12 columns">
+		<h5>Please fill-out the boxes below based on your  ISO 9001 certificate issued by  the certifying body
+</h5>
             <label>Government Agency<br/>
                 <input type="hidden" name="agencycertid" value="<?php echo $id; ?>">
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['agencyname'];?>"/>
