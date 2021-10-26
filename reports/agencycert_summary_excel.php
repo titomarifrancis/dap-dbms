@@ -11,41 +11,24 @@ if (PHP_SAPI == 'cli')
 
 include '../dbconn.php';
 
+$dateStamp = date('Ymd');
+
+require_once '../lib/Spout/Autoloader/autoload.php';
+use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
+use Box\Spout\Common\Entity\Row;
+$writer = WriterEntityFactory::createCSVWriter();
+$filename = "AgencyCertificationSummaryReport $dateStamp'.csv";
+$writer->openToBrowser($filename);
+
 $getAgencyCategory = "select id, agencyclassdesc from govtagencyclass";
 $getAgencyCategoryStmt = $dbh->query($getAgencyCategory);
 $agencyCategoryArray = $getAgencyCategoryStmt->fetchAll();
 
-include '../lib/PHPExcel2014/PHPExcel.php';
+$headerRow = ['Agency Category','Total Number of Agencies','Active Certifications','Active Certifications (%)','Uncertified Agencies', 'Uncertified Agencies (%)', 'Expired Certifications'];
 
-// Create new PHPExcel object
-$objPHPExcel = new PHPExcel();
-
-// Set document properties
-$objPHPExcel->getDefaultStyle()->getFont()->setName('Calibri');
-$objPHPExcel->getDefaultStyle()->getFont()->setSize(12);
-
-
-
-$objSheet = $objPHPExcel->getActiveSheet();
-$objSheet->setTitle('Agency Certification Report');
-
-
-$objPHPExcel->getProperties()->setCreator("Tito Mari Francis H. Escano")
-							 ->setLastModifiedBy("Tito Mari Francis H. Escano")
-							 ->setTitle("EDGEKIT Computer Systems Report Document")
-							 ->setSubject("Agency Certification Report")
-							 ->setDescription("EDGEKIT Computer Systems Report Document, generated using PHP classes.")
-							 ->setKeywords("EDGEKIT agency certification report document php")
-                             ->setCategory("EDGEKIT Computer Systems Report Document");
-
-$objSheet->getColumnDimension('A')->setAutoSize(true);
-$objSheet->getColumnDimension('B')->setAutoSize(true);
-$objSheet->getColumnDimension('C')->setAutoSize(true);
-$objSheet->getColumnDimension('D')->setAutoSize(true);
-$objSheet->getColumnDimension('E')->setAutoSize(true);
-$objSheet->getColumnDimension('F')->setAutoSize(true);
-$objSheet->getColumnDimension('G')->setAutoSize(true);
-
+$rowFromValues = WriterEntityFactory::createRowFromArray($headerRow);
+$writer->addRow($rowFromValues);
+/*
 $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('A1', 'Agency Category')
             ->setCellValue('B1', 'Total Number of Agencies')        
@@ -56,7 +39,8 @@ $objPHPExcel->setActiveSheetIndex(0)
             ->setCellValue('G1', 'Expired Certifications');
 
 $cellCounter=2;
-
+*/
+$dataRow = [];
 foreach($agencyCategoryArray as $categoryRow)
 {
     $categoryId = $categoryRow['id'];
@@ -111,7 +95,10 @@ foreach($agencyCategoryArray as $categoryRow)
         $percentageUncertified = number_format($percentUncertified, 2);
 
     }
-
+	
+	$dataRowEntry = [$agencycategoryName,$numberTotalAgencyCount,$numberActiveCertified,$percentageActivecertified,$numberUncertifiedAgency,$percentageUncertified,$totalNumberExpiredCertification];
+	
+	/*
     $objSheet
             ->setCellValue('A' . $cellCounter, $agencycategoryName)
             ->setCellValue('B' . $cellCounter, $numberTotalAgencyCount)
@@ -120,36 +107,19 @@ foreach($agencyCategoryArray as $categoryRow)
             ->setCellValue('E' . $cellCounter, $numberUncertifiedAgency)
             ->setCellValue('F' . $cellCounter, $percentageUncertified)
             ->setCellValue('G' . $cellCounter, $totalNumberExpiredCertification);
-    $cellCounter++;
+	*/
+	//array_push($dataRow, $dataRowEntry);
+	$rowFromValues = WriterEntityFactory::createRowFromArray($dataRowEntry);
+	$writer->addRow($rowFromValues);
+
 }
 
-// Set active sheet index to the first sheet, so Excel opens this as the first sheet
-$objPHPExcel->setActiveSheetIndex(0);
-/*
-$objPHPExcel->getActiveSheet()->getProtection()->setSelectLockedCells(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setSelectUnlockedCells(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setFormatCells(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setFormatRows(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setInsertColumns(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setInsertRows(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setInsertHyperlinks(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setDeleteColumns(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setDeleteRows(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setSort(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setAutofilter(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setObjects(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setScenarios(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setSheet(true);
-$objPHPExcel->getActiveSheet()->getProtection()->setPassword('password');
-*/
 
-$dateStamp = date('Ymd');
 
-header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="AgencyCertificationSummaryReport'.$dateStamp.'.xlsx"');
-header('Cache-Control: max-age=1');
+//$values = [$headerRow, $dataRow];
 
-$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-//$objWriter->save('output/AgencyCertificationSummaryReport.xlsx');
-$objWriter->save('php://output');
+
+$writer->openToFile('php://output');
+$writer->close();
+
 exit;
