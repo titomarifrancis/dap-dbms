@@ -28,19 +28,7 @@ $headerRow = ['Agency Category','Total Number of Agencies','Active Certification
 
 $rowFromValues = WriterEntityFactory::createRowFromArray($headerRow);
 $writer->addRow($rowFromValues);
-/*
-$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Agency Category')
-            ->setCellValue('B1', 'Total Number of Agencies')        
-            ->setCellValue('C1', 'Active Certifications')
-            ->setCellValue('D1', 'Active Certifications (%)')
-            ->setCellValue('E1', 'Uncertified Agencies')
-            ->setCellValue('F1', 'Uncertified Agencies (%)')
-            ->setCellValue('G1', 'Expired Certifications');
 
-$cellCounter=2;
-*/
-$dataRow = [];
 foreach($agencyCategoryArray as $categoryRow)
 {
     $categoryId = $categoryRow['id'];
@@ -97,27 +85,11 @@ foreach($agencyCategoryArray as $categoryRow)
     }
 	
 	$dataRowEntry = [$agencycategoryName,$numberTotalAgencyCount,$numberActiveCertified,$percentageActivecertified,$numberUncertifiedAgency,$percentageUncertified,$totalNumberExpiredCertification];
-	
-	/*
-    $objSheet
-            ->setCellValue('A' . $cellCounter, $agencycategoryName)
-            ->setCellValue('B' . $cellCounter, $numberTotalAgencyCount)
-            ->setCellValue('C' . $cellCounter, $numberActiveCertified)
-            ->setCellValue('D' . $cellCounter, $percentageActivecertified)
-            ->setCellValue('E' . $cellCounter, $numberUncertifiedAgency)
-            ->setCellValue('F' . $cellCounter, $percentageUncertified)
-            ->setCellValue('G' . $cellCounter, $totalNumberExpiredCertification);
-	*/
-	//array_push($dataRow, $dataRowEntry);
+
 	$rowFromValues = WriterEntityFactory::createRowFromArray($dataRowEntry);
 	$writer->addRow($rowFromValues);
 
 }
-
-
-
-//$values = [$headerRow, $dataRow];
-
 
 $writer->openToFile('php://output');
 $writer->close();
