@@ -9,58 +9,30 @@ date_default_timezone_set('Asia/Manila');
 if (PHP_SAPI == 'cli')
     die('This example should only be run from a Web Browser');
 
+
+
 include '../dbconn.php';
+
+require_once '../lib/Spout/Autoloader/autoload.php';
+use Box\Spout\Writer\Common\Creator\WriterEntityFactory;
+use Box\Spout\Common\Entity\Row;
+
+
+
 
 $agencycategoryId = $_REQUEST['catid'];
 $getCategoryLabel = "select agencyclassdesc from govtagencyclass where id=$agencycategoryId";
 $getCategoryStmt = $dbh->query($getCategoryLabel)->fetchAll();
 $agencyCategoryLabel = $getCategoryStmt[0]['agencyclassdesc'];
 
-include '../lib/PHPExcel2014/PHPExcel.php';
+$writer = WriterEntityFactory::createCSVWriter();
+$filename = "ActiveCertificationReport $agencyCategoryLabel'.csv";
+$writer->openToBrowser($filename);
 
-// Create new PHPExcel object
-$objPHPExcel = new PHPExcel();
+$headerRow = ['Name of Agency', 'Certifying Body','Certification', 'Valid From', 'Valid Until', 'Original Certification Date', 'Scope of Certification', 'Region', 'Province', 'City/Municipality'];
 
-// Set document properties
-$objPHPExcel->getDefaultStyle()->getFont()->setName('Calibri');
-$objPHPExcel->getDefaultStyle()->getFont()->setSize(12);
-
-$objSheet = $objPHPExcel->getActiveSheet();
-$objSheet->setTitle('Active Certifications');
-
-
-$objPHPExcel->getProperties()->setCreator("Tito Mari Francis H. Escano")
-							 ->setLastModifiedBy("Tito Mari Francis H. Escano")
-							 ->setTitle("EDGEKIT Computer Systems Report Document")
-							 ->setSubject("Active Certification Report")
-							 ->setDescription("EDGEKIT Computer Systems Report Document, generated using PHP classes.")
-							 ->setKeywords("EDGEKIT active certification report document php")
-                             ->setCategory("EDGEKIT Computer Systems Report Document");
-
-$objSheet->getColumnDimension('A')->setAutoSize(true);
-$objSheet->getColumnDimension('B')->setAutoSize(true);
-$objSheet->getColumnDimension('C')->setAutoSize(true);
-$objSheet->getColumnDimension('D')->setAutoSize(true);
-$objSheet->getColumnDimension('E')->setAutoSize(true);
-$objSheet->getColumnDimension('F')->setAutoSize(true);
-$objSheet->getColumnDimension('G')->setAutoSize(true);
-$objSheet->getColumnDimension('H')->setAutoSize(true);
-$objSheet->getColumnDimension('I')->setAutoSize(true);
-$objSheet->getColumnDimension('J')->setAutoSize(true);
-
-$objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Name of Agency')
-            ->setCellValue('B1', 'Certifying Body')        
-            ->setCellValue('C1', 'Certification')
-            ->setCellValue('D1', 'Valid From')
-            ->setCellValue('E1', 'Valid Until')
-            ->setCellValue('F1', 'Original Certification Date')
-            ->setCellValue('G1', 'Scope of Certification')
-            ->setCellValue('H1', 'Region')
-            ->setCellValue('I1', 'Province')
-            ->setCellValue('J1', 'City/Municipality');            
-
-$cellCounter=2;
+$rowFromValues = WriterEntityFactory::createRowFromArray($headerRow);
+$writer->addRow($rowFromValues);
 
 //national
 $getAgenciesQueryNational = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid is NULL and agencycertifications.provinceid is NULL and agencycertifications.citymunicipalityid is NULL and agencycertifications.isexpired=false and govtagencyclass.id=$agencycategoryId order by agencyname";
@@ -90,20 +62,11 @@ if($numrecordsNational > 0)
             //
             $myODC = "N/A";
         }
+		
+		$dataRowEntry = [$row['agencyname'],$row['certifyingbody'],$row['certificationdesc'],$row['certstartdate'],$row['certenddate'],$myODC,$isPartial,'', '', ''];
 
-        $objSheet
-        ->setCellValue('A' . $cellCounter, $row['agencyname'])
-        ->setCellValue('B' . $cellCounter, $row['certifyingbody'])
-        ->setCellValue('C' . $cellCounter, $row['certificationdesc'])
-        ->setCellValue('D' . $cellCounter, $row['certstartdate'])
-        ->setCellValue('E' . $cellCounter, $row['certenddate'])
-        ->setCellValue('F' . $cellCounter, $myODC)
-        ->setCellValue('G' . $cellCounter, $isPartial)
-        ->setCellValue('H' . $cellCounter, '')
-        ->setCellValue('I' . $cellCounter, '')
-        ->setCellValue('J' . $cellCounter, ''); 
-
-        $cellCounter++;
+		$rowFromValues = WriterEntityFactory::createRowFromArray($dataRowEntry);
+		$writer->addRow($rowFromValues);
     }
 }
 
@@ -135,20 +98,10 @@ if($numrecordsRegional > 0)
             //
             $myODC = "N/A";
         } 
+		$dataRowEntry = [$row['agencyname'],$row['certifyingbody'],$row['certificationdesc'],$row['certstartdate'],$row['certenddate'],$myODC,$isPartial,$row['regionname'], '', ''];
 
-        $objSheet
-        ->setCellValue('A' . $cellCounter, $row['agencyname'])
-        ->setCellValue('B' . $cellCounter, $row['certifyingbody'])
-        ->setCellValue('C' . $cellCounter, $row['certificationdesc'])
-        ->setCellValue('D' . $cellCounter, $row['certstartdate'])
-        ->setCellValue('E' . $cellCounter, $row['certenddate'])
-        ->setCellValue('F' . $cellCounter, $myODC)
-        ->setCellValue('G' . $cellCounter, $isPartial)
-        ->setCellValue('H' . $cellCounter, $row['regionname'])
-        ->setCellValue('I' . $cellCounter, '')
-        ->setCellValue('J' . $cellCounter, ''); 
-
-        $cellCounter++;
+		$rowFromValues = WriterEntityFactory::createRowFromArray($dataRowEntry);
+		$writer->addRow($rowFromValues);
     }
 }
 
@@ -180,20 +133,10 @@ if($numrecordsProvincial > 0)
             //
             $myODC = "N/A";
         }
+		$dataRowEntry = [$row['agencyname'],$row['certifyingbody'],$row['certificationdesc'],$row['certstartdate'],$row['certenddate'],$myODC,$isPartial,$row['regionname'], $row['provincename'], ''];
 
-        $objSheet
-        ->setCellValue('A' . $cellCounter, $row['agencyname'])
-        ->setCellValue('B' . $cellCounter, $row['certifyingbody'])
-        ->setCellValue('C' . $cellCounter, $row['certificationdesc'])
-        ->setCellValue('D' . $cellCounter, $row['certstartdate'])
-        ->setCellValue('E' . $cellCounter, $row['certenddate'])
-        ->setCellValue('F' . $cellCounter, $myODC)
-        ->setCellValue('G' . $cellCounter, $isPartial)
-        ->setCellValue('H' . $cellCounter, $row['regionname'])
-        ->setCellValue('I' . $cellCounter, $row['provincename'])
-        ->setCellValue('J' . $cellCounter, ''); 
-
-        $cellCounter++;
+		$rowFromValues = WriterEntityFactory::createRowFromArray($dataRowEntry);
+		$writer->addRow($rowFromValues);
     }
 }
 
@@ -223,31 +166,14 @@ if($numrecordsMunicipal > 0)
             //
             $myODC = "N/A";
         }
+		
+		$dataRowEntry = [$row['agencyname'],$row['certifyingbody'],$row['certificationdesc'],$row['certstartdate'],$row['certenddate'],$myODC,$isPartial,$row['regionname'], $row['provincename'], $row['towncitymunicipalityname']];
 
-        $objSheet
-        ->setCellValue('A' . $cellCounter, $row['agencyname'])
-        ->setCellValue('B' . $cellCounter, $row['certifyingbody'])
-        ->setCellValue('C' . $cellCounter, $row['certificationdesc'])
-        ->setCellValue('D' . $cellCounter, $row['certstartdate'])
-        ->setCellValue('E' . $cellCounter, $row['certenddate'])
-        ->setCellValue('F' . $cellCounter, $myODC)
-        ->setCellValue('G' . $cellCounter, $isPartial)
-        ->setCellValue('H' . $cellCounter, $row['regionname'])
-        ->setCellValue('I' . $cellCounter, $row['provincename'])
-        ->setCellValue('J' . $cellCounter, $row['towncitymunicipalityname']); 
-
-        $cellCounter++;
+		$rowFromValues = WriterEntityFactory::createRowFromArray($dataRowEntry);
+		$writer->addRow($rowFromValues);
     }
 }
+$writer->openToFile('php://output');
+$writer->close();
 
-// Set active sheet index to the first sheet, so Excel opens this as the first sheet
-$objPHPExcel->setActiveSheetIndex(0);
-
-header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-header('Content-Disposition: attachment;filename="ActiveCertificationReport - '.$agencyCategoryLabel.'.xlsx"');
-header('Cache-Control: max-age=1');
-
-$objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-//$objWriter->save('output/AgencyCertificationSummaryReport.xlsx');
-$objWriter->save('php://output');
 exit;
