@@ -66,8 +66,8 @@ $pdf->Cell(150, 20, 'Active Certification Report - '.$agencyCategoryLabel.'', 0,
 //$pdf->Ln();
 $pdf->SetTextColor(255);
 // column titles
-$header = array('Name of Agency', 'Certifying Body', 'Certification', 'Valid From', 'Valid Until', 'Original Certification Date', 'Scope of Certification', 'Region', 'Province', 'City/Municipality');
-$w = array(45, 32, 25, 20, 20, 25, 25, 25, 25, 25);
+$header = array('Name of Agency', 'Certification Site', 'Certifying Body', 'Certification', 'Valid From', 'Valid Until', 'Original Certification Date', 'Scope of Certification', 'Region', 'Province', 'City/Municipality');
+$w = array(25, 25, 25, 25, 20, 20, 25, 25, 25, 25, 30);
 $num_headers = count($header);
 $lineX= $pdf->getX();
 for($i = 0; $i < $num_headers; ++$i) {
@@ -82,7 +82,7 @@ $pdf->SetFillColor(224, 235, 255);
 $pdf->SetTextColor(0);
 $pdf->SetFont('');
 
-$getAgenciesQueryNational = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid is NULL and agencycertifications.provinceid is NULL and agencycertifications.citymunicipalityid is NULL and agencycertifications.isexpired=false and govtagencyclass.id=$agencycategoryId order by agencyname";
+$getAgenciesQueryNational = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, agencycertifications.certificationsite as certificationsite, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid is NULL and agencycertifications.provinceid is NULL and agencycertifications.citymunicipalityid is NULL and agencycertifications.isexpired=false and govtagencyclass.id=$agencycategoryId order by agencyname";
 //echo "$getAgenciesQueryNational<br/>";
 $numrecordsNational = $dbh->query($getAgenciesQueryNational)->rowCount();
 if($numrecordsNational > 0)
@@ -110,8 +110,8 @@ if($numrecordsNational > 0)
             $myODC = "N/A";
         }        
 
-        $data = array($row['agencyname'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, '', '', '');
-        $y = array(45, 32, 25, 20, 20, 25, 25, 25, 25, 25);
+        $data = array($row['agencyname'], $row['certificationsite'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, '', '', '');
+        $y = array(25, 25, 25, 25, 20, 20, 25, 25, 25, 25, 30);
         $num_data = count($data);
         $lineX1= $pdf->getX();
         $lineY1= $pdf->getY();
@@ -128,7 +128,7 @@ if($numrecordsNational > 0)
     }
 }
 
-$getAgenciesQueryRegional = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc, regions.regionname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid is NULL and citymunicipalityid is NULL and govtagencyclass.id=$agencycategoryId order by agencyname";
+$getAgenciesQueryRegional = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname,  agencycertifications.certificationsite as certificationsite, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc, regions.regionname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid is NULL and citymunicipalityid is NULL and govtagencyclass.id=$agencycategoryId order by agencyname";
 //echo "$getAgenciesQueryRegional<br/>";
 $numrecordsRegional = $dbh->query($getAgenciesQueryRegional)->rowCount();
 if($numrecordsRegional > 0)
@@ -156,8 +156,8 @@ if($numrecordsRegional > 0)
             $myODC = "N/A";
         }        
 
-        $data = array($row['agencyname'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, $row['regionname'], '', '');
-        $y = array(45, 32, 25, 20, 20, 25, 25, 25, 25, 25);
+        $data = array($row['agencyname'], $row['certificationsite'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, $row['regionname'], '', '');
+        $y = array(25, 25, 25, 25, 20, 20, 25, 25, 25, 25, 30);
         $num_data = count($data);
         $lineX1= $pdf->getX();
         $lineY1= $pdf->getY();
@@ -174,7 +174,7 @@ if($numrecordsRegional > 0)
     }
 }
 
-$getAgenciesQueryProvincial = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc, regions.regionname, provinces.provincename from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions, provinces where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid is NULL and govtagencyclass.id=$agencycategoryId order by agencyname";
+$getAgenciesQueryProvincial = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, agencycertifications.certificationsite as certificationsite, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc, regions.regionname, provinces.provincename from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions, provinces where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid is NULL and govtagencyclass.id=$agencycategoryId order by agencyname";
 //echo "$getAgenciesQueryProvincial<br/>";
 $numrecordsProvincial = $dbh->query($getAgenciesQueryProvincial)->rowCount();
 if($numrecordsProvincial > 0)
@@ -202,8 +202,8 @@ if($numrecordsProvincial > 0)
             $myODC = "N/A";
         }        
 
-        $data = array($row['agencyname'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, $row['regionname'], $row['provincename'], '');
-        $y = array(45, 32, 25, 20, 20, 25, 25, 25, 25, 25);
+        $data = array($row['agencyname'], $row['certificationsite'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, $row['regionname'], $row['provincename'], '');
+        $y = array(25, 25, 25, 25, 20, 20, 25, 25, 25, 25, 30);
         $num_data = count($data);
         $lineX1= $pdf->getX();
         $lineY1= $pdf->getY();
@@ -220,7 +220,7 @@ if($numrecordsProvincial > 0)
     }
 }
 
-$getAgenciesQueryCityMunicipal = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc, regions.regionname, provinces.provincename, citymunicipality.towncitymunicipalityname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions, provinces, citymunicipality where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid=citymunicipality.id and govtagencyclass.id=$agencycategoryId order by agencyname";
+$getAgenciesQueryCityMunicipal = "select agencycertifications.id as agencycertificationid, govtagency.id as govtagencyid, govtagency.agencyname as agencyname, agencycertifications.certificationsite as certificationsite, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, govtagency.hideorigcertdate as hideodc, regions.regionname, provinces.provincename, citymunicipality.towncitymunicipalityname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions, provinces, citymunicipality where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid=citymunicipality.id and govtagencyclass.id=$agencycategoryId order by agencyname";
 //echo "$getAgenciesQueryCityMunicipal<br/>";
 $numrecordsMunicipal = $dbh->query($getAgenciesQueryCityMunicipal)->rowCount();
 if($numrecordsMunicipal > 0)
@@ -246,8 +246,8 @@ if($numrecordsMunicipal > 0)
             $myODC = "N/A";
         }        
 
-        $data = array($row['agencyname'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, $row['regionname'], $row['provincename'], $row['towncitymunicipalityname']);
-        $y = array(45, 32, 25, 20, 20, 25, 25, 25, 25, 25);
+        $data = array($row['agencyname'], $row['certificationsite'], $row['certifyingbody'], $row['certificationdesc'], $row['certstartdate'], $row['certenddate'], $myODC, $isPartial, $row['regionname'], $row['provincename'], $row['towncitymunicipalityname']);
+        $y = array(25, 25, 25, 25, 20, 20, 25, 25, 25, 25, 30);
         $num_data = count($data);
         $lineX1= $pdf->getX();
         $lineY1= $pdf->getY();
