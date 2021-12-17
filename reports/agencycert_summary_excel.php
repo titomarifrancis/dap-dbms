@@ -24,7 +24,7 @@ $getAgencyCategory = "select id, agencyclassdesc from govtagencyclass";
 $getAgencyCategoryStmt = $dbh->query($getAgencyCategory);
 $agencyCategoryArray = $getAgencyCategoryStmt->fetchAll();
 
-$headerRow = ['Agency Category','Total Number of Agencies','Active Certifications','Active Certifications (%)','Uncertified Agencies', 'Uncertified Agencies (%)', 'Expired Certifications'];
+$headerRow = ['Agency Category','Total Number of Agencies','Active Certifications','Active Certifications (%)','Agencies Without ISO Certification', 'Agencies Without ISO Certification (%)', 'Expired Certifications'];
 
 $rowFromValues = WriterEntityFactory::createRowFromArray($headerRow);
 $writer->addRow($rowFromValues);
