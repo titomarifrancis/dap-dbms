@@ -34,7 +34,7 @@ foreach($certificationStmt as $certificationRow)
 		</label>
 	</div>
     <div class="large-12 columns">
-        <input type="text" name="govtagencydesc" placeholder="Government Agency Name">
+        <input type="text" name="govtagencydesc" placeholder="Certification Standard Name">
     </div>
     <div class="large-12 columns">
         <input type="submit" class="button expand" value="Save to Add"/>
