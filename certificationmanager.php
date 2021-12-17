@@ -4,7 +4,7 @@ include 'dbconn.php';
 
 //this is to manage the content of Govt Agency Class table
 ?>
-<h3>Certification Details</h3>
+<h3>Certification Standards</h3>
 <form enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
