@@ -34,7 +34,7 @@ foreach($getRegionStmt as $regionRow)
 		</label>
 	</div>
     <div class="large-12 columns">
-        <input type="text" name="govtagencydesc" placeholder="Government Agency Name">
+        <input type="text" name="govtagencydesc" placeholder="Enter Region Name">
     </div>
     <div class="large-12 columns">
         <input type="submit" class="button expand" value="Save to Add"/>
