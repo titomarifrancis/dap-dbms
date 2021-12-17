@@ -65,7 +65,7 @@ $pdf->Cell(100, 13, 'Agency Certification Summary', 0, 1, '', 0, '', 0);
 //$pdf->Ln();
 $pdf->SetTextColor(255);
 // column titles
-$header = array('Agency Category', 'Total Number of Agencies', 'Active Certifications', 'Active Certifications (%)', 'Uncertified Agencies', 'Uncertified Agencies (%)', 'Expired Certifications',);
+$header = array('Agency Category', 'Total Number of Agencies', 'Active Certifications', 'Active Certifications (%)', 'Agencies Without ISO Certification', 'Agencies Without ISO Certification (%)', 'Expired Certifications',);
 $w = array(93, 25, 25, 25, 25, 25, 25, 25);
 $num_headers = count($header);
 $lineX= $pdf->getX();
