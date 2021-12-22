@@ -17,7 +17,7 @@ create index idx_region on regions(id, regionname);
 
 create table provinces (
 	id serial primary key,
-	provincename varchar(24) not null,
+	provincename varchar(64) not null,
 	regionid integer references regions(id) on delete restrict,
 	creationdate timestamptz not null	
 );
@@ -26,7 +26,7 @@ create index idx_province on provinces(id, provincename);
 
 create table citymunicipality (
 	id serial primary key,
-	towncitymunicipalityname varchar(24) not null,
+	towncitymunicipalityname varchar(64) not null,
 	iscity boolean default false not null,
 	provinceid integer default null references provinces(id) on delete restrict,
 	creationdate timestamptz not null
@@ -36,7 +36,7 @@ create index idx_citymunicipality on citymunicipality(id, towncitymunicipalityna
 
 create table barangays (
 	id serial primary key,
-	barangayname varchar(24) not null,
+	barangayname varchar(64) not null,
 	citymunicipalityid integer references citymunicipality(id) on delete restrict,
 	creationdate timestamptz not null
 );
@@ -45,7 +45,7 @@ create index idx_barangay on barangays(id, barangayname);
 
 create table governancelevel (
 	id serial primary key,
-	govlevel varchar(24) not null,
+	govlevel varchar(64) not null,
 	creationdate timestamptz not null
 );
 
