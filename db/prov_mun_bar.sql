@@ -1369,6 +1369,25 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tonsuya', 8, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tugatog', 8, NOW(), NULL);
 
---
+--Navotas City
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Sipac-Almacen', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bagumbayan North', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bagumbayan South', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bangculasi', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Daanghari', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Navotas East', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Navotas West', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('North Bay Boulevard North', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('NBBS Kaunlaran', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('San Jose (Pob.)', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('San Rafael Village', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('San Roque', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tangos South', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tanza 1', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('NBBS Dagat-dagatan', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('NBBS Proper', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tangos North', 9, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tanza 2', 9, NOW(), NULL);
+
 
 
