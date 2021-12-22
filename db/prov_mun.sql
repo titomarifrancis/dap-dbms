@@ -33,7 +33,7 @@ insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creat
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Laoag City', true, 2, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Marcos', false, 2, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Nueva Era', false, 2, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pagudpud', true, 2, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pagudpud', false, 2, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Paoay', false, 2, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pasuquin', false, 2, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Piddig', false, 2, NOW(), NULL);
