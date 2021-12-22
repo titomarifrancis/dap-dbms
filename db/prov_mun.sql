@@ -1,3 +1,23 @@
+--National Capital Region (NCR)
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Manila', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Mandaluyong', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Marikina', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Pasig', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Quezon City', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of San Juan', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Caloocan', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Malabon', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Navotas', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Valenzuela', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Las Pinas', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Makati', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Muntinlupa', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Paranaque', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pasay City', 1, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pateros', 0, 1);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('City of Taguig', 1, 1);
+
+
 --Ilocos Norte
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Adams', 0, 2);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bacarra', 0, 2);
@@ -767,6 +787,1087 @@ insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) value
 
 
 --Aklan
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('', 0, 34);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('', 0, 34);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Altavas', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balete', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Banga', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Batan', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buruanga', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ibajay', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kalibo', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lezo', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Libacao', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Madalag', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Makato', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malay', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malinao', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Nabas', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('New Washington', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Numancia', 0, 34);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tangalan', 0, 34);
+
+
+--Antique
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Anini-Y', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barbaza', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Belison', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bugasong', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Caluya', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Culasi', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tobias Fornier', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hamtic', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Laua-An', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Libertad', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pandan', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Patnongon', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Jose', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Remigio', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sebaste', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibalom', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tibiao', 0, 35);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Valderrama', 0, 35);
+
+
+--Capiz
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cuatero', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dao', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dumalag', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dumarao', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ivisan', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jamindan', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ma-Ayon', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mambusao', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Panay', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Panitan', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pilar', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pontevedra', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('President Roxas', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Roxas City', 1, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sapi-An', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sigma', 0, 36);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tapaz', 0, 36);
+
+
+--Guimaras
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buenavista', 0, 37);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jordan', 0, 37);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Nueva Valencia', 0, 37);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Lorenzo', 0, 37);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibunag', 0, 37);
+
+
+--Iloilo
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ajuy', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alimodian', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Anilao', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Badiangan', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balasan', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Banate', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barotac Nuevo', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barotac Viejo', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Batad', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bingawan', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cabatuan', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calinog', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carles', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Concepcion', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dingle', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Duenas', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dumangas', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Estancia', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Guimbal', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Igbaras', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Iloilo City', 1, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Janiuay', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lambunao', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Leganes', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lemery', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Leon', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maasin', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Miagao', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mina', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('New Lucena', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Oton', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Passi City', 1, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pavia', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pototan', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Dionisio', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Enrique', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Joaquin', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Miguel', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Rafael', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Barbara', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sara', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tigbauan', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubungan', 0, 38);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Zarraga', 0, 38);
+
+
+--Negros Occidental
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bacolod City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bago City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Binalbagan', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cadiz City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calatrava', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Candoni', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cauayan', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Enrique B. Magalona', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Escalante City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Himamaylan City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hinigaran', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hinoba-An', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ilog', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Isabela', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kabankalan City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Carlota City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Castellana', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Manapla', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Moises Padilla', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Murcia', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pontevedra', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pulupandan', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sagay City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Salvador Benedicto', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Carlos City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Enrique', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Silay City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sipalay City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talisay City', 1, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Toboso', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Valladolid', 0, 39);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Victorias City', 1, 39);
+
+
+--Bohol
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alburquerque', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alicia', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Anda', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Antequera', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baclayon', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balilihan', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Batuan', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bien Unido', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bilar', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buenavista', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calape', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Candijay', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carmen', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Catigbian', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Clarin', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Corella', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cortes', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dagohoy', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Danao', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dauis', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dimiao', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Duero', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Garcia Hernandez', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Guindulman', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Inabanga', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jagna', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Getafe', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lila', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Loay', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Loboc', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Loon', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mabini', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maribojoc', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Panglao', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pilar', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('President Carlos P. Garcia', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sagbayan', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Isidro', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Miguel', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sevilla', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sierra Bullones', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sikatuna', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagbilaran City', 1, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talibon', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Trinidad', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubigon', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ubay', 0, 40);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Valencia', 0, 40);
+
+
+--Cebu
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alcantara', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alcoy', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alegria', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Aloguinsan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Argao', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Asturias', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Badian', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balamban', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bantayan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barili', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bogo City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Boljoon', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Borbon', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carcar City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carmen', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Catmon', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cebu City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Compostela', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Consolacion', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cordova', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Daanbantayan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dalaguete', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Danao City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dumanjug', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ginatilan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lapu-Lapu City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Liloan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Madridejos', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malabuyoc', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mandaue City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Medellin', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Minglanilla', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Moalboal', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Naga City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Oslob', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pilar', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pinamungajan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Poro', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ronda', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Samboan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Fernando', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Francisco', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Remigio', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Fe', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santander', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibonga', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sogod', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tabogon', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tabuelan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talisay City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Toledo City', 1, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tuburan', 0, 41);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tudela', 0, 41);
+
+
+--Negros Oriental
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Amlan', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ayungon', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bacong', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bais City', 1, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Basay', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bayawan City', 1, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bindoy', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Canlaon City', 1, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dauin', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dumaguete City', 1, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Guihulngan City', 1, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jimalalud', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Libertad', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mabinay', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Manjuyod', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pamplona', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Jose', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Catalina', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Siaton', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibulan', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tanjay City', 1, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tayasan', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Valencia', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Vallehermoso', 0, 42);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Zamboanguita', 0, 42);
+
+
+--Siquijor
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Enrique Villanueva', 0, 43);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Larena', 0, 43);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lazi', 0, 43);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maria', 0, 43);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Juan', 0, 43);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Siquijor', 0, 43);
+
+
+--Biliran
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Almeria', 0, 44);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Biliran', 0, 44);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cabugcayan', 0, 44);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Caibiran', 0, 44);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Culaba', 0, 44);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kawayan', 0, 44);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maripipi', 0, 44);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Naval', 0, 44);
+
+
+--Eastern Samar
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Arteche', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balangiga', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balangkayan', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Borongan City', 1, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Can-Avid', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dolores', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('General Macarthur', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Giporlos', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Guiuan', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hernani', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jipapad', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lawaan', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Llorente', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maslog', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maydolong', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mercedes', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Oras', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Quinapondan', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Salcedo', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Julian', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Policarpio', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sulat', 0, 45);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Taft', 0, 45);
+
+
+--Leyte
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Abuyog', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alangalang', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Albuera', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Babatngon', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barugo', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bato', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baybay City', 1, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Burauen', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calubian', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Capoocan', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carigara', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dagami', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dulag', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hilongos', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hindang', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Inopacan', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Isabel', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jaro', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Javier', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Julita', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kananga', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Paz', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Leyte', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Macarthur', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mahaplag', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Matag-Ob', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Matalom', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mayorga', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Merida', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ormoc City', 1, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Palo', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Palompon', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pastrana', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Isidro', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Miguel', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sante Fe', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tabango', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tabontabon', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tacloban City', 1, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tanauan', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tolosa', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tunga', 0, 46);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Villaba', 0, 46);
+
+
+--Northern Samar
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Allen', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Biri', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bobon', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Capul', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Catarman', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Catubig', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Gamay', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Laoang', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lapinig', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Las Navas', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lavezares', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lope de Vega', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mapanas', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mondragon', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Palapag', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pambujan', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Rosario', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Antonio', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Isidro', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Jose', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Roque', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Vicente', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Silvino Lobos', 0, 47);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Victoria', 0, 47);
+
+
+--Samar
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Almagro', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Basey', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calbayog City', 1, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calbiga', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Catbalogan City', 1, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Daram', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Gandara', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hinabangan', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jiabong', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Marabut', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Matuguinao', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Motiong', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pinabacdao', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Jose de Buan', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Sebastian', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Margarita', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Rita', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santo Nino', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talalora', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tarangnan', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Villareal', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Paranas', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Zumarraga', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagapul-An', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Jorge', 0, 48);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pagsanghan', 0, 48);
+
+
+--Southern Leyte
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Anahawan', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bontoc', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hinunangan', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hinundayan', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Libagon', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Liloan', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maasin City', 1, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Macrohon', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malitbog', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Padre Burgos', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pintuyan', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Saint Bernard', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Francisco', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Juan', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Ricardo', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Silago', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sogod', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tomas Oppus', 0, 49);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Limasawa', 0, 49);
+
+
+--Zamboanga del Norte
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dapitan City', 1, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dipolog City', 1, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Katipunan', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Libertad', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Labason', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Liloy', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Manukan', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mutia', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pinan', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Polanco', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pres. Manual A. Roxas', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Rizal', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Salug', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sergio Osmena Sr.', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Siayan', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibuco', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibutad', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sindangan', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Siocon', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sirawai', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tampilisan', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jose Dalman', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Gutaman', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baliguian', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Godod', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bacungan', 0, 50);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kalawit', 0, 50);
+
+
+--Zamboanga del Sur
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Aurora', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bayog', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dimataling', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dinas', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dumalinao', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dumingag', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kumalarang', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Labangan', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lapuyan', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mahayag', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Margosatubig', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Midsalip', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Molave', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pagadian City', 1, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ramon Magsaysay', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Miguel', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Pablo', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tabina', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tambulig', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tukuran', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Zamboanga City', 1, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lakewood', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Josefina', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pitogo', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sominot', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Vincenzo A. Sagun', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Guipos', 0, 51);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tigbao', 0, 51);
+
+
+--Zamboanga Sibugay
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alicia', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buug', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Diplahan', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Imelda', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ipil', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kabasalan', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mabuhay', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malangas', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Naga', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Olutanga', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Payao', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Roseller Lim', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Siay', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talusan', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Titay', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tungawan', 0, 52);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Isabela City', 1, 52);
+
+
+--Bukidnon
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baungon', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Damulog', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dangcagan', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Don Carlos', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Impasug-Ong', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kadingilan', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kalilangan', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kibawe', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kitaotao', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lantapan', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Libona', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malaybalay City', 1, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malitbog', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Manolo Fortich', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maramag', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pangantucan', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Quezon', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Fernando', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sumilao', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talakag', 0, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Valencia City', 1, 53);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cabanglasan', 0, 53);
+
+
+--Camiguin
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Catarman', 0, 54);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Guinsiliban', 0, 54);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mahinog', 0, 54);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mambajao', 0, 54);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sagay', 0, 54);
+
+
+--Lanao del Norte
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bacolod', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baloi', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baroy', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Iligan City', 1, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kapatagan', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sultan Naga Dimaporo', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kauswagan', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kolambugan', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lala', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Linamon', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Magsaysay', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maigo', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Matungao', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Munai', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Nunungan', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pantao Ragat', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Poona Piagapo', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Salvador', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sapar', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagoloan', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tangcal', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubod', 0, 55);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pantar', 0, 55);
+
+
+--Misamis Occidental
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Aloran', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baliangao', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bonifacio', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calamba', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Clarin', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Concepcion', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jimenez', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lopez Jaena', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Oroquieta City', 1, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ozamiz City', 1, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Panaon', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Plaridel', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sapang Dalaga', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sinacaban', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tangub City', 1, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tudela', 0, 56);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Don Victorino Chiongbian', 0, 56);
+
+
+--Misamis Oriental
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alubijid', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balingasag', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balingoan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Binuangan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cagayan de Oro City', 1, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Claveria', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('El Salvador City', 1, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Gingoog City', 1, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Gitagum', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Initao', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jasaan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kinoguitan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lagonglong', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Laguindingan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Libertad', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lugait', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Magsaysay', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Manticao', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Medina', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Naawan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Opol', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Salay', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sugbongcogon', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagoloan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talisayan', 0, 57);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Villanueva', 0, 57);
+
+
+--Compostela Valley (Davao de Oro)
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Compostela', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Laak', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mabini', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maco', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maragusan', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mawab', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Monkayo', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Montevista', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Nabunturan', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('New Bataan', 0, 58);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pantukan', 0, 58);
+
+
+--Davao del Norte
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Asuncion', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carmen', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kapalong', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('New Corella', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Panabo City', 1, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Island Garden City of Samal', 1, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santo Tomas', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagum City', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talaingod', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Braulio D. Dujali', 0, 59);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Isidro', 0, 59);
+
+
+--Davao del Sur
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bansalan', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Davao City', 1, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Digos City', 1, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hagonoy', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kiblawan', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Magsaysay', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malalag', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Matano', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Padada', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Cruz', 0, 60);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sulop', 0, 60);
+
+
+--Davao Occidental
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Don Marcelino', 0, 61);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jose Abad Santos', 0, 61);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malita', 0, 61);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Maria', 0, 61);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sarangani', 0, 61);
+
+
+--Davao Oriental
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baganga', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Banaybanay', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Boston', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Caraga', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cateel', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Governor Generoso', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lupon', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Manay', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mati City', 1, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Isidro', 0, 62);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tarragona', 0, 62);
+
+
+--North Cotabato
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alamada', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Aleosan', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Antipas', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Arakan', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Banisilan', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carmen', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kabacan', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kidapawan City', 1, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Libungan', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Magpet', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Makilala', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Matalam', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Midsayap', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('MLang', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pigkawayan', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pikit', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('President Roxas', 0, 63);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tulunan', 0, 63);
+
+
+--Sarangani
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alabel', 0, 64);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Glan', 0, 64);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kiamba', 0, 64);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maasim', 0, 64);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maitum', 0, 64);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malapatan', 0, 64);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malungon', 0, 64);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cotabato City', 1, 64);
+
+
+--South Cotabato
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Banga', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('General Santos City', 1, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Koronadal City', 1, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Norala', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Polomolok', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Surallah', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tampakan', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tantangan', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('TBoli', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tupi', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santo Nino', 0, 65);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lake Sebu', 0, 65);
+
+
+--Sultan Kudarat
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bagumbayan', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Columbio', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Esperanza', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Isulan', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kalamansig', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lebak', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lutayan', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lambayong', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Palimbang', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('President Quirino', 0, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tacurong City', 1, 66);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sen. Ninoy Aquino', 0, 66);
+
+
+--Agusan del Norte
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buenavista', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Butuan City', 1, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cabadbaran City', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carmen', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jabonga', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kitcharao', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Las Nieves', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Magallanes', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Nasipit', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santiago', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubay', 0, 67);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Remedios T. Romualdez', 0, 67);
+
+
+--Agusan del Sur
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bayugan City', 1, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bunawan', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Esperanza', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Paz', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Loreto', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Prosperidad', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Rosario', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Francisco', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Luis', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Josefa', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talacogon', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Trento', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Veruela', 0, 68);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibagat', 0, 68);
+
+
+--Dinagat Islands
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Basilisa', 0, 69);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cagdianao', 0, 69);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dinagat', 0, 69);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Libjo', 0, 69);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Loreto', 0, 69);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Jose', 0, 69);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubajon', 0, 69);
+
+
+--Surigao del Norte
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alegria', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bacuag', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Burgos', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Claver', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dapa', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Del Carmen', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('General Luna', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Gigaquit', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mainit', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malimono', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pilar', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Placer', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Benito', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Francisco', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Isidro', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Monica', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sison', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Socorro', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Surigao City', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagana-An', 0, 70);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubod', 0, 70);
+
+
+--Surigao del Sur
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barobo', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bayabas', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bislig City', 1, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cagwait', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cantilan', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carmen', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Carrascal', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Cortes', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hinatuan', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lanuza', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lianga', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lingig', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Madrid', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Marihatag', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Agustin', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Miguel', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagbina', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tago', 0, 71);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tandag City', 1, 71);
+
+
+--Abra
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bangued', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Boliney', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bucay', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bucloc', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Daguioman', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Danglas', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Dolores', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Paz', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lacub', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Langangilang', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lagayan', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Langiden', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Licuan-Baay', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Luba', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malibcong', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Manabo', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Penarrubia', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pidigan', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pilar', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sallapaden', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Isidro', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Juan', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('San Quintin', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tayum', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tineg', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubo', 0, 72);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Villaviciosa', 0, 72);
+
+
+--Apayao
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calanasan', 0, 73);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Conner', 0, 73);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Flora', 0, 73);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kabugao', 0, 73);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Luna', 0, 73);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pudtol', 0, 73);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Santa Marcela', 0, 73);
+
+
+--Benguet
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Atok', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Baguio City', 1, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bakun', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bokod', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buguias', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Itogon', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kabayan', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kapangan', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kibungan', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('La Trinidad', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mankayan', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sablan', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tuba', 0, 74);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tublay', 0, 74);
+
+
+--Ifugao
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Banaue', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hungduan', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kiangan', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lagawe', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lamut', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mayoyao', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Alfonso Lista', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Aguinaldo', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hingyon', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tinoc', 0, 75);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Asipulo', 0, 75);
+
+
+--Kalinga
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balbalan', 0, 76);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lubuangan', 0, 76);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pasil', 0, 76);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pinukpuk', 0, 76);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Rizal', 0, 76);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tabuk City', 1, 76);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tanudan', 0, 76);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tinglayan', 0, 76);
+
+
+--Mountain Province
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barlig', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bauko', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Besao', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bontoc', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Natonin', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Paracelis', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sabangan', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sadanga', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sagada', 0, 77);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tadian', 0, 77);
+
+
+--Basilan
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lamitan City', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lantawan', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maluso', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sumisip', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tipo-Tipo', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tuburan', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Akbar', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Al-Barka', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hadji Mohammad Ajul', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ungkaya Pukan', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hadji Muhtamad', 0, 78);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tabuan-Lasa', 0, 78);
+
+
+--Lanao del Sur
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bacolod-Kalawi', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balabagan', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Balindong', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bayang', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Binidayan', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bubong', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Butig', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ganassi', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kapai', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lumba-Bayabao', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lumbatan', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Madalum', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Madamba', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Malabang', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Marantao', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Marawi City', 1, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Masiu', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mulondo', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pagayawan', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Piagapo', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Poona Bayabao', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pualas', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ditsaan-Ramain', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Saguiaran', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tamparan', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Taraka', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tubaran', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tugaya', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Wao', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Marogong', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Calanogas', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buadiposo-Buntong', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maguing', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Picong', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lumbayanague', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Amai Manabilang', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tagoloan', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kapatagan', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sultan Dumalondong', 0, 79);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lumbaca-Unayan', 0, 79);
+
+
+--Maguindanao
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Ampatuan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buldon', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Buluan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Paglas', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Piang', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Odin Sinsuat', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Shariff Aguak', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Matanog', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pagalungan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Parang', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sultan Kudarat', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sultan Sa Barongis', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kabuntalan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Upi', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talayan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('South Upi', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Barira', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Gen. S. K. Pendatun', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mamasapano', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talitay', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pagagawan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Paglat', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sultan Mastura', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Guindulungan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Saudi-Ampatuan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Unsay', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Abdullah Sangki', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Rajah Buayan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Blah T. Sinsuat', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Anggal Midtimbang', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mangudadatu', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pandag', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Northen Kabuntulan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Hoffer Ampatuan', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Datu Salibo', 0, 80);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Shariff Saydona Mustapha', 0, 80);
+
+
+--Sulu
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Indanan', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Jolo', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Kalingalan Caluang', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Luuk', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Maimbung', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Hadji Panglima Tahil', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Old Pamanao', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pangutaran', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Parang', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pata', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Patikul', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Siasi', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Talipao', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tapul', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tongkil', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Panglima Estino', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Lugus', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Pandami', 0, 81);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Omar', 0, 81);
+
+
+--Tawi-Tawi
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Panglima Sugala', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Bongao', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Mapun', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Simunul', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sitangkai', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('South Ubian', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Tandubas', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Turtle Islands', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Languyan', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sapa-Sapa', 0, 82);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid) values ('Sibutu', 0, 82);
