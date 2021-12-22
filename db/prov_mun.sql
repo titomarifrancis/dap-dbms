@@ -473,36 +473,36 @@ insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creat
 
 
 --Laguna
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Alaminos', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Bay', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Binan City', true, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Cabuyao City', true, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Calamba City', true, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Calauan', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Cavinti', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Famy', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Kalayaan', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Liliw', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Los Banos', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Luisiana', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Lumban', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Mabitac', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Magdalena', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Majayjay', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Nagcarlan', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Paete', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pagsanjan', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pakil', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pangil', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pila', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Rizal', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('San Pablo City', true, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('San Pedro City', true, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santa Cruz', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santa Maria', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santa Rosa City', true, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Siniloan', false, 2false, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Victoria', false, 2false, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Alaminos', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Bay', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Binan City', true, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Cabuyao City', true, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Calamba City', true, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Calauan', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Cavinti', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Famy', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Kalayaan', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Liliw', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Los Banos', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Luisiana', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Lumban', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Mabitac', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Magdalena', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Majayjay', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Nagcarlan', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Paete', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pagsanjan', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pakil', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pangil', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pila', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Rizal', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('San Pablo City', true, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('San Pedro City', true, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santa Cruz', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santa Maria', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santa Rosa City', true, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Siniloan', false, 20, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Victoria', false, 20, NOW(), NULL);
 
 
 --Quezon
