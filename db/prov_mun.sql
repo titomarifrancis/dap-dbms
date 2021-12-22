@@ -1451,7 +1451,7 @@ insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creat
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Kapalong', false, 59, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('New Corella', false, 59, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Panabo City', true, 59, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Island Garden City of Samal', 1, 59, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Island Garden City of Samal', true, 59, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santo Tomas', false, 59, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Tagum City', true, 59, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Talaingod', false, 59, NOW(), NULL);
