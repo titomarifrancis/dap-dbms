@@ -1389,5 +1389,98 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tangos North', 9, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tanza 2', 9, NOW(), NULL);
 
+--Valenzuela City
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Arkong Bato', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bagbaguin', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Balangkas', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Parada', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bignay', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bisig', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Canumay West', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Karuhatan', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Coloong', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Dalandanan', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Gen. T. De Leon', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Isla', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Lawang Bato', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Lingunan', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Mabolo', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Malanday', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Malinta', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Mapulang Lupa', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Marulas', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Maysan', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Palasan', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pariancillo Villa', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Paso De Blas', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pasolo', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Poblacion', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pulo', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Punturin', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Rincon', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tagalag', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Ugong', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Viente Reales', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Wawang Pulo', 10, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Canumay East', 10, NOW(), NULL);
+
+--Las Pinas City
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Almanza Uno', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Daniel Fajardo', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Elias Aldana', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Ilaya', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Manuyo Uno', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pamplona Uno', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pulang Lupa Uno', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Talon Uno', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Zapote', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Almanza Dos', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('B. F. International Village', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Manuyo Dos', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pamplona Dos', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pamplona Tres', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pilar', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pulang Lupa Dos', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Talon Dos', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Talon Tres', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Talon Kuatro', 11, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Talon Singko', 11, NOW(), NULL);
+
+--Makati City
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bangkal', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bel-Air', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Cembo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Comembo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Carmona', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Dasmarinas', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('East Rembo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Forbes Park', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Guadalupe Nuevo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Guadalupe Viejo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Kasilawan', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('La Paz', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Magallanes', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Olympia', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Palanan', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pembo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pinagkaisahan', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pio Del Pilar', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pitogo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Poblacion', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Post Proper Northside', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Post Proper Southside', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('San Antonio', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('San Isidro', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('San Lorenzo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Santa Cruz', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Singkamas', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('South Cembo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tejeros', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Urdaneta', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Valenzuela', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('West Rembo', 12, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Rizal', 12, NOW(), NULL);
+
+--Muntinlupa City
 
 
