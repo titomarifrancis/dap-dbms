@@ -30,11 +30,11 @@
 if(isset($loggedInAccessLevel) && ($loggedInAccessLevel >= 2))
 {
 ?>                              
-                                <li class="sidebar-sl"><a href="certifyingbodymanager.php" class="sidebar-slink">Certifying Body Details</a></li>
-                                <li class="sidebar-sl"><a href="govtagencyclassmanager.php" class="sidebar-slink">Government Agency Category</a></li>
+                                <li class="sidebar-sl"><a href="certifyingbodymanager.php" class="sidebar-slink">List of Certifying Body</a></li>
+                                <li class="sidebar-sl"><a href="govtagencyclassmanager.php" class="sidebar-slink">List of Government Agency Category</a></li>
                                 <li class="sidebar-sl"><a href="govtagencymanager.php" class="sidebar-slink">List of Government Agencies</a></li>
                                 
-                                <li class="sidebar-sl"><a href="certificationmanager.php" class="sidebar-slink">Certification Standards</a></li>
+                                <li class="sidebar-sl"><a href="certificationmanager.php" class="sidebar-slink">List of Certification Standards</a></li>
                                 <li class="sidebar-sl"><a href="regionlistmanager.php" class="sidebar-slink">List of Regions</a></li>
                                 <li class="sidebar-sl"><a href="provincelistmanager.php" class="sidebar-slink">List of Provinces</a></li>                                
 <?php
