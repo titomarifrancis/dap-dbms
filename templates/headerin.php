@@ -209,6 +209,7 @@ if(isset($loggedInUserRealname))
                         </style>
                         <h3>ISO Certifications in the Government</h3>
                         <ul style="list-style: none; margin: 0" class="sidebar-sl">
+                            <li class="sidebar-sl"><a href="listcertificationsec.php?catid=1" class="sidebar-slink">Search for Agency</a></li>
                             <li class="sidebar-sl"><a href="listcertificationsec.php?catid=1" class="sidebar-slink">Constitutional Offices</a></li>
                             <li class="sidebar-sl"><a href="listcertificationsec.php?catid=5" class="sidebar-slink">National Government Agencies</a></li>
                             <li class="sidebar-sl"><a href="listcertificationsec.php?catid=6" class="sidebar-slink">NGA-Attached Offices and Bureaus</a></li>
