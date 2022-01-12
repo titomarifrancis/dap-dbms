@@ -4,7 +4,7 @@ include 'templates/header.php';
 include 'dbconn.php';
 ?>
 <h3>Find Agency</h3>
-<form id="findAgencyForm" method="post" enctype="multipart/form-data">
+<form id="findAgencyForm" method="post" onSubmit="<?php echo $_SERVER['PHP_SELF'];?>">
   <div class="row">
     <div class="large-12 columns">
       <label>Full or Partial Name of the Agency
