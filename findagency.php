@@ -25,9 +25,8 @@ const okButton = document.getElementById('okButton');
 signUpForm.addEventListener('keyup', function (event) {
     //isValidEmail = emailField.checkValidity();
     isValidUsername = usernameField.checkValidity();
-    isValidPassword = passwordField.checkValidity();
 
-    if ( isValidUsername && isValidPassword )
+    if ( isValidUsername )
     {
         okButton.disabled = false;
     }
