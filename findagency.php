@@ -47,6 +47,7 @@ if(isset($_POST['partfullagencyname']))
   $searchString = $_POST['partfullagencyname'];
   $findAgencyName = "select govtagency.agencyname, agencycertifications.id from govtagency, agencycertifications where agencycertifications.govtagencyid=govtagency.id and govtagency.agencyname like '%".$searchString."%'";
   echo $findAgencyName<br/>;
+  unset($_POST['partfullagencyname']);
 }
 
 
