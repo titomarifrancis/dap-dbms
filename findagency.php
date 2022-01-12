@@ -12,7 +12,7 @@ include 'dbconn.php';
       </label>
     </div>
     <div class="large-12 large-centered columns">
-        <input type="button" class="button expand" id="okButton" value="Find" disabled>
+        <input type="submit" class="button expand" id="okButton" value="Find" disabled>
     </div>    
 	</div>
 </form>
