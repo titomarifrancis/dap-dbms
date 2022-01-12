@@ -2456,7 +2456,7 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Alinaay', 45, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Aragan', 45, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Arnap', 45, NOW(), NULL);
-insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Baclig', 45, NOW(), NULL); (Pob.)
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Baclig (Pob.)', 45, NOW(), NULL); 
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bato', 45, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bonifacio (Pob.)', 45, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bungro', 45, NOW(), NULL);
@@ -4636,7 +4636,7 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Osmeña (Pob.)', 122, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pacalat', 122, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pampano', 122, NOW(), NULL);
-insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Paria', 122, NOW(), NULL);n
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Paria', 122, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Paul', 122, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pogon-Aniat', 122, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Pogon-Lomboy (Pob.)', 122, NOW(), NULL);
