@@ -4,18 +4,43 @@ include 'templates/header.php';
 include 'dbconn.php';
 ?>
 <h3>Find Agency</h3>
-<form id="certForm" method="post" action="agencycert_processor.php" enctype="multipart/form-data">
+<form id="findAgencyForm" method="post" action="agencycert_processor.php" enctype="multipart/form-data">
   <div class="row">
     <div class="large-12 columns">
       <label>Full or Partial Name of the Agency
-        <input type="text" name="certificationsite" id="certificationsite" placeholder="Type the Full or Partial Name of the Agency Here">
+        <input type="text" name="partfullagencyname" id="partfullagencyname" placeholder="Type the Full or Partial Name of the Agency Here">
       </label>
     </div>
     <div class="large-12 large-centered columns">
-        <input type="submit" class="button expand" id="okButton" value="Find" disabled>
+        <input type="button" class="button expand" id="okButton" value="Find" disabled>
     </div>    
 	</div>
 </form>
+<script>
+const signUpForm = document.getElementById('findAgencyForm');
+const usernameField = document.getElementById('partfullagencyname');
 
+const okButton = document.getElementById('okButton');
+  
+signUpForm.addEventListener('keyup', function (event) {
+    //isValidEmail = emailField.checkValidity();
+    isValidUsername = usernameField.checkValidity();
+    isValidPassword = passwordField.checkValidity();
+
+    if ( isValidUsername && isValidPassword )
+    {
+        okButton.disabled = false;
+    }
+    else
+    {
+        okButton.disabled = true;
+    }
+});
+
+ 
+okButton.addEventListener('click', function (event) {
+  signUpForm.submit();
+});
+</script>
 <?php
 include 'templates/footer.php';
