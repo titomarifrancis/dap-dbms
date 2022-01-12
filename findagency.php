@@ -11,6 +11,9 @@ include 'dbconn.php';
         <input type="text" name="certificationsite" id="certificationsite" placeholder="Type the Full or Partial Name of the Agency Here">
       </label>
     </div>
+    <div class="large-12 large-centered columns">
+        <input type="button" class="button expand" id="okButton" value="Find" disabled>
+    </div>    
 	</div>
 </form>
 
