@@ -8,7 +8,7 @@ include 'dbconn.php';
   <div class="row">
     <div class="large-12 columns">
       <label>Full or Partial Name of the Agency
-        <input type="text" name="certificationsite" id="certificationsite" placeholder="Type the Site of Certification Here">
+        <input type="text" name="certificationsite" id="certificationsite" placeholder="Type the Full or Partial Name of the Agency Here">
       </label>
     </div>
 	</div>
