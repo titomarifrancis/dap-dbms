@@ -4733,7 +4733,7 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 
 --Rosales
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Acop', 126, NOW(), NULL);
-insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bakitbaki', 126, NOW(), NULL);t
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bakitbakit', 126, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Balingcanaway', 126, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Cabalaoangan Norte', 126, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Cabalaoangan Sur', 126, NOW(), NULL);
