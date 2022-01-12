@@ -4949,7 +4949,7 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Nagkaysa', 131, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Nining', 131, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Poblacion East', 131, NOW(), NULL);
-insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Poblacion Wes', 131, NOW(), NULL);t
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Poblacion West', 131, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Salingcob', 131, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Salpad', 131, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('San Felipe East', 131, NOW(), NULL);
