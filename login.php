@@ -51,11 +51,11 @@ signUpForm.addEventListener('keyup', function (event) {
         okButton.disabled = true;
     }
 });
-
  
 okButton.addEventListener('click', function (event) {
   signUpForm.submit();
 });
 </script>
+
 <?php
 include 'templates/footer.php';
