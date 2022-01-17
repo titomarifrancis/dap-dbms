@@ -37,8 +37,10 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
             if (empty($errors))
             {
                 //the uploaded file is stored in stash/ folder
+
 				if(move_uploaded_file($file_tmp, $file))
 				{
+                    /*
 					$ssh = ssh2_connect($ssh2host, $ssh2port);
 					ssh2_auth_password($ssh, $ssh2username, $ssh2password);
 		
@@ -50,7 +52,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 					fclose(realpath($file));
 					
 					//change to path of file (stash)
-					chdir($path);
+					chdir($path);*/
 
 					//Disabled deleting the file in the local stash folder, causing showstopper
 					//Can be handled by a cron job and less logic to be handled by system
@@ -79,6 +81,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 		
 					
 				}
+
     
                 //build the query based on the submitted parameters
                 $queryArray = [];
