@@ -10836,7 +10836,7 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Santa Cruz (Pob.)', 627, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Santa Maria (Pob.)', 627, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Saripongpong (Pob.)', 627, NOW(), NULL);
-insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Sipaco
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Sipaco', 627, NOW(), NULL);
 
 --Libmanan
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Aslong', 628, NOW(), NULL);
