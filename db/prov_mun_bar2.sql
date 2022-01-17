@@ -12946,7 +12946,7 @@ insert into barangays(barangayname, citymunicipalityid, creationdate, createdby)
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Ticol', 694, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Tugos', 694, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Balete', 694, NOW(), NULL);
-insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Balogo', 694, NOW(), NULL);
+insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Balogo (formerly Bacon)', 694, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bato', 694, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bon-Ot', 694, NOW(), NULL);
 insert into barangays(barangayname, citymunicipalityid, creationdate, createdby) values ('Bogña', 694, NOW(), NULL);
