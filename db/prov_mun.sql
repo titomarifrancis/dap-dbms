@@ -1377,7 +1377,7 @@ insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creat
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Pantao Ragat', false, 55, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Poona Piagapo', false, 55, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Salvador', false, 55, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Sapar', false, 55, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Sapad', false, 55, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Tagoloan', false, 55, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Tangcal', false, 55, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Tubod', false, 55, NOW(), NULL);
