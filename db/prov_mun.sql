@@ -1469,7 +1469,7 @@ insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creat
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Kiblawan', false, 60, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Magsaysay', false, 60, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Malalag', false, 60, NOW(), NULL);
-insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Matano', false, 60, NOW(), NULL);
+insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Matanao', false, 60, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Padada', false, 60, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Santa Cruz', false, 60, NOW(), NULL);
 insert into citymunicipality(towncitymunicipalityname, iscity, provinceid, creationdate, createdby) values ('Sulop', false, 60, NOW(), NULL);
