@@ -1,4 +1,7 @@
 <?php
+echo "Line 2";
+die();
+
 include 'templates/magic.php';
 include 'lib/secProc.php';
 include 'dbconn.php';
