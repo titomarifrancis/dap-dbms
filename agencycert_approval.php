@@ -43,6 +43,11 @@ and agencycertifications.id=$id";
 //echo "$getAgencyCertforApproval<br/>";
 $agencyCertStmt = $dbh->query($getAgencyCertforApproval);
 $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
+
+//for troubleshooting purpose only
+print_r($agencyCertApprovalArray);
+die();
+
 ?>
     <div class="row">
         <div class="large-12 columns">
