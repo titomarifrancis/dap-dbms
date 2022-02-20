@@ -125,7 +125,7 @@ print_r($agencyCertApprovalArray);
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certificationstandard'];?>"/>
             </label>
         </div>
-        <div class="large-12 columns">
+        <div class="large-8 columns">
             <label>Certifying Body<br/>
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['providerorg'];?>"/>
             </label>
