@@ -161,7 +161,7 @@ print_r($agencyCertApprovalArray);
         </div>
         <div class="large-12 columns">
             <label>Certification Scope Is Full? &nbsp;
-                <?php if($agencyCertApprovalArray[0]['scope_ispartial'] == 1) echo "Yes"; else echo "No";?><br/>&nbsp;
+                <?php if($agencyCertApprovalArray[0]['scope_ispartial'] == 1) echo "No"; else echo "Yes";?><br/>&nbsp;
             </label>
         </div>
         
