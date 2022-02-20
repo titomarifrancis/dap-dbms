@@ -46,7 +46,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
 
 //for troubleshooting purpose only
 print_r($agencyCertApprovalArray);
-die();
+//die();
 
 ?>
     <div class="row">
