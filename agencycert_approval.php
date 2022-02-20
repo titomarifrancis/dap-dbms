@@ -110,7 +110,7 @@ print_r($agencyCertApprovalArray);
     $barangayName = '';
     if(isset($agencyCertApprovalArray[0]['barangayid']) && ($agencyCertApprovalArray[0]['barangayid'] !== ''))
     {
-        $barangayId = $agencyCertApprovalArray[0]['citymunicipalityid'];
+        $barangayId = $agencyCertApprovalArray[0]['barangayid'];
         $getBarangayName = "select barangayname from barangays where id=$barangayId";
         $getBarangayStmt = $dbh->query($getBarangayName);
         $getBarangayArray = $getBarangayStmt->fetchAll();
