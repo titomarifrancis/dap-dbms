@@ -23,6 +23,9 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
             $file_ext = strtolower(end(explode('.', $file_name)));
 	        $file = $path . $enc_filename . "." . $file_ext;
 
+            echo "Hi line 26<br/>";
+            die();
+
             if (!in_array($file_ext, $extensions))
             {
                 $errors[] = 'Extension not allowed: ' . $file_name . ' ' . $file_type;
