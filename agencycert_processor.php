@@ -28,6 +28,11 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
             $file_ext = strtolower(end(explode('.', $file_name)));
 	        $file = $path . $enc_filename . "." . $file_ext;
 
+            $dst = $ssh2destpath . $enc_filename.'.' .$file_ext;
+
+            echo $dst;
+            die();
+
             //echo "Hi line 32<br/>";
             //die();
 
@@ -46,10 +51,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 				if(move_uploaded_file($file_tmp, $file))
 				{
 					//this will be the path to be recorded in the DB
-					$dst = $ssh2destpath . $enc_filename.'.' .$file_ext;
 
-                    echo $dst;
-                    die();
 
 					//close file handle
 					fclose(realpath($file));
