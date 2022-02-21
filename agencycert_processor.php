@@ -48,6 +48,9 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 					//this will be the path to be recorded in the DB
 					$dst = $ssh2destpath . $enc_filename.'.' .$file_ext;
 
+                    echo $dst;
+                    die();
+
 					//close file handle
 					fclose(realpath($file));
 					
