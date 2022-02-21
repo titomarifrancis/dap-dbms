@@ -87,7 +87,7 @@ create table systemusers (
 	barangayid integer default null references barangays(id) on delete restrict,
 	usrname varchar(128) unique not null,
 	usrpassword varchar(128) not null,
-    usrpasswdsalt varchar(128) not null,
+  usrpasswdsalt varchar(128) not null,
 	userlevelid integer default 1 references userlevels(userlevel) on delete restrict check(userlevelid < 4),
 	isapproved boolean default false,
 	approvedby integer default null references systemusers(id) on delete restrict,
