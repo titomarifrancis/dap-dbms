@@ -30,8 +30,8 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 
             $dst = $ssh2destpath . $enc_filename.'.' .$file_ext;
 
-            echo $dst;
-            die();
+            //echo $dst;
+            //die();
 
             //echo "Hi line 32<br/>";
             //die();
