@@ -23,9 +23,9 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
             $file_ext = strtolower(end(explode('.', $file_name)));
             //$file_ext = strtolower(end(explode('.', $_FILES['uploadedFile']['name'])));
             $file = $path . $enc_filename . "." . $file_ext;
-			//echo $file;
-			//echo "<br>";
-			//die();
+			echo $file;
+			echo "<br>";
+			die();
             if (!in_array($file_ext, $extensions))
             {
                 $errors[] = 'Extension not allowed: ' . $file_name . ' ' . $file_type;
