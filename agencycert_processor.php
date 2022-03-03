@@ -23,8 +23,8 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
             $file_ext = strtolower(end(explode('.', $file_name)));
             //$file_ext = strtolower(end(explode('.', $_FILES['uploadedFile']['name'])));
             $file = $path . $enc_filename . "." . $file_ext;
-			//echo $file;
-			//echo "<br>";
+			echo $file;
+			echo "<br>";
 			//die();
             if (!in_array($file_ext, $extensions))
             {
@@ -125,8 +125,6 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
                 if(isset($_REQUEST['region']) && ($_REQUEST['region'] > 0))
                 {
                     $regionid = $_REQUEST['region'];
-                    echo "$regionid<br/>";
-                    //die();
                     $queryArray['regionid'] = $regionid;
                     if(strlen($paramList) < 1)
                     {
@@ -149,8 +147,6 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
                 if(isset($_REQUEST['province']) && ($_REQUEST['province'] > 0))
                 {
                     $provinceid = $_REQUEST['province'];
-                    echo "$provinceid<br/>";
-                    //die();
                     $queryArray['provinceid'] = $provinceid;
                     if(strlen($paramList) < 1)
                     {
