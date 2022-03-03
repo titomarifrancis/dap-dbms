@@ -44,6 +44,8 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 		
 					//this will be the path to be recorded in the DB
 					$dst = $ssh2destpath . $enc_filename.'.' .$file_ext;
+                    echo "The dst is $dst<br/>";
+
 					//ssh2_scp_send($ssh, $file, $dst, 0777);
 
 					//close file handle
@@ -62,6 +64,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
 		
 					$webpathlen = strlen($ssh2destpath);
 					$webpathlastchar = substr($ssh2destpath, ($webpathlen - 1), 1);
+
 					if($webpathlastchar == "/")
 					{
 						//webpath
