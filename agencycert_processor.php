@@ -39,12 +39,12 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
                 //the uploaded file is stored in stash/ folder
 				if(move_uploaded_file($file_tmp, $file))
 				{
-					$ssh = ssh2_connect($ssh2host, $ssh2port);
-					ssh2_auth_password($ssh, $ssh2username, $ssh2password);
+					//$ssh = ssh2_connect($ssh2host, $ssh2port);
+					//ssh2_auth_password($ssh, $ssh2username, $ssh2password);
 		
 					//this will be the path to be recorded in the DB
 					$dst = $ssh2destpath . $enc_filename.'.' .$file_ext;
-					ssh2_scp_send($ssh, $file, $dst, 0777);
+					//ssh2_scp_send($ssh, $file, $dst, 0777);
 
 					//close file handle
 					fclose(realpath($file));
