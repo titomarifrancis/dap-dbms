@@ -45,7 +45,7 @@ $agencyCertStmt = $dbh->query($getAgencyCertforApproval);
 $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
 
 //for troubleshooting purpose only
-print_r($agencyCertApprovalArray);
+//print_r($agencyCertApprovalArray);
 //die();
 
 ?>
