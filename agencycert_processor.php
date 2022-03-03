@@ -25,7 +25,7 @@ if((isset($_REQUEST['govtagencyid']) && ($_REQUEST['govtagencyid'] > 0)) && (iss
             $file = $path . $enc_filename . "." . $file_ext;
 			echo $file;
 			echo "<br>";
-			die();
+			//die();
             if (!in_array($file_ext, $extensions))
             {
                 $errors[] = 'Extension not allowed: ' . $file_name . ' ' . $file_type;
