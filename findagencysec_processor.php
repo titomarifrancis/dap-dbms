@@ -37,7 +37,7 @@ if(isset($_REQUEST['partfullagencyname']))
         }
 ?>
                         <tr> 
-                        <td><a href="agencycertsec_detail.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
+                        <td><a href="agencycert_detailsec.php?id=<?php echo $row['agencycertificationid'];?>"><?php echo $row['agencyname'];?></a></td>
 						<td><p>Taguig</p></td>
 						<td><p>Main Office</p></td>						
                         <td><?php echo $row['certifyingbody'];?></td>
