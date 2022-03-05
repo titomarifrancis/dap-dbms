@@ -3,7 +3,6 @@
 include 'templates/header.php';
 include 'dbconn.php';
 
-partfullagencyname
 if((isset($_REQUEST['partfullagencyname']))
 {
 ?>
