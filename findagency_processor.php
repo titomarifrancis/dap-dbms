@@ -5,6 +5,7 @@ include 'dbconn.php';
 
 if(isset($_REQUEST['partfullagencyname']))
 {
-  echo "Input string is $_REQUEST['partfullagencyname']";
+  $inputString= $_REQUEST['partfullagencyname'];
+  echo "Input string is $inputString";
 }
 include 'templates/footer.php';
