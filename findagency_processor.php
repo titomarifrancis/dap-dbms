@@ -21,7 +21,7 @@ if(isset($_REQUEST['partfullagencyname']))
   else
   {
     //Display notice that no records were found with that search string
-    echo "There may not be an agency name with the input you entered and/or there may be no certification yet recorded for such agency";
+    echo "There may not be an agency and/or there may be no certification yet recorded for such agency name with the input you entered";
   }
 }
 include 'templates/footer.php';
