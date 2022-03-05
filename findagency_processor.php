@@ -8,7 +8,6 @@ if((isset($_REQUEST['partfullagencyname']))
 {
   echo "This is a test";
 }
-}
 ?>
 <!--
 <h3>Agency Search Result</h3>
