@@ -7,7 +7,7 @@ include 'dbconn.php';
 <?php
 if(isset($_REQUEST['partfullagencyname']))
 {
-  $inputString= $_REQUEST['partfullagencyname'];
+  $inputString= ucwords($_REQUEST['partfullagencyname']);
   echo "Input string is $inputString";
 }
 include 'templates/footer.php';
