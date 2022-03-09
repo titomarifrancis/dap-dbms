@@ -478,7 +478,7 @@ if($isapproved == 'true')
     $htmlContent = ' 
         <html> 
         <head> 
-            <title>You Are Now Approved to Use DAP DBMS</title> 
+            <title>You Are Now Approved to Use the DAP DBMS</title> 
         </head> 
         <body> 
             <h1>Congratulations!</h1> 
@@ -496,7 +496,7 @@ if($isapproved == 'true')
 }
 
 //for troubleshooting purposes only
-die();
+//die();
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
