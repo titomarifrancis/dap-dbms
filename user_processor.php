@@ -464,8 +464,8 @@ else
 }
 
 //for troubleshooting purposes only
-//echo $sqlQuery;
-//die();
+echo $sqlQuery;
+die();
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
