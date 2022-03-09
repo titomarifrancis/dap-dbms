@@ -467,6 +467,35 @@ else
 echo $sqlQuery;
 die();
 
+if($isapproved == 'true')
+{
+    //send email to approved users
+    $to = $contactemail; 
+    $from = 'dbms-no-reply@dap.edu.ph'; 
+    $fromName = 'DAP DBMS Admin'; 
+    
+    $subject = "You Are Now Approved to Use DAP DBMS"; 
+    
+    $htmlContent = ' 
+        <html> 
+        <head> 
+            <title>You Are Now Approved to Use DAP DBMS</title> 
+        </head> 
+        <body> 
+            <h1>Congratulations!</h1> 
+            <p> 
+            Your account has been validated by our team, you may now access your account and encode your agency’s certification details.
+            </p> 
+        </body> 
+        </html>'; 
+    
+    // Set content-type header for sending HTML email 
+    $headers = "MIME-Version: 1.0" . "\r\n"; 
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+
+    mail($to, $subject, $htmlContent, $headers);
+}
+
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
     try
@@ -494,6 +523,4 @@ elseif($actionId==2)
     //
     header("Location:$urlComponents[0]?userid=$userId&msg=$actionId");
 }
-
-
 //header("Location:$_SERVER[HTTP_REFERER]?msg=$actionId");
