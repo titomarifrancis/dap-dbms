@@ -464,7 +464,7 @@ else
 }
 
 //for troubleshooting purposes only
-echo $sqlQuery;
+//echo $sqlQuery;
 
 if($isapproved == 'true')
 {
@@ -494,7 +494,10 @@ if($isapproved == 'true')
 
     mail($to, $subject, $htmlContent, $headers);
 }
+
+//for troubleshooting purposes only
 die();
+
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
     try
