@@ -7,6 +7,10 @@ include 'templates/magic.php';
 include 'lib/secProc.php';
 include 'dbconn.php';
 
+require_once '../lib/PHPMailer/src/PHPMailer.php';
+require_once '../lib/PHPMailer/src/Exception.php';
+require_once '../lib/PHPMailer/src/SMTP.php';
+
 $queryArray = [];
 $paramList = '';
 $valueList = '';
