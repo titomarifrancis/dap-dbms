@@ -3,3 +3,10 @@ testhtml5.php
 test2.php
 test1.php
 stash/735434ae6a912147054e00deba44872f.pdf
+lib/PHPMailer/COMMITMENT
+lib/PHPMailer/composer.json
+lib/PHPMailer/get_oauth_token.php
+lib/PHPMailer/LICENSE
+lib/PHPMailer/README.md
+lib/PHPMailer/SECURITY.md
+lib/PHPMailer/VERSION
