@@ -7,10 +7,6 @@ include 'templates/magic.php';
 include 'lib/secProc.php';
 include 'dbconn.php';
 
-//require_once '../lib/PHPMailer/src/PHPMailer.php';
-//require_once '../lib/PHPMailer/src/Exception.php';
-//require_once '../lib/PHPMailer/src/SMTP.php';
-
 $queryArray = [];
 $paramList = '';
 $valueList = '';
@@ -477,9 +473,16 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         //for troubleshooting purposes only
         //echo $sqlQuery;
 
-        /*
+
         if($isapproved == 'true')
         {
+            echo "email sending logic here!";
+            die();
+
+            //require_once '../lib/PHPMailer/src/PHPMailer.php';
+            //require_once '../lib/PHPMailer/src/Exception.php';
+            //require_once '../lib/PHPMailer/src/SMTP.php';
+
             //send email to approved users
             $to = $contactemail;
             $toFullname = $firstname.' '.$lastname;
