@@ -464,8 +464,8 @@ else
 
 //for troubleshooting purposes only
 echo $sqlQuery;
-echo "<br/>";
-echo "Value of isApproved is $isapproved";
+//echo "<br/>";
+//echo "Value of isApproved is $isapproved";
 die();
 
 
