@@ -482,6 +482,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         $dbh->query($sqlQuery);
         $dbh->commit();
 
+        /*
         if($isapproved == 'true')
         {
             echo "email sending logic here!";
