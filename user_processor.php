@@ -462,15 +462,17 @@ else
     $actionId= 1;
 }
 
-//for troubleshooting purposes only
-echo $sqlQuery;
-//echo "<br/>";
-//echo "Value of isApproved is $isapproved";
-die();
+
 
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
+    //for troubleshooting purposes only
+    echo $sqlQuery;
+    echo "<br/>";
+    echo "Value of isApproved is $isapproved";
+    die();
+
     try
     {
         $dbh->beginTransaction();
