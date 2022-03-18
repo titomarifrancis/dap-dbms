@@ -246,33 +246,32 @@ else
         </select>
       </label>
 	</div>
-
     <div class="large-12 columns">
 		<label>Region
-            <select id="region" name="region">
-            </select>
+			<select id="region" name="region">
+			</select>
 		</label>
 	</div>
-    <div class="large-12 columns">
+  <div class="large-12 columns">
 		<label>Province
 			<select id="province" name="province">
-                <option>Select region first</option>
-            </select>
+				<option>Select region first</option>
+			</select>
 	</div>    
-    <div class="large-12 columns">
+  <div class="large-12 columns">
 		<label>City/Municipality
 			<select id="citymunicipality" name="citymunicipality">
-                <option>Select province first</option>
-            </select>
+				<option>Select province first</option>
+			</select>
 	</div>
-    <div class="large-12 columns">
+  <div class="large-12 columns">
 		<label>Barangay
 			<select id="barangay" name="barangay">
-                <option>Select city/municipality first</option>
-            </select>
+				<option>Select city/municipality first</option>
+			</select>
 	</div>
 
-	  <div class="large-12 columns">
+	<div class="large-12 columns">
 		<label>Username
 <?php
 if(isset($usrname) && (strlen($usrname) > 0))
@@ -290,13 +289,13 @@ else
 ?>		
 		  
 		</label>
-	  </div>
-	  <div class="large-12 columns">
+	</div>
+	<div class="large-12 columns">
 		<label>Password
 		  <input type="password" name="usrpassword" placeholder="at least 8 alphanumeric characters"/>
 		</label>
-	  </div>
-	  <div class="large-12 columns">
+	</div>
+	<div class="large-12 columns">
 	<?php
 	$getLevelsQuery = 'select userlevel, leveldesc from userlevels where userlevel < 3 order by id asc';
 	$levelStmt= $dbh->query($getLevelsQuery);
@@ -313,8 +312,8 @@ else
 	?>
 			</select>		
 		</label>
-	  </div>
-	  <div class="large-12 columns">
+	</div>
+	<div class="large-12 columns">
 		<label>User Access Approval
 			<p>
 <?php
