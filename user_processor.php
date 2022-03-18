@@ -462,6 +462,13 @@ else
     $actionId= 1;
 }
 
+//for troubleshooting purposes only
+echo $sqlQuery;
+echo "<br/>";
+echo "Value of isApproved is $isapproved";
+die();
+
+
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
     try
@@ -470,8 +477,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         $dbh->query($sqlQuery);
         $dbh->commit();
 
-        //for troubleshooting purposes only
-        //echo $sqlQuery;
+
 
 
         if($isapproved == 'true')
