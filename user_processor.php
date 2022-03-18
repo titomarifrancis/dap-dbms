@@ -477,6 +477,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         //for troubleshooting purposes only
         //echo $sqlQuery;
 
+        /*
         if($isapproved == 'true')
         {
             //send email to approved users
@@ -539,7 +540,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
             } catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
-        }    
+        }*/  
     }
     catch(PDOException $e)
     {
@@ -547,6 +548,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         echo "Failed to complete transaction: " . $e->getMessage() . "\n";
         exit;
     }
+    //header("Location:$_SERVER[HTTP_REFERER]?msg=$actionId");
 }
 
 $urlComponents = explode("?", $_SERVER[HTTP_REFERER]);
