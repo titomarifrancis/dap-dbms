@@ -478,15 +478,10 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
 
     try
     {
-        $dbh->beginTransaction();
-        $dbh->query($sqlQuery);
-        $dbh->commit();
-
-        /*
         if($isapproved == 'true')
         {
             echo "email sending logic here!";
-            die();
+            //die();
 
             //require_once '../lib/PHPMailer/src/PHPMailer.php';
             //require_once '../lib/PHPMailer/src/Exception.php';
@@ -552,7 +547,14 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
             } catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
-        }*/  
+        }
+
+        $dbh->beginTransaction();
+        $dbh->query($sqlQuery);
+        $dbh->commit();
+
+
+
     }
     catch(PDOException $e)
     {
@@ -560,7 +562,6 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         echo "Failed to complete transaction: " . $e->getMessage() . "\n";
         exit;
     }
-    //header("Location:$_SERVER[HTTP_REFERER]?msg=$actionId");
 }
 
 $urlComponents = explode("?", $_SERVER[HTTP_REFERER]);
@@ -574,4 +575,3 @@ elseif($actionId==2)
     //
     header("Location:$urlComponents[0]?userid=$userId&msg=$actionId");
 }
-//header("Location:$_SERVER[HTTP_REFERER]?msg=$actionId");
