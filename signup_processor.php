@@ -426,45 +426,9 @@ if(isset($loggedInUserId) && (!isset($_REQUEST['userId'])))
     }       
 }
 
-/*
-if(isset($_REQUEST['userId']))
-{
-    //update
-    $userId = $_REQUEST['userId'];
-    $paramArray = explode(",", $paramList);
-    $valueArray = explode(",", $valueList);
-    $paramCount = count($paramArray);
-    $valueCount = count($valueArray);
 
-    $updateList = '';
-    if($paramCount == $valueCount)
-    {
-        //list per location
-        for($ctr= 0; $ctr < $paramCount; $ctr++)
-        {
-            if(strlen($updateList) < 1)
-            {
-                $updateList .= "$paramArray[$ctr]=$valueArray[$ctr]";
-            }
-            else
-            {
-                $updateList .= ", $paramArray[$ctr]=$valueArray[$ctr]";
-            }
-        }
-    }
+$sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
 
-    $sqlQuery = "UPDATE systemusers SET $updateList WHERE id= $userId";
-}
-else
-{
-    */
-    //insert
-    $sqlQuery = "INSERT INTO systemusers($paramList, creationdate) VALUES($valueList, 'NOW()')";
-//}
-
-//for troubleshooting purposes only
-//echo $sqlQuery;
-//die();
 
 if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0))
 {
@@ -481,7 +445,5 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
         exit;
     }
 }
-//echo $_SERVER[HTTP_REFERER];
-//die();
 
 header("Location:$_SERVER[HTTP_REFERER]?msg=1");
