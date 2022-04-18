@@ -478,6 +478,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
 
     try
     {
+        /*
         if($isapproved == 'true')
         {
             echo "email sending logic here!";
@@ -548,6 +549,7 @@ if((strlen($lastname) > 0) && (strlen($firstname) > 0) && (strlen($usrname) > 0)
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
         }
+        */
 
         $dbh->beginTransaction();
         $dbh->query($sqlQuery);
