@@ -8,12 +8,12 @@ The Development Academy of the Philippines (DAP) through its Productivity and De
 Furthermore, the information collected and stored in the DBMS shall only be used for the following purposes:
 </p>
 <ul>
-  <li>• Processing and reporting of data related to the ISO 900 certification in the government, i.e., site and scope of certification, original date of certification, validity period of certification, historical data of certification, head of agency during the certification;</li>
-  <li>• Research activities; and,</li>
-  <li>• Activities pertaining to the ISO 9001 certifications in the government.</li>
+  <li>Processing and reporting of data related to the ISO 900 certification in the government, i.e., site and scope of certification, original date of certification, validity period of certification, historical data of certification, head of agency during the certification;</li>
+  <li>Research activities; and,</li>
+  <li>Activities pertaining to the ISO 9001 certifications in the government.</li>
 </ul>
 <br/>
-<h1>Government Agency CONSENT:</h1>
+<h3>Government Agency CONSENT:</h3>
 <p>
 I have read the Data Privacy Statement and express my consent for the DAP to collect, record, organize, update or modify, retrieve, consult, use, consolidate, block, erase or destruct our agency data as part of its information.
 </p>
