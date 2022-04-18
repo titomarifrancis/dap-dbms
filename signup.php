@@ -114,7 +114,13 @@ Congratulations for your successful registration.<br/>
         <label>Password (required)
             <input type="password" name="usrpassword" id="passwordField" placeholder="Password" required/>
         </label>
-    </div>    
+    </div>
+    <div class="large-12 columns">
+        <label>Data Privacy Agreement and Consent (required)
+            <!--<input type="checkbox" name="usrpassword" id="passwordField"  required/>-->
+            <input type="checkbox" name="dp_agree_consent" value="agree" required/>I agree to the Data Privacy Agreement and Consent<br> 
+        </label>
+    </div>        
     <div class="large-12 large-centered columns">
         <input type="button" class="button expand" id="okButton" value="Sign Up" disabled>
     </div>
