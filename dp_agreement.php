@@ -1,6 +1,7 @@
 <?php
 include 'templates/header.php';
 ?>
+<h3>Development Academy of the Philippines (DAP) Data Privacy Agreement</h3>
 <p>
 The Development Academy of the Philippines (DAP) through its Productivity and Development Center (PDC), recognizes its responsibilities under the Republic Act No. 10173, also known as the Data Privacy Act of 2012, with respect to the data it collects, record, organize, update, use, consolidate or destruct from government agencies. The data obtained from this webpage is entered and stored within the Academy’s authorized Database Management System (DBMS) and will only be accessed by the Academy’s authorized personnel. The certification details of the agency will be presented on the webpage of the Academy for public information. The Academy has instituted appropriate organizational, technical and physical security measures to ensure the protection of the government agencies’ data.
 </p>
