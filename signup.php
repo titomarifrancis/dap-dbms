@@ -117,7 +117,7 @@ Congratulations for your successful registration.<br/>
     </div>
     <div class="large-12 columns">
         <label>Data Privacy Agreement and Consent (required)<br/>
-            <input type="checkbox" name="dp_agree_consent" value="agree" required/>I agree and consent to the <a href="dp_agreement.php" target="_blank">Data Privacy Agreement</a><br> 
+            <input type="checkbox" name="dp_agree_consent" id="dpagreementField" value="agree" required/>I agree and consent to the <a href="dp_agreement.php" target="_blank">Data Privacy Agreement</a><br> 
         </label>
     </div>        
     <div class="large-12 large-centered columns">
@@ -178,6 +178,7 @@ const emailField = document.getElementById('emailField');
 const govtagencyField = document.getElementById('govtagencyField');
 const usernameField = document.getElementById('usernameField');
 const passwordField = document.getElementById('passwordField');
+const dpagreementField = document.getElementById('dpagreementField');
 const okButton = document.getElementById('okButton');
   
 signUpForm.addEventListener('keyup', function (event)
@@ -188,8 +189,9 @@ signUpForm.addEventListener('keyup', function (event)
     isValidGovtagency = govtagencyField.checkValidity();
     isValidUsername = usernameField.checkValidity();
     isValidPassword = passwordField.checkValidity();
+    isValidDPAgree = dpagreementField.checkValidity();
 
-    if(isValidLastname && isValidFirstname && isValidEmail && isValidGovtagency && isValidUsername && isValidPassword)
+    if(isValidLastname && isValidFirstname && isValidEmail && isValidGovtagency && isValidUsername && isValidPassword && isValidDPAgree)
     {
         okButton.disabled = false;
     }
