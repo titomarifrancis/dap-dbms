@@ -107,7 +107,7 @@ Congratulations for your successful registration.<br/>
 
     <div class="large-12 columns">
         <label>Username (required)
-            <input type="text" name="usrname" id="usernameField" placeholder="username@domain" required/>
+            <input type="text" name="usrname" id="usernameField" placeholder="username@domain" maxlength="20" required/>
         </label>
     </div>
     <div class="large-12 columns">
