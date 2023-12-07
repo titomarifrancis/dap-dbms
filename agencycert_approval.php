@@ -177,7 +177,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
         </div>
         <div class="large-12 columns">
             <label>Uploaded Certification File in PDF (Please copy and open in separate browser tab or window to preview)<br/>
-                <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certpdfurl'];?>"/>
+                <!--<input type="text" value="<?php echo $agencyCertApprovalArray[0]['certpdfurl'];?>"/>-->
 <?php
 	$origFileUrl = $agencyCertApprovalArray[0]['certpdfurl'];
     $origFileUrlArray = explode("/", $origFileUrl);
@@ -187,7 +187,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
     $fileUrl = implode("/", $origFileUrlArray);
     $newFileUrl = "http://" . $viewerRootUrl . "/ViewerJS/#/./" . $fileUrl;
 ?>                    
-  				<a href="<?php echo $newFileUrl;?>"><?php echo $newFileUrl;?></a>              
+  				<a href="<?php echo $newFileUrl;?>" target="_blank"><?php echo $newFileUrl;?></a>              
             </label>
         </div>
         <hr/>
