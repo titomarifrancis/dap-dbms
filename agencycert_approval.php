@@ -189,7 +189,9 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
 ?>                    
   				<a href="<?php echo $newFileUrl;?>" target="_blank"><?php echo $newFileUrl;?></a>              
             </label>
+            
         </div>
+        <br/>
         <hr/>
         <div class="large-12 columns">
             <h3>Agency Authorized Representative</h3>

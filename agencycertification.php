@@ -230,7 +230,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 	$tableHeaderOn = 0;
 
 	//national
-	$getAgenciesQueryNational = "select agencycertifications.id as agencycertid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications where agencycertifications.isapproved=false and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid is NULL and agencycertifications.provinceid is NULL and agencycertifications.citymunicipalityid is NULL order by agencyname";
+	$getAgenciesQueryNational = "select agencycertifications.id as agencycertificationid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, agencycertifications.certificationsite as certsite, agencycertifications.certificationsite as certsite, governancelevel.govlevel as governancelevel from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, governancelevel where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid is NULL and agencycertifications.provinceid is NULL and agencycertifications.citymunicipalityid is NULL and agencycertifications.isexpired=false and governancelevel.id=agencycertifications.governancelevel and govtagencyclass.id=$agencycategoryId order by agencyname";
 	//echo "$getAgenciesQueryNational<br/>";
 	$numrecordsNational = $dbh->query($getAgenciesQueryNational)->rowCount();
 	if($numrecordsNational > 0)
@@ -254,6 +254,8 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 	?>
 							<tr> 
 							<td><a href="agencycert_approval.php?id=<?php echo $row['agencycertid'];?>"><?php echo $row['agencyname'];?></a></td>
+							<td><?php echo $row['certsite'];?></td>
+							<td><?php echo $row['governancelevel'];?></td>	
 							<td><?php echo $row['certifyingbody'];?></td>
 							<td><?php echo $row['certificationdesc'];?></td>
 							<td><?php echo $row['certstartdate'];?></td>
@@ -268,7 +270,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 	}
 
 	//regional
-	$getAgenciesQueryRegional = "select agencycertifications.id as agencycertid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, regions.regionname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions where agencycertifications.isapproved=false and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid=regions.id and agencycertifications.provinceid is NULL and agencycertifications.citymunicipalityid is NULL order by agencyname";
+	$getAgenciesQueryRegional = "select agencycertifications.id as agencycertificationid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, agencycertifications.certificationsite as certsite, governancelevel.govlevel as governancelevel, regions.regionname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, governancelevel, regions where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid is NULL and citymunicipalityid is NULL  and governancelevel.id=agencycertifications.governancelevel and govtagencyclass.id=$agencycategoryId order by agencyname";
 	//echo "$getAgenciesQueryRegional<br/>";
 	$numrecordsRegional = $dbh->query($getAgenciesQueryRegional)->rowCount();
 	if($numrecordsRegional > 0)
@@ -292,6 +294,8 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 	?>
 							<tr> 
 							<td><a href="agencycert_approval.php?id=<?php echo $row['agencycertid'];?>"><?php echo $row['agencyname'];?></a></td>
+							<td><?php echo $row['certsite'];?></td>
+							<td><?php echo $row['governancelevel'];?></td>								
 							<td><?php echo $row['certifyingbody'];?></td>
 							<td><?php echo $row['certificationdesc'];?></td>
 							<td><?php echo $row['certstartdate'];?></td>
@@ -306,7 +310,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 	}
 
 	//provincial
-	$getAgenciesQueryProvincial = "select agencycertifications.id as agencycertid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, regions.regionname, provinces.provincename from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions, provinces where agencycertifications.isapproved=false and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid is NULL order by agencyname";
+	$getAgenciesQueryProvincial = "select agencycertifications.id as agencycertificationid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, agencycertifications.certificationsite as certsite, governancelevel.govlevel as governancelevel, regions.regionname, provinces.provincename from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, governancelevel, regions, provinces where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and governancelevel.id=agencycertifications.governancelevel and agencycertifications.citymunicipalityid is NULL and govtagencyclass.id=$agencycategoryId order by agencyname";
 	//echo "$getAgenciesQueryProvincial<br/>";
 	$numrecordsProvincial = $dbh->query($getAgenciesQueryProvincial)->rowCount();
 	if($numrecordsProvincial > 0)
@@ -331,6 +335,8 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 	?>
 							<tr> 
 							<td><a href="agencycert_approval.php?id=<?php echo $row['agencycertid'];?>"><?php echo $row['agencyname'];?></a></td>
+							<td><?php echo $row['certsite'];?></td>
+							<td><?php echo $row['governancelevel'];?></td>								
 							<td><?php echo $row['certifyingbody'];?></td>
 							<td><?php echo $row['certificationdesc'];?></td>
 							<td><?php echo $row['certstartdate'];?></td>
@@ -346,7 +352,7 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 
 	//city/municipal
 	//$getAgenciesQueryCityMunicipal = "select agencycertifications.id as agencycertificationid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, regions.regionname, provinces.provincename, citymunicipality.towncitymunicipalityname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions, provinces, citymunicipality where agencycertifications.isapproved=false and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid=citymunicipality.id and govtagencyclass.id=$agencycategoryId order by agencyname";
-	$getAgenciesQueryCityMunicipal = "select agencycertifications.id as agencycertid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, regions.regionname, provinces.provincename, citymunicipality.towncitymunicipalityname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, regions, provinces, citymunicipality where agencycertifications.isapproved=false and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid=citymunicipality.id order by agencyname";
+	$getAgenciesQueryCityMunicipal = "select agencycertifications.id as agencycertificationid, govtagency.agencyname as agencyname, certifyingbody.providerorg as certifyingbody, certifications.certificationstandard as certificationdesc, agencycertifications.certvalidstartdate as certstartdate, agencycertifications.certvalidenddate as certenddate, agencycertifications.scope_ispartial as ispartial, agencycertifications.certificationsite as certsite, governancelevel.govlevel as governancelevel, regions.regionname, provinces.provincename, citymunicipality.towncitymunicipalityname from govtagencyclass, govtagency, certifyingbody, certifications, agencycertifications, governancelevel, regions, provinces, citymunicipality where agencycertifications.isapproved=true and agencycertifications.govtagencyid=govtagency.id and agencycertifications.certifyingbodyid=certifyingbody.id and agencycertifications.certificationid=certifications.id and govtagency.govtagencyclassid=govtagencyclass.id and agencycertifications.isexpired=false and agencycertifications.regionid=regions.id and agencycertifications.provinceid=provinces.id and agencycertifications.citymunicipalityid=citymunicipality.id and governancelevel.id=agencycertifications.governancelevel and govtagencyclass.id=$agencycategoryId order by agencyname";
 	//echo "$getAgenciesQueryCityMunicipal<br/>";
 	$numrecordsMunicipal = $dbh->query($getAgenciesQueryCityMunicipal)->rowCount();
 	if($numrecordsMunicipal > 0)
@@ -370,6 +376,8 @@ if(isset($loggedInAccessLevel) && ($loggedInAccessLevel > 1))
 	?>
 							<tr> 
 							<td><a href="agencycert_approval.php?id=<?php echo $row['agencycertid'];?>"><?php echo $row['agencyname'];?></a></td>
+							<td><?php echo $row['certsite'];?></td>
+							<td><?php echo $row['governancelevel'];?></td>								
 							<td><?php echo $row['certifyingbody'];?></td>
 							<td><?php echo $row['certificationdesc'];?></td>
 							<td><?php echo $row['certstartdate'];?></td>
