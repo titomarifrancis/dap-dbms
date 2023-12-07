@@ -193,7 +193,7 @@ if(isset($_REQUEST['msg']))
 		</label>
 	  </div>
 	  <div class="large-12 columns">
-		<label>Upload Certification File in PDF (required)
+		<label>Upload Certification File in PDF, JPEG, JPG, GIF or PNG (required)
 		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf, .jpg, .jpeg, .png, .gif" placeholder="Certification File to be Uploaded Here" required>
 		</label>
 	  </div>
