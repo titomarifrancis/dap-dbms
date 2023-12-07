@@ -194,7 +194,7 @@ if(isset($_REQUEST['msg']))
 	  </div>
 	  <div class="large-12 columns">
 		<label>Upload Certification File in PDF (required)
-		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf" placeholder="Certification File to be Uploaded Here" required>
+		<input type="file" name="uploadedFile" id="uploadedFile" accept=".pdf, .jpg, .jpeg, .png, .gif" placeholder="Certification File to be Uploaded Here" required>
 		</label>
 	  </div>
 <?php
