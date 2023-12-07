@@ -154,11 +154,11 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
             </label>
         </div>
         <div class="large-12 columns">
-            <label>Uploaded Certification File in PDF<br/>
+            <label>Uploaded Certification File in PDF, JPEG, JPG, GIF or PNG<br/>
 <?php
     $origFileUrl = $agencyCertApprovalArray[0]['certpdfurl'];
     $origFileUrlArray = explode("/", $origFileUrl);
-    $viewerRootUrl = $origFileUrlArray[0];
+    $viewerRootUrl = "gqmpfiles.dap.edu.ph";
     $origFileArraySize = sizeof($origFileUrlArray);
     unset($origFileUrlArray[0]);
     $fileUrl = implode("/", $origFileUrlArray);
