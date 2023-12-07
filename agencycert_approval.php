@@ -178,6 +178,15 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
         <div class="large-12 columns">
             <label>Uploaded Certification File in PDF (Please copy and open in separate browser tab or window to preview)<br/>
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certpdfurl'];?>"/>
+<?php
+    $origFileUrlArray = explode("/", $origFileUrl);
+    $viewerRootUrl = "gqmpfiles.dap.edu.ph";
+    $origFileArraySize = sizeof($origFileUrlArray);
+    unset($origFileUrlArray[0]);
+    $fileUrl = implode("/", $origFileUrlArray);
+    $newFileUrl = "http://" . $viewerRootUrl . "/ViewerJS/#/./" . $fileUrl;
+?>                    
+  				<a href="<?php echo $newFileUrl;?>"><?php echo $newFileUrl;?></a>              
             </label>
         </div>
         <hr/>
