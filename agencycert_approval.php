@@ -179,6 +179,7 @@ $agencyCertApprovalArray = $agencyCertStmt->fetchAll();
             <label>Uploaded Certification File in PDF (Please copy and open in separate browser tab or window to preview)<br/>
                 <input type="text" value="<?php echo $agencyCertApprovalArray[0]['certpdfurl'];?>"/>
 <?php
+	$origFileUrl = $agencyCertApprovalArray[0]['certpdfurl'];
     $origFileUrlArray = explode("/", $origFileUrl);
     $viewerRootUrl = "gqmpfiles.dap.edu.ph";
     $origFileArraySize = sizeof($origFileUrlArray);
